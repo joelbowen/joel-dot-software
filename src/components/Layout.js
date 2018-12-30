@@ -2,7 +2,30 @@ import React from 'react'
 import Image from 'gatsby-image'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
+import { Global, css } from '@emotion/core'
+import fontFiles from '../fonts'
 
+const globalStyles = css`
+  @font-face {
+    font-family: 'Marion';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Marion'), local('Marion-Regular'),
+      url(${fontFiles.MarionRegular}) format('ttf');
+  }
+  @font-face {
+    font-family: 'Marion-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Marion-Bold'), url(${fontFiles.MarionBold}) format('ttf');
+  }
+  @font-face {
+    font-family: 'Marion-Italic';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Marion-Italic'), url(${fontFiles.MarionItalic}) format('ttf');
+  }
+`
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -21,6 +44,7 @@ class Layout extends React.Component {
             }}
           >
             <div style={{ display: 'flex' }}>
+            <Global styles={globalStyles} />
               <Image
                 fixed={data.avatar.childImageSharp.fixed}
                 alt={data.site.siteMetadata.author}

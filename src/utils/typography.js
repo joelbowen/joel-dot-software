@@ -1,17 +1,13 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import usWebDesignStandardsTheme from 'typography-theme-us-web-design-standards'
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    'a.gatsby-resp-image-link': {
-      boxShadow: `none`,
-    },
-  }
-}
+// We won't be using Google Fonts (Because PERFORMANCE!)
+delete usWebDesignStandardsTheme.googleFonts
 
-delete Wordpress2016.googleFonts
+// Update the default theme header font
+usWebDesignStandardsTheme.headerFontFamily = ['Marion-Bold', 'serif']
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(usWebDesignStandardsTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
