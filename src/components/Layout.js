@@ -43,8 +43,14 @@ class Layout extends React.Component {
               padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
             }}
           >
-            <div style={{ display: 'flex' }}>
             <Global styles={globalStyles} />
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                marginBottom: rhythm(3),
+              }}
+            >
               <Image
                 fixed={data.avatar.childImageSharp.fixed}
                 alt={data.site.siteMetadata.author}
@@ -57,8 +63,8 @@ class Layout extends React.Component {
               />
               <h1
                 style={{
-                  ...scale(1.5),
-                  marginBottom: rhythm(1.5),
+                  fontSize: '1.4117647059rem',
+                  marginBottom: 0,
                   marginTop: 0,
                 }}
               >
