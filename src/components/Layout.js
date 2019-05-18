@@ -25,6 +25,25 @@ const globalStyles = css`
     font-weight: normal;
     src: local('Marion-Italic'), url(${fontFiles.MarionItalic}) format('ttf');
   }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lato'), local('Lato-Regular'),
+      url(${fontFiles.LatoRegular}) format('ttf');
+  }
+  @font-face {
+    font-family: 'Lato-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Lato-Bold'), url(${fontFiles.LatoBold}) format('ttf');
+  }
+  @font-face {
+    font-family: 'Lato-Light';
+    font-style: normal;
+    font-weight: light;
+    src: local('Lato-Light'), url(${fontFiles.LatoLight}) format('ttf');
+  }
 `
 class Layout extends React.Component {
   render() {
@@ -39,7 +58,6 @@ class Layout extends React.Component {
             style={{
               marginLeft: `auto`,
               marginRight: `auto`,
-              maxWidth: rhythm(24),
               padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
             }}
           >
@@ -48,14 +66,14 @@ class Layout extends React.Component {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: rhythm(3),
+                marginBottom: rhythm(2.75),
               }}
             >
               <Image
-                fixed={data.avatar.childImageSharp.fixed}
+                fluid={data.avatar.childImageSharp.fluid}
                 alt={data.site.siteMetadata.author}
                 style={{
-                  marginRight: rhythm(1 / 2),
+                  marginRight: rhythm(2 / 3),
                   marginBottom: 0,
                   minWidth: 50,
                   borderRadius: `100%`,
@@ -63,7 +81,7 @@ class Layout extends React.Component {
               />
               <h1
                 style={{
-                  fontSize: '1.4117647059rem',
+                  fontSize: rhythm(3 / 4),
                   marginBottom: 0,
                   marginTop: 0,
                 }}
@@ -95,8 +113,8 @@ export const layoutQuery = graphql`
   query layoutQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 81, height: 81) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 81) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
