@@ -1,11 +1,11 @@
 import Typography from 'typography'
 import usWebDesignStandardsTheme from 'typography-theme-us-web-design-standards'
 
-// We won't be using Google Fonts (Because PERFORMANCE!)
+// We'll load Google font files locally (Because PERFORMANCE!)
 delete usWebDesignStandardsTheme.googleFonts
 
 // Update the default theme header font
-usWebDesignStandardsTheme.headerFontFamily = ['Marion-Bold', 'serif']
+usWebDesignStandardsTheme.headerFontFamily = ['Marion-Regular', 'serif']
 
 const typography = new Typography(usWebDesignStandardsTheme)
 
