@@ -2,11 +2,12 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { rhythm } from '../utils/typography'
 import { StaticQuery, graphql } from 'gatsby'
+import BackTopTop from './BackToTop'
 
 const SocialIcons = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: ${rhythm(2 / 3)};
+  margin-bottom: ${rhythm(1)};
   margin-top: ${rhythm(2.75)};
   a {
     flex: 1;
@@ -53,6 +54,7 @@ function Footer({ instagram, twitter, linkedin }) {
           See the code on <strong>Github</strong>
         </a>
       </p>
+      <BackTopTop />
     </footer>
   )
 }
