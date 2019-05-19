@@ -6,6 +6,13 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
 import Featured from '../components/Featured'
+import Skills from '../components/Skills'
+import Experience from '../components/Experience'
+import Accomplishments from '../components/Accomplishments'
+import Education from '../components/Education'
+
+const CURRENT_YEAR = new Date().getFullYear()
+const START_YEAR = 2006
 
 class BlogIndex extends React.Component {
   render() {
@@ -39,6 +46,10 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
+        <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
+        <Experience />
+        <Accomplishments />
+        <Education currentYear={CURRENT_YEAR} startYear={START_YEAR} />
       </Layout>
     )
   }
