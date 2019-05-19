@@ -4,6 +4,7 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
 import { Global, css } from '@emotion/core'
 import fontFiles from '../fonts'
+import Footer from './Footer'
 
 const globalStyles = css`
   @font-face {
@@ -111,9 +112,7 @@ class Layout extends React.Component {
               </h1>
             </div>
             {children}
-            <footer>
-              © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
+            <Footer />
           </div>
         )}
       />
