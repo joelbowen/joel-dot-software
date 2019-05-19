@@ -29,7 +29,6 @@ function Bio() {
       <hr
         style={{
           alignSelf: 'center',
-
           border: '1px solid rgb(225, 225, 225)',
           display: 'block',
           height: 0,
