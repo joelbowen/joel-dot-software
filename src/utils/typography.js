@@ -6,6 +6,7 @@ delete usWebDesignStandardsTheme.googleFonts
 
 // Update the default theme header font
 usWebDesignStandardsTheme.headerFontFamily = ['Marion-Regular', 'serif']
+usWebDesignStandardsTheme.bodyFontFamily = ['Lato', 'sans-serif']
 
 const typography = new Typography(usWebDesignStandardsTheme)
 

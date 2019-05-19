@@ -39,10 +39,22 @@ const globalStyles = css`
     src: local('Lato-Bold'), url(${fontFiles.LatoBold}) format('ttf');
   }
   @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Lato'), url(${fontFiles.LatoBlack}) format('ttf');
+  }
+  @font-face {
     font-family: 'Lato-Light';
     font-style: normal;
     font-weight: light;
     src: local('Lato-Light'), url(${fontFiles.LatoLight}) format('ttf');
+  }
+  html {
+    letter-spacing: 0.01764705882rem;
+    strong {
+      font-weight: 800;
+    }
   }
 `
 class Layout extends React.Component {
