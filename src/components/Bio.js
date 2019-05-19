@@ -16,6 +16,7 @@ function Bio() {
         display: `flex`,
         flexDirection: 'column',
         marginBottom: rhythm(2.75),
+        paddingTop: rhythm(5.5),
         letterSpacing: rhythm(1 / 60),
       }}
     >

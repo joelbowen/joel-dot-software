@@ -1,10 +1,9 @@
 import React from 'react'
-import Image from 'gatsby-image'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import { rhythm, scale } from '../utils/typography'
+import { rhythm } from '../utils/typography'
 import { Global, css } from '@emotion/core'
 import fontFiles from '../fonts'
 import Footer from './Footer'
+import Header from './Header'
 
 const globalStyles = css`
   @font-face {
@@ -64,80 +63,20 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
 
     return (
-      <StaticQuery
-        query={layoutQuery}
-        render={data => (
-          <div
-            style={{
-              marginLeft: `auto`,
-              marginRight: `auto`,
-              padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-            }}
-          >
-            <Global styles={globalStyles} />
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginBottom: rhythm(2.75),
-              }}
-            >
-              <Image
-                fluid={data.avatar.childImageSharp.fluid}
-                alt={data.site.siteMetadata.author}
-                style={{
-                  marginRight: rhythm(2 / 3),
-                  marginBottom: 0,
-                  minWidth: 50,
-                  borderRadius: `100%`,
-                }}
-              />
-              <h1
-                style={{
-                  fontSize: rhythm(3 / 4),
-                  marginBottom: 0,
-                  marginTop: 0,
-                }}
-              >
-                <Link
-                  style={{
-                    boxShadow: `none`,
-                    textDecoration: `none`,
-                    color: `inherit`,
-                  }}
-                  to={`/`}
-                >
-                  {title}
-                </Link>
-              </h1>
-            </div>
-            {children}
-            <Footer />
-          </div>
-        )}
-      />
+      <div
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          padding: `0 ${rhythm(3 / 4)}`,
+        }}
+      >
+        <Global styles={globalStyles} />
+        <Header title={title} />
+        {children}
+        <Footer />
+      </div>
     )
   }
 }
-
-export const layoutQuery = graphql`
-  query layoutQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fluid(maxWidth: 81) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        author
-        social {
-          twitter
-        }
-      }
-    }
-  }
-`
 
 export default Layout
