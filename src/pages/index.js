@@ -5,12 +5,12 @@ import styled from '@emotion/styled'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
 import Featured from '../components/Featured'
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
 import Accomplishments from '../components/Accomplishments'
 import Education from '../components/Education'
+import Footer from '../components/Footer'
 
 const CURRENT_YEAR = new Date().getFullYear()
 const START_YEAR = 2006
@@ -27,14 +27,15 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <Bio />
-        <Featured />
-        {/* {posts.map(({ node }) => {
+      <div>
+        <Layout location={this.props.location} title={siteTitle}>
+          <SEO
+            title="About Me"
+            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          />
+          <Bio />
+          <Featured />
+          {/* {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -52,13 +53,15 @@ class BlogIndex extends React.Component {
             </div>
           )
         })} */}
-        <ContentWrapper>
-          <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
-          <Experience />
-          <Accomplishments />
-          <Education currentYear={CURRENT_YEAR} startYear={START_YEAR} />
-        </ContentWrapper>
-      </Layout>
+          <ContentWrapper>
+            <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
+            <Experience />
+            <Accomplishments />
+            <Education currentYear={CURRENT_YEAR} startYear={START_YEAR} />
+          </ContentWrapper>
+        </Layout>
+        <Footer />
+      </div>
     )
   }
 }

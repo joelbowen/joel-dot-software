@@ -135,7 +135,6 @@ class Layout extends React.Component {
         <Global styles={globalStyles} />
         <Header title={title} />
         <Body>{children}</Body>
-        <Footer />
       </div>
     )
   }
