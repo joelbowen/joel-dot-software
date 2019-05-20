@@ -117,6 +117,7 @@ const globalStyles = css`
 const Body = styled.div`
   margin: 0 auto;
   max-width: 1024px;
+  padding-top: ${rhythm(2.75)};
 `
 
 class Layout extends React.Component {
