@@ -57,6 +57,11 @@ const globalStyles = css`
     }
   }
 `
+const Body = styled.div`
+  margin: 0 auto;
+  max-width: 1024px;
+`
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -72,7 +77,7 @@ class Layout extends React.Component {
       >
         <Global styles={globalStyles} />
         <Header title={title} />
-        {children}
+        <Body>{children}</Body>
         <Footer />
       </div>
     )

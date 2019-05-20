@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import styled from '@emotion/styled'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
@@ -13,6 +14,11 @@ import Education from '../components/Education'
 
 const CURRENT_YEAR = new Date().getFullYear()
 const START_YEAR = 2006
+
+const ContentWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 750px;
+`
 
 class BlogIndex extends React.Component {
   render() {
@@ -46,10 +52,12 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
-        <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
-        <Experience />
-        <Accomplishments />
-        <Education currentYear={CURRENT_YEAR} startYear={START_YEAR} />
+        <ContentWrapper>
+          <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
+          <Experience />
+          <Accomplishments />
+          <Education currentYear={CURRENT_YEAR} startYear={START_YEAR} />
+        </ContentWrapper>
       </Layout>
     )
   }
