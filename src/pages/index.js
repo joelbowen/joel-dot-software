@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         <Featured />
-        {posts.map(({ node }) => {
+        {/* {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -51,7 +51,7 @@ class BlogIndex extends React.Component {
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
-        })}
+        })} */}
         <ContentWrapper>
           <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
           <Experience />
