@@ -6,26 +6,53 @@ import { StaticQuery, graphql } from 'gatsby'
 
 const FeaturedWrapper = styled.div`
   margin-bottom: ${rhythm(2.75)};
+
+  @media (min-width: 620px) {
+    display: flex;
+  }
 `
 
 const FeaturedItems = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (min-width: 620px) {
+    flex: 1;
+    justify-content: flex-end;
+    &:last-child {
+      justify-content: flex-start;
+    }
+  }
 `
 
 const FeaturedItemWrapper = styled.div`
   flex: 0 0 33%;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 200px;
+  max-width: 200px;
 `
 
+const WatchCTA = styled.strong`
+  display: none;
+  @media (min-width: 345px) {
+    display: inline-block;
+  }
+`
 const FeaturedText = styled.h3`
+  display: -webkit-box;
   font-size: ${rhythm(3 / 4)};
   font-family: Lato;
   font-weight: 200;
   line-height: 1.5;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  @media (min-width: 325px) {
+    -webkit-line-clamp: 3;
+  }
 `
 
 function Featured({ images, videos }) {
@@ -51,12 +78,16 @@ function Featured({ images, videos }) {
             display: 'flex',
             justifyContent: 'center',
             padding: rhythm(2 / 3),
-            maxWidth: '300px',
+            maxWidth: '400px',
           }}
         >
           <FeaturedText>
-            <strong>WATCH:</strong> Creating the “Jake” for Wily’s Design Sprint
-            Bootcamp.
+            <WatchCTA>WATCH:</WatchCTA> Creating “Jake Knapp” for Wily’s Design
+            Sprint Bootcamp. (
+            <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
+              link
+            </a>
+            )
           </FeaturedText>
         </FeaturedItemWrapper>
       </FeaturedItems>
