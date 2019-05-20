@@ -1,8 +1,10 @@
 import React from 'react'
+import OffsetAnchor from './OffsetAnchor'
 
 function Experience() {
   return (
     <div>
+      <OffsetAnchor id="experience" />
       <h2>Experience</h2>
       <p>
         I’ve worked with many top-talent firms and teams of creative problem

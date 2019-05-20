@@ -1,7 +1,10 @@
 import React from 'react'
+import OffsetAnchor from './OffsetAnchor'
+
 function Skills({ currentYear, startYear }) {
   return (
     <div>
+      <OffsetAnchor id="skills" />
       <h2>Skills</h2>
       <p>
         I speak web languages – the web API was my first love and I have enjoyed

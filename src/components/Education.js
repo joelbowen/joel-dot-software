@@ -1,8 +1,10 @@
 import React from 'react'
+import OffsetAnchor from './OffsetAnchor'
 
 function Education({ currentYear, startYear }) {
   return (
     <div>
+      <OffsetAnchor id="education" />
       <h2>Education</h2>
       <p>
         I received a Bachelor’s Degree in Digital Information Design from

@@ -1,8 +1,10 @@
 import React from 'react'
+import OffsetAnchor from './OffsetAnchor'
 
 function Accomplishments() {
   return (
     <div>
+      <OffsetAnchor id="accomplishments" />
       <h2>Accomplishments</h2>
       <p>
         I’m proud of all the projects I’ve been part of and the events I’ve
