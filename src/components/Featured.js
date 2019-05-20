@@ -77,7 +77,7 @@ function Featured({ images, videos }) {
             flex: `0 0 66%`,
             display: 'flex',
             justifyContent: 'center',
-            padding: rhythm(2 / 3),
+            padding: `0 ${rhythm(2 / 3)}`,
             maxWidth: '400px',
           }}
         >
