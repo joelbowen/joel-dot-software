@@ -96,8 +96,25 @@ const MobileNavBtn = styled.button`
   display: none; // @TODO mobile menu is not ready yet
   font-size: 0.75rem;
 `
+function Navigation({ title, isBlogEntry }) {
+  if (title === '404' || isBlogEntry) {
+    return (
+      <Nav style={{ justifyContent: 'flex-end' }}>
+        <a href="/">Home</a>
+      </Nav>
+    )
+  }
+  return (
+    <Nav>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#accomplishments">Accomplishments</a>
+      <a href="#education">Education</a>
+    </Nav>
+  )
+}
 
-function Header({ avatar, site, title }) {
+function Header({ avatar, site, title, isBlogEntry }) {
   return (
     <HeaderWrapper>
       <Container>
@@ -132,16 +149,7 @@ function Header({ avatar, site, title }) {
             </Link>
           </h1>
           <MobileNavBtn>MENU</MobileNavBtn>
-          {title === '404' ? (
-            ''
-          ) : (
-            <Nav>
-              <a href="#skills">Skills</a>
-              <a href="#experience">Experience</a>
-              <a href="#accomplishments">Accomplishments</a>
-              <a href="#education">Education</a>
-            </Nav>
-          )}
+          <Navigation title={title} isBlogEntry={isBlogEntry} />
         </Content>
       </Container>
     </HeaderWrapper>
