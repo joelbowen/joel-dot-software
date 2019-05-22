@@ -11,6 +11,7 @@ import Experience from '../components/Experience'
 import Accomplishments from '../components/Accomplishments'
 import Education from '../components/Education'
 import Footer from '../components/Footer'
+import LatestPost from '../components/LatestPost'
 
 const CURRENT_YEAR = new Date().getFullYear()
 const START_YEAR = 2006
@@ -24,7 +25,6 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
 
     return (
       <div>
@@ -35,25 +35,8 @@ class BlogIndex extends React.Component {
           />
           <Bio />
           <Featured />
-          {/* {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })} */}
           <ContentWrapper>
+            <LatestPost />
             <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
             <Experience />
             <Accomplishments />
@@ -73,20 +56,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
       }
     }
   }
