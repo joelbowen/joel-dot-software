@@ -116,6 +116,10 @@ const Body = styled.div`
   margin: 0 auto;
   max-width: 1024px;
   padding-top: ${rhythm(2.75)};
+
+  @media (min-width: 620px) {
+    padding-top: ${rhythm(5.5)};
+  }
 `
 
 class Layout extends React.Component {
