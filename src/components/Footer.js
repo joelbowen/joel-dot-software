@@ -20,8 +20,28 @@ const SocialIcons = styled.div`
     }
   }
 `
+const GitHubLink = () => (
+  <div>
+    <hr
+      style={{
+        alignSelf: 'center',
+        border: '1px solid rgb(225, 225, 225)',
+        display: 'block',
+        height: 0,
+        margin: '0 auto',
+        maxWidth: '300px',
+        width: '60%',
+      }}
+    />
+    <p style={{ textAlign: 'center', marginTop: rhythm(1) }}>
+      <a href="https://github.com/joelbowen/joel-dot-software" target="_blank">
+        See the code on <strong>Github</strong>
+      </a>
+    </p>
+  </div>
+)
 
-function Footer({ instagram, twitter, linkedin }) {
+function Footer({ instagram, twitter, linkedin, showGitHub }) {
   return (
     <footer>
       <SocialIcons>
@@ -35,25 +55,11 @@ function Footer({ instagram, twitter, linkedin }) {
           <img src={linkedin.publicURL} />
         </a>
       </SocialIcons>
-      <hr
-        style={{
-          alignSelf: 'center',
-          border: '1px solid rgb(225, 225, 225)',
-          display: 'block',
-          height: 0,
-          margin: '0 auto',
-          maxWidth: '300px',
-          width: '60%',
-        }}
-      />
-      <p style={{ textAlign: 'center', marginTop: rhythm(1) }}>
-        <a
-          href="https://github.com/joelbowen/joel-dot-software"
-          target="_blank"
-        >
-          See the code on <strong>Github</strong>
-        </a>
-      </p>
+      {showGitHub ? (
+        <GitHubLink />
+      ) : (
+        <p style={{ paddingTop: rhythm(2 / 3) }} />
+      )}
       <BackTopTop />
     </footer>
   )
@@ -109,6 +115,7 @@ export default props => (
         instagram={data.instagram.edges[0].node}
         twitter={data.twitter.edges[0].node}
         linkedin={data.linkedin.edges[0].node}
+        {...props}
       />
     )}
   />

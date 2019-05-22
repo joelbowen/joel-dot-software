@@ -60,7 +60,7 @@ class BlogIndex extends React.Component {
             <Education currentYear={CURRENT_YEAR} startYear={START_YEAR} />
           </ContentWrapper>
         </Layout>
-        <Footer />
+        <Footer showGitHub />
       </div>
     )
   }
