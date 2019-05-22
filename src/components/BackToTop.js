@@ -4,7 +4,7 @@ import { rhythm } from '../utils/typography'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Wrapper = styled.div`
-  margin: ${rhythm(2.75)} -${rhythm(3 / 4)} 0;
+  margin-top: ${rhythm(2.75)};
 `
 
 const Button = styled.button`
