@@ -106,7 +106,7 @@ export default props => (
               timestamp
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 150, maxHeight: 150) {
+                  fluid(maxWidth: 250, maxHeight: 250) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -124,7 +124,7 @@ export default props => (
             node {
               id
               childImageSharp {
-                fluid(maxWidth: 150, maxHeight: 150) {
+                fluid(maxWidth: 250, maxHeight: 250) {
                   ...GatsbyImageSharpFluid
                 }
               }
