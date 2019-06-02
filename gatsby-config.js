@@ -69,7 +69,7 @@ module.exports = {
         short_name: `Joel.Software`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#30395F`,
         display: `minimal-ui`,
         icon: `content/assets/profile-pic.jpg`,
       },
