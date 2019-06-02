@@ -68,7 +68,10 @@ function Featured({ images, videos }) {
       <FeaturedItems>
         <FeaturedItemWrapper>
           <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
-            <Image fluid={videos[0].node.childImageSharp.fluid} />
+            <Image
+              fluid={videos[0].node.childImageSharp.fluid}
+              alt="Featured Video"
+            />
           </a>
         </FeaturedItemWrapper>
         <FeaturedItemWrapper

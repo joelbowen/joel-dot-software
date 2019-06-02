@@ -19,16 +19,21 @@ const Button = styled.button`
     margin: 0;
     width: 1rem;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 function BackToTop({ triangleSVG }) {
   return (
     <Wrapper>
-      <Button onClick={() => window.scrollTo(0, 0)}>
+      <Button onClick={() => window.scrollTo(0, 0)} role="button">
         back to top
         <img
           src={triangleSVG.publicURL}
           style={{ marginLeft: rhythm(1 / 2) }}
+          alt=""
         />
       </Button>
     </Wrapper>

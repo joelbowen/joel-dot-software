@@ -127,6 +127,7 @@ function Header({ avatar, site, title, isBlogEntry }) {
               width: '100%',
               borderRadius: `100%`,
             }}
+            alt="Joel Bowen's Headshot"
           />
         </ProfilePhoto>
         <Content>

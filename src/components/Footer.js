@@ -46,13 +46,13 @@ function Footer({ instagram, twitter, linkedin, showGitHub }) {
     <footer>
       <SocialIcons>
         <a href="https://www.instagram.com/joelbowen/" target="_blank">
-          <img src={instagram.publicURL} />
+          <img src={instagram.publicURL} alt="Instragram Logo" />
         </a>
         <a href="https://twitter.com/JoelSocialized" target="_blank">
-          <img src={twitter.publicURL} />
+          <img src={twitter.publicURL} alt="Twitter Logo" />
         </a>
         <a href="https://www.linkedin.com/in/joelbowen" target="_blank">
-          <img src={linkedin.publicURL} />
+          <img src={linkedin.publicURL} alt="LinkedIn Logo" />
         </a>
       </SocialIcons>
       {showGitHub ? (
