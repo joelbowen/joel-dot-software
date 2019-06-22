@@ -20,6 +20,7 @@ const Post = styled.article`
 `
 const Title = styled.h1`
   margin-bottom: 0;
+  margin-top: 1rem;
 `
 const Subtitle = styled.h2`
   font-family: ${sansFont};
