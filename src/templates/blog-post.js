@@ -70,7 +70,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <div>
         <Layout location={this.props.location} title={siteTitle} isBlogEntry>
-          <article>
+          <Post>
             <SEO
               title={post.frontmatter.title}
               description={post.frontmatter.description || post.excerpt}
@@ -85,7 +85,7 @@ class BlogPostTemplate extends React.Component {
                   marginBottom: rhythm(2),
                   marginTop: rhythm(-1),
                 }}
-                datetime={post.frontmatter.date}
+                dateTime={post.frontmatter.date}
               >
                 {post.frontmatter.datestring}
               </time>
@@ -101,25 +101,29 @@ class BlogPostTemplate extends React.Component {
                   justifyContent: `space-between`,
                   listStyle: `none`,
                   padding: 0,
+                  margin: `${rhythm(3)} 0 0 0`,
                 }}
               >
-                <li>
-                  {previous && (
+                {previous && (
+                  <li>
+                    <h3>Previous Post</h3>
+
                     <Link to={previous.fields.slug} rel="prev">
                       ← {previous.frontmatter.title}
                     </Link>
-                  )}
-                </li>
-                <li>
-                  {next && (
+                  </li>
+                )}
+                {next && (
+                  <li>
+                    <h3>Next Post</h3>
                     <Link to={next.fields.slug} rel="next">
                       {next.frontmatter.title} →
                     </Link>
-                  )}
-                </li>
+                  </li>
+                )}
               </ul>
             </ContentWrapper>
-          </article>
+          </Post>
         </Layout>
         <Footer />
       </div>
