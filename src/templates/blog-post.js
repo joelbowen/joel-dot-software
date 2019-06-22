@@ -75,7 +75,9 @@ class BlogPostTemplate extends React.Component {
             <SEO
               title={post.frontmatter.title}
               description={post.frontmatter.description || post.excerpt}
-              imageUrl={post.frontmatter.photo.publicURL}
+              imageUrl={`https://joel.software${
+                post.frontmatter.photo.publicURL
+              }`}
             />
             <ContentWrapper>
               <Title>{post.frontmatter.title}</Title>
