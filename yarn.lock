@@ -764,7 +764,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
   integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
@@ -5125,6 +5125,13 @@ gatsby-plugin-google-analytics@^2.0.5:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-iubenda-cookie-footer@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-iubenda-cookie-footer/-/gatsby-plugin-iubenda-cookie-footer-1.1.1.tgz#1d27c67f2392109ac7ac95ae7598a3003acba6f6"
+  integrity sha512-e6ulBfe7uUJBJBhc3zGUVq8TFe91xwB4+AyD9963MGXDbhfY7A69XvHakW4/fz7q0q3xsr3jOCd0r6+imghKOA==
+  dependencies:
+    "@babel/runtime" "^7.4.3"
+
 gatsby-plugin-manifest@^2.0.5:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.1.1.tgz#e987d6e655b1dcfba6e10d65ff20722aaeb75391"
@@ -5316,6 +5323,15 @@ gatsby-source-instagram@^0.5.0:
     axios "^0.18.0"
     cheerio "^1.0.0-rc.2"
     gatsby-source-filesystem "^2.0.27"
+
+gatsby-source-iubenda@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-iubenda/-/gatsby-source-iubenda-1.0.0.tgz#9842cca67e717ef66bfb71c04cd7167a6e331df5"
+  integrity sha512-39JSfq6eGLVVn4uwehOkgx0OyZBvG64KvMDuSf8Y4XGsY6MXFjU4QTPCp4OLxOJP2zcT4257n8Gk8KPKS4Vnvw==
+  dependencies:
+    axios "^0.18.0"
+    babel-runtime "^6.26.0"
+    lodash "^4.17.10"
 
 gatsby-telemetry@^1.0.11:
   version "1.0.11"

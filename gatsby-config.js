@@ -53,6 +53,27 @@ module.exports = {
         username: `joelbowen`,
       },
     },
+    {
+      resolve: `gatsby-source-iubenda`,
+      options: {
+        documentIds: [`72446042`],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-iubenda-cookie-footer',
+      options: {
+        iubendaOptions: {
+          lang: 'en',
+          siteId: 1617210,
+          cookiePolicyId: 72446042,
+          banner: {
+            position: 'float-bottom-left',
+            textColor: 'black',
+            backgroundColor: 'white',
+          },
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

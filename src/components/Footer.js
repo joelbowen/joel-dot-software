@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { rhythm } from '../utils/typography'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import BackTopTop from './BackToTop'
 
 const SocialIcons = styled.div`
@@ -60,6 +60,16 @@ function Footer({ instagram, twitter, linkedin, showGitHub }) {
       ) : (
         <p style={{ paddingTop: rhythm(2 / 3) }} />
       )}
+      <div
+        style={{
+          fontSize: '.75rem',
+          margin: '1.5rem auto',
+          maxWidth: '750px',
+          textAlign: 'center',
+        }}
+      >
+        <Link to="privacy-policy">Privacy Policy</Link>
+      </div>
       <BackTopTop />
     </footer>
   )
