@@ -14,11 +14,15 @@ function Accomplishments() {
       <ul>
         <li>Launching and leading an Innovation Studio for a Fortune 500</li>
         <li>Architecting a distributed real-time auctions platform</li>
+        <li>Attending GraphQL Conf 2019 in Berlin</li>
         <li>Being a multi-year alumnus of Adaptive Path's UX Intensive</li>
         <li>Co-founding a technology education startup</li>
         <li>Data pipeline automation with REDIS Protocol & AWS Batch</li>
         <li>Writing and deploying React Native applications and prototypes</li>
-        <li>Directing businesses in HIPAA compliant policies & web apps</li>
+        <li>
+          Directing businesses in HIPAA compliant policies & application
+          development
+        </li>
       </ul>
     </div>
   )
