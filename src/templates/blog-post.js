@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from '@emotion/styled'
 
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale, sansFont } from '../utils/typography'
@@ -12,6 +11,12 @@ import Footer from '../components/Footer'
 const ContentWrapper = styled.div`
   margin: 0 auto;
   max-width: 750px;
+`
+const Post = styled.article`
+  hr {
+    border-top: 4px dotted #cecece;
+    background: none;
+  }
 `
 const Title = styled.h1`
   margin-bottom: 0;
@@ -89,11 +94,6 @@ class BlogPostTemplate extends React.Component {
 
             <ContentWrapper>
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              <hr
-                style={{
-                  marginBottom: rhythm(1),
-                }}
-              />
               <ul
                 style={{
                   display: `flex`,
