@@ -40,16 +40,18 @@ function FeaturedPhoto({ post }) {
           textAlign: 'center',
         }}
       >
-        <em>
-          Credit:{' '}
-          <a
-            href={post.frontmatter.photoCreditLink}
-            target="_blank"
-            alt={`See more photos from ${post.frontmatter.photoCredit}`}
-          >
-            {post.frontmatter.photoCredit}
-          </a>
-        </em>
+        {post.frontmatter.photoCredit && (
+          <em>
+            Credit:{' '}
+            <a
+              href={post.frontmatter.photoCreditLink}
+              target="_blank"
+              alt={`See more photos from ${post.frontmatter.photoCredit}`}
+            >
+              {post.frontmatter.photoCredit}
+            </a>
+          </em>
+        )}
       </p>
     </div>
   )
