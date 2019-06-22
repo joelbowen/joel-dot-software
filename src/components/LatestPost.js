@@ -29,19 +29,14 @@ const PostWrapper = styled.div`
 const FeaturedPhotoWrapper = styled.div`
   flex: 1;
   margin-bottom: ${rhythm(1)};
+  margin-right: ${rhythm(1)};
 
   @media (min-width: 620px) {
     margin-bottom: ${rhythm(1 / 2)};
     max-width: 265px;
   }
 `
-const Content = styled.div`
-  flex: 1;
 
-  @media (min-width: 620px) {
-    padding-left: 1rem;
-  }
-`
 const MobileCTA = styled.p`
   margin-top: -${rhythm(1 / 2)};
   text-align: right;
@@ -50,20 +45,30 @@ const MobileCTA = styled.p`
   }
 `
 
+function FeaturedPhoto({ post }) {
+  if (!post.frontmatter.photo) {
+    return null
+  }
+
+  return (
+    <FeaturedPhotoWrapper>
+      <Link style={{ boxShadow: `none` }} to={post.fields.slug}>
+        <Image
+          fluid={post.frontmatter.photo.childImageSharp.fluid}
+          alt={post.frontmatter.photoDescription}
+        />
+      </Link>
+    </FeaturedPhotoWrapper>
+  )
+}
+
 function LatestPost({ post }) {
   return (
     <div style={{ marginBottom: rhythm(1) }}>
       <h2>Latest Post</h2>
       <PostWrapper>
-        <FeaturedPhotoWrapper>
-          <Link style={{ boxShadow: `none` }} to={post.fields.slug}>
-            <Image
-              fluid={post.frontmatter.photo.childImageSharp.fluid}
-              alt={post.frontmatter.photoDescription}
-            />
-          </Link>
-        </FeaturedPhotoWrapper>
-        <Content>
+        <FeaturedPhoto post={post} />
+        <article style={{ flex: 1 }}>
           <Link
             style={{
               display: 'block',
@@ -73,7 +78,7 @@ function LatestPost({ post }) {
             }}
             to={post.fields.slug}
           >
-            {post.frontmatter.title}
+            <h3 style={{ margin: 0 }}>{post.frontmatter.title}</h3>
           </Link>
           <Abstract
             dangerouslySetInnerHTML={{
@@ -85,7 +90,7 @@ function LatestPost({ post }) {
               Continue Reading
             </Link>
           </MobileCTA>
-        </Content>
+        </article>
       </PostWrapper>
       <hr
         style={{

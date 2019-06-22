@@ -2,14 +2,14 @@
 title: What even is a PWA?
 subtitle: TL;DR They're just best practices that maximize the value in every interaction.
 description: What are Progressive Web Apps (PWAs), and how do they solve for many of the challenges brands experience in user engagement accessibility, and utility? In this post, we’ll explore how and when PWAs are used, what characteristics define them, and most importantly, whether you should be considering a Progressive Web App for your own company’s needs.
-date: '2018-10-29T09:00:00'
 photo: ./alex-knight-211510.jpg
 photoDescription: A brick tower in Melbourne, Australia grows beneath a metal frame.
 photoCredit: Alex Knight
 photoCreditLink: https://unsplash.com/@agkdesign
+date: '2018-10-29T09:00:00-04:00'
 ---
 
-_This content also appears on [skoookum.com](https://skookum.com/blog/getting-started-with-progressive-web-apps) and was co-authored by [Tirell Mckinnon](https://twitter.com/TirellMckinnon)_
+_This content also appears on [skookum.com](https://skookum.com/blog/getting-started-with-progressive-web-apps) and was co-authored by [Tirell Mckinnon](https://twitter.com/TirellMckinnon)_
 
 What are Progressive Web Apps (PWAs), and how do they solve for many of the challenges brands experience in user engagement, accessibility, and utility? In this post, we’ll explore how and when PWAs are used, what characteristics define them, and most importantly, whether you should be considering a Progressive Web App for your own company’s needs.
 

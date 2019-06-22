@@ -21,6 +21,39 @@ const Subtitle = styled.h2`
   font-size: 1rem;
   color: rgb(125, 125, 125);
 `
+function FeaturedPhoto({ post }) {
+  if (!post.frontmatter.photo) {
+    return null
+  }
+
+  return (
+    <div>
+      <Image
+        fluid={post.frontmatter.photo.childImageSharp.fluid}
+        alt={post.frontmatter.photoDescription}
+      />
+      <p
+        style={{
+          color: 'rgb(125, 125, 125)',
+          fontSize: '0.75rem',
+          marginTop: '1rem',
+          textAlign: 'center',
+        }}
+      >
+        <em>
+          Credit:{' '}
+          <a
+            href={post.frontmatter.photoCreditLink}
+            target="_blank"
+            alt={`See more photos from ${post.frontmatter.photoCredit}`}
+          >
+            {post.frontmatter.photoCredit}
+          </a>
+        </em>
+      </p>
+    </div>
+  )
+}
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -30,80 +63,61 @@ class BlogPostTemplate extends React.Component {
     return (
       <div>
         <Layout location={this.props.location} title={siteTitle} isBlogEntry>
-          <SEO
-            title={post.frontmatter.title}
-            description={post.frontmatter.description || post.excerpt}
-          />
-          <ContentWrapper>
-            <Title>{post.frontmatter.title}</Title>
-            <Subtitle>{post.frontmatter.subtitle}</Subtitle>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(2),
-                marginTop: rhythm(-1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </ContentWrapper>
-          <Image
-            fluid={post.frontmatter.photo.childImageSharp.fluid}
-            alt={post.frontmatter.photoDescription}
-          />
-
-          <ContentWrapper>
-            <p
-              style={{
-                color: 'rgb(125, 125, 125)',
-                fontSize: '0.75rem',
-                marginTop: '1rem',
-                textAlign: 'center',
-              }}
-            >
-              <em>
-                Credit:{' '}
-                <a
-                  href={post.frontmatter.photoCreditLink}
-                  target="_blank"
-                  alt={`See more photos from ${post.frontmatter.photoCredit}`}
-                >
-                  {post.frontmatter.photoCredit}
-                </a>
-              </em>
-            </p>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <hr
-              style={{
-                marginBottom: rhythm(1),
-              }}
+          <article>
+            <SEO
+              title={post.frontmatter.title}
+              description={post.frontmatter.description || post.excerpt}
             />
-            <ul
-              style={{
-                display: `flex`,
-                flexWrap: `wrap`,
-                justifyContent: `space-between`,
-                listStyle: `none`,
-                padding: 0,
-              }}
-            >
-              <li>
-                {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </Link>
-                )}
-              </li>
-              <li>
-                {next && (
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
-                )}
-              </li>
-            </ul>
-          </ContentWrapper>
+            <ContentWrapper>
+              <Title>{post.frontmatter.title}</Title>
+              <Subtitle>{post.frontmatter.subtitle}</Subtitle>
+              <time
+                style={{
+                  ...scale(-1 / 5),
+                  display: `block`,
+                  marginBottom: rhythm(2),
+                  marginTop: rhythm(-1),
+                }}
+                datetime={post.frontmatter.date}
+              >
+                {post.frontmatter.datestring}
+              </time>
+            </ContentWrapper>
+            <FeaturedPhoto post={post} />
+
+            <ContentWrapper>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              <hr
+                style={{
+                  marginBottom: rhythm(1),
+                }}
+              />
+              <ul
+                style={{
+                  display: `flex`,
+                  flexWrap: `wrap`,
+                  justifyContent: `space-between`,
+                  listStyle: `none`,
+                  padding: 0,
+                }}
+              >
+                <li>
+                  {previous && (
+                    <Link to={previous.fields.slug} rel="prev">
+                      ← {previous.frontmatter.title}
+                    </Link>
+                  )}
+                </li>
+                <li>
+                  {next && (
+                    <Link to={next.fields.slug} rel="next">
+                      {next.frontmatter.title} →
+                    </Link>
+                  )}
+                </li>
+              </ul>
+            </ContentWrapper>
+          </article>
         </Layout>
         <Footer />
       </div>
@@ -129,7 +143,8 @@ export const pageQuery = graphql`
         title
         subtitle
         description
-        date(formatString: "MMMM DD, YYYY")
+        datestring: date(formatString: "MMMM DD, YYYY")
+        date
         photo {
           childImageSharp {
             fluid(maxWidth: 1024, maxHeight: 500) {
