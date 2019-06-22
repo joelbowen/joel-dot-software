@@ -39,10 +39,11 @@ const WatchCTA = styled.strong`
   }
 `
 const FeaturedText = styled.h3`
+  color: #000;
   display: -webkit-box;
   font-size: ${rhythm(3 / 4)};
   font-family: Lato;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.5;
   margin: 0;
   overflow: hidden;
