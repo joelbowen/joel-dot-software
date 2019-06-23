@@ -5,6 +5,7 @@ photo: './its-graphql-time-2019.jpg'
 photoDescription: Joel Bowen with Sashko Stubailo and Lee Byron at GraphQL Conf 2019
 photoCredit: Sergio Pellegrini
 photoCreditLink: https://www.instagram.com/iamsergiop
+keywords: GraphQL,GraphQL Conf,Apollo,Federation,Prisma,Honeypot,Schema First,SDL,Code First,Scaling GraphQL
 date: '2019-06-22'
 ---
 
@@ -61,7 +62,7 @@ As far as arguments go, this one seems to be _incredibly_ low-key within the Gra
 
 GraphQL Conf organizers did a great job of giving space to both camps to share their reasoning, but the energy seems to be coalescing around code first with caveats to your organization's needs.
 
-## It is still about people
+## GraphQL is still about people
 
 Much like the importance of type safety, there was a pervasive theme around collaboration and the ability to create a shared language between teams. I particularly enjoyed [Jon Wong](https://twitter.com/jnwng)'s talk about evolving the graph and [Bernardo Raposo](https://twitter.com/braposo)'s talk where he extolled the importance of human-first API design.
 

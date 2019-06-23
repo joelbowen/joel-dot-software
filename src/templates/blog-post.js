@@ -78,6 +78,11 @@ class BlogPostTemplate extends React.Component {
               imageUrl={`https://joel.software${
                 post.frontmatter.photo.publicURL
               }`}
+              keywords={
+                post.frontmatter.keywords
+                  ? post.frontmatter.keywords.split(',')
+                  : ''
+              }
             />
             <ContentWrapper>
               <Title>{post.frontmatter.title}</Title>
@@ -155,6 +160,7 @@ export const pageQuery = graphql`
         description
         datestring: date(formatString: "MMMM DD, YYYY")
         date
+        keywords
         photo {
           childImageSharp {
             fluid(maxWidth: 1024, maxHeight: 500) {
