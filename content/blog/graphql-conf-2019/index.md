@@ -1,6 +1,6 @@
 ---
 title: Top Takeaways from GraphQL Conf 2019
-description: I have 10 hours to kill on a train to Switzerland, 3 pages worth of notes, very little sleep, and plenty of excitement about GraphQL so here are my takeaways from GraphQL Conf (and Prisma Day) less than 24 hours later.
+description: I have 10 hours on a train, 3 days worth of notes and very little sleep but plenty of excitement about GraphQL so here are my takeaways from GraphQL Conf 2019 and the first ever Prisma Day.
 photo: './its-graphql-time-2019.jpg'
 photoDescription: Joel Bowen with Sashko Stubailo and Lee Byron at GraphQL Conf 2019
 photoCredit: Sergio Pellegrini
