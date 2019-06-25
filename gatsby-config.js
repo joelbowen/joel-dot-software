@@ -1,8 +1,10 @@
+const description = require('./content/aboutMe').join(' ')
+
 module.exports = {
   siteMetadata: {
     title: `Joel.Software`,
     author: `Joel Bowen`,
-    description: `A personal site`,
+    description,
     siteUrl: `https://joel.software`,
     social: {
       twitter: `JoelSocialized`,

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { rhythm } from '../utils/typography'
+import aboutMeList from '../../content/aboutMe'
 
 const Intro = styled.h2`
   text-align: center;
@@ -9,6 +10,7 @@ const Intro = styled.h2`
   line-height: 2;
   margin-bottom: ${rhythm(2.75)};
 `
+
 function Bio() {
   return (
     <div
@@ -21,11 +23,8 @@ function Bio() {
       }}
     >
       <Intro>
-        <strong style={{ display: 'block' }}>
-          I am passionate about people,
-        </strong>
-        I love scalability, great user experience, thoughtful security, and
-        elegant design patterns.
+        <strong style={{ display: 'block' }}>{aboutMeList[0]}</strong>
+        {aboutMeList[1]}
       </Intro>
       <hr
         style={{
