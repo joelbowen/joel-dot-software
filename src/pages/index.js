@@ -32,6 +32,7 @@ class BlogIndex extends React.Component {
           <SEO
             title="About Me"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+            imageUrl={`https://joel.software${data.avatar.publicURL}`}
           />
           <Bio />
           <Featured />
@@ -57,6 +58,9 @@ export const pageQuery = graphql`
       siteMetadata {
         title
       }
+    }
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      publicURL
     }
   }
 `
