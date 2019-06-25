@@ -46,6 +46,10 @@ function FeaturedPhoto({ post }) {
           textAlign: 'center',
         }}
       >
+        {post.frontmatter.photoDescription && (
+          <em>{post.frontmatter.photoDescription}</em>
+        )}
+        <br />
         {post.frontmatter.photoCredit && (
           <em>
             Credit:{' '}
