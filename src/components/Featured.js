@@ -30,6 +30,15 @@ const FeaturedItemWrapper = styled.div`
   flex: 0 0 33%;
   max-height: 200px;
   max-width: 200px;
+  padding: 2px;
+
+  @media (min-width: 800px) {
+    padding: 0 0 0 10px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: ${rhythm(2 / 3)};
+  }
 `
 
 const WatchCTA = styled.strong`
@@ -46,7 +55,7 @@ const FeaturedText = styled.h3`
   font-weight: 300;
   line-height: 1.5;
   margin: 0;
-  overflow: hidden;
+  1overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
