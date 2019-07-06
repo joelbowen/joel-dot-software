@@ -68,7 +68,7 @@ function Footer({ instagram, twitter, linkedin, showGitHub }) {
           textAlign: 'center',
         }}
       >
-        <Link to="privacy-policy">Privacy Policy</Link>
+        <Link to="/privacy-policy">Privacy Policy</Link>
       </div>
       <BackTopTop />
     </footer>
