@@ -14,6 +14,11 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
+        <script
+          type="text/javascript"
+          src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js"
+          data-dojo-config="usePlainJson: true, isDebug: false"
+        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
