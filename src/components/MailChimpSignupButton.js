@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import Loader from 'react-loading-overlay'
 
@@ -35,25 +35,32 @@ function openMailChimpSignup() {
   })
 }
 
+const observerCallback = setShowLoader => (mutationsList, observer) => {
+  const removedNode = mutationsList[0]
+    ? mutationsList[0].removedNodes[0]
+    : false
+  // Verify the removed node matches the MC form id pattern
+  // Remove the loading overlay when the form is closed
+  if (removedNode && isMCForm.test(removedNode.id)) {
+    setShowLoader(false)
+    observer.disconnect()
+  }
+}
+
 function MailChimpSignupButton(props) {
   const [showLoader, setShowLoader] = useState(false)
-  const body = document.getElementsByTagName('body')
+  let observer, body
 
-  // Setup an observer that removes the loading overlay when the form is closed
-  const observer = new MutationObserver(function(event) {
-    const removedNode = event[0] ? event[0].removedNodes[0] : false
-
-    // Verify the removed node matches the MC form id pattern
-    if (removedNode && isMCForm.test(removedNode.id)) {
-      setShowLoader(false)
-      observer.disconnect()
-    }
+  useEffect(() => {
+    body = document.getElementsByTagName('body')
+  })
+  useEffect(() => {
+    observer = new MutationObserver(observerCallback(setShowLoader))
   })
 
   function showForm() {
     setShowLoader(true)
     openMailChimpSignup()
-
     // Start observing the body element for dom changes
     observer.observe(body[0], { childList: true })
   }
