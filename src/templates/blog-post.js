@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale, sansFont } from '../utils/typography'
+import MailChimpSignupButton from '../components/MailChimpSignupButton'
 import Footer from '../components/Footer'
 
 const ContentWrapper = styled.div`
@@ -107,14 +108,16 @@ class BlogPostTemplate extends React.Component {
 
             <ContentWrapper>
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              <MailChimpSignupButton cta="Click here to get notified when I post new content" />
               <ul
                 style={{
+                  background: '#7AAB4F20',
                   display: `flex`,
                   flexWrap: `wrap`,
                   justifyContent: `space-between`,
                   listStyle: `none`,
-                  padding: 0,
-                  margin: `${rhythm(3)} 0 0 0`,
+                  padding: '2rem',
+                  margin: `${rhythm(1)} 0`,
                 }}
               >
                 {previous && (
