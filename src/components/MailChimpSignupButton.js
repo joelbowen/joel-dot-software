@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
+import Loader from 'react-loading-overlay'
 
 const LinkButton = styled.button`
   background-color: transparent;
@@ -11,6 +12,8 @@ const LinkButton = styled.button`
   margin: 0;
   padding: 0;
 `
+
+const isMCForm = /(PopupSignupForm)\w+/
 
 function openMailChimpSignup() {
   // By default, the popup will not show if user has closed it before
@@ -33,7 +36,46 @@ function openMailChimpSignup() {
 }
 
 function MailChimpSignupButton(props) {
-  return <LinkButton onClick={openMailChimpSignup}>{props.cta}</LinkButton>
+  const [showLoader, setShowLoader] = useState(false)
+  const body = document.getElementsByTagName('body')
+
+  // Setup an observer that removes the loading overlay when the form is closed
+  const observer = new MutationObserver(function(event) {
+    const removedNode = event[0] ? event[0].removedNodes[0] : false
+
+    // Verify the removed node matches the MC form id pattern
+    if (removedNode && isMCForm.test(removedNode.id)) {
+      setShowLoader(false)
+      observer.disconnect()
+    }
+  })
+
+  function showForm() {
+    setShowLoader(true)
+    openMailChimpSignup()
+
+    // Start observing the body element for dom changes
+    observer.observe(body[0], { childList: true })
+  }
+
+  return (
+    <div style={{ display: 'inline-block' }}>
+      <Loader
+        active={showLoader}
+        spinner
+        fadeSpeed={0}
+        styles={{
+          overlay: base => ({
+            ...base,
+            position: 'fixed',
+            background: 'rgba(0, 0, 0, 0.2)',
+          }),
+        }}
+      >
+        <LinkButton onClick={showForm}>{props.cta}</LinkButton>
+      </Loader>
+    </div>
+  )
 }
 
 export default MailChimpSignupButton
