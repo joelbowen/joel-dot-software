@@ -85,7 +85,7 @@ class BlogPostTemplate extends React.Component {
               keywords={
                 post.frontmatter.keywords
                   ? post.frontmatter.keywords.split(',')
-                  : ''
+                  : undefined
               }
             />
             <ContentWrapper>
