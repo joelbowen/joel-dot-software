@@ -36,12 +36,11 @@ function openMailChimpSignup() {
 }
 
 const observerCallback = setShowLoader => (mutationsList, observer) => {
-  const removedNode = mutationsList[0]
-    ? mutationsList[0].removedNodes[0]
-    : false
-  // Verify the removed node matches the MC form id pattern
-  // Remove the loading overlay when the form is closed
-  if (removedNode && isMCForm.test(removedNode.id)) {
+  console.log(mutationsList)
+  const addedNode = mutationsList[0] ? mutationsList[0].addedNodes[0] : false
+  // Verify the added node matches the MC form id pattern
+  // Remove the loading overlay
+  if (addedNode && isMCForm.test(addedNode.id)) {
     setShowLoader(false)
     observer.disconnect()
   }
