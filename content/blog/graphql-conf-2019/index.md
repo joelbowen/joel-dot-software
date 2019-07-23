@@ -27,16 +27,16 @@ In no particular order; a few things that were discussed, showcased, released, o
 - **Prisma 2: [Photon](https://github.com/prisma/photonjs) & [Lift](https://github.com/prisma/lift)**
 - **Serverless is stateful! Functions maintain state between executions of the same instance**
 
-  - _Stateful Serverless Applications - [Guillermo Rauch](https://twitter.com/rauchg) (30min, @ Prisma Day)_
+  - _[Stateful Serverless Applications](https://youtu.be/lUyln5m6AhY) - [Guillermo Rauch](https://twitter.com/rauchg) (30min, @ Prisma Day)_
 
 - **[Calvin: Fast Distributed Transactions for Partitioned Database Systems](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf)**
 - **[FaunaDB](https://fauna.com/)** - Implements Calvin
 
-  - _Serverless Data - [Evan Weaver](https://twitter.com/evan) (30min, @ Prisma Day)_
+  - _[Serverless Data](https://youtu.be/zWY2A43IQKI) - [Evan Weaver](https://twitter.com/evan) (30min, @ Prisma Day)_
 
 - **[CodeSandbox.io](https://codesandbox.io/)** - I had no idea it was so easy to [import from GitHub](https://codesandbox.io/docs/importing#import-from-github)!
 
-  - _Bringing Databases into Cloud IDEs: CodeSandbox + Prisma = ❤️- [Sara Vieira](https://twitter.com/NikkitaFTW) & [Ives van Hoorne](https://twitter.com/compuives) (30min @ Prisma Day)_
+  - _[Bringing Databases into Cloud IDEs: CodeSandbox + Prisma = ❤️](https://youtu.be/QR6G5x1dCnk)- [Sara Vieira](https://twitter.com/NikkitaFTW) & [Ives van Hoorne](https://twitter.com/compuives) (30min @ Prisma Day)_
 
 - **Get your types! [GraphQL Nexus](https://nexus.js.org/), [TypeGraphQL](https://typegraphql.ml/), [graphql-compose](https://graphql-compose.github.io/)**
 
@@ -94,10 +94,6 @@ Many languages and technologies were represented in the talks, and by attendees,
 
 Notably for me, between Prisma Day (more on this below) and GraphQL Conf it seemed clear that TypeScript is continuing to grow in adoption and general popularity so that it no longer seems to carry as much of a stigma as I have perceived in the past.
 
-`youtube:https://www.youtube.com/embed/6MDZjVOy2zw`
-
-▶&nbsp;&nbsp;_Moving Fast with End-to-End Type-Safety - [Siegfried Puchbauer](https://twitter.com/ziegfri3d) (25min @ Prisma Day)_
-
 ## Schema (SDL) first v.s. code first
 
 As far as arguments go, this one seems to be _incredibly_ low-key within the GraphQL community. Maybe it's just because the GraphQL community is healthy, or people don't see this as a topic worthy of dividing. Whatever the reason, while there was plenty of clearly stated positions on both sides, it seemed genuine.
@@ -132,9 +128,9 @@ Another fantastic talk was from [Guillermo Rauch](https://twitter.com/rauchg), C
 
 I've had only been partially aware of Prisma from looking into GraphCool in the past, and I have not used Prisma in production. But I appreciated the intimate feel of Prisma Day along with the depth quality of the content – I'll be looking for an opportunity to add Prisma tools into my stack soon to learn more about them.
 
-▶&nbsp;&nbsp;_Serverless Data - [Evan Weaver](https://twitter.com/evan) (30min, @ Prisma Day)_  
-▶&nbsp;&nbsp;_Stateful Serverless Applications - [Guillermo Rauch](https://twitter.com/rauchg) (30min, @ Prisma Day)_  
-▶&nbsp;&nbsp;_Evolution of Data Access in the Enterprise - Past, Present, Future - [Mark LaRosa](https://www.linkedin.com/in/mlarosa) (30min, @ Prisma Day)_
+`youtube:https://www.youtube.com/embed/zWY2A43IQKI`
+`youtube:https://www.youtube.com/embed/lUyln5m6AhY`  
+`youtube:https://www.youtube.com/embed/0orY8a-660g`
 
 ## Conclusion
 
