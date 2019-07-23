@@ -59,12 +59,6 @@ In no particular order; a few things that were discussed, showcased, released, o
 
   - _[Apollo Schema Federation](https://youtu.be/Uw-Z1aUQvgg) - [James Baxley](https://twitter.com/jbaxleyiii) (30min)_
 
----
-
-_I intend to update this page with links to the talks I've referenced when they are available._
-
----
-
 ## GraphQL is a small part of the stack, and that's good
 
 GraphQL was not _designed_ to solve many important server architecture concerns.
@@ -124,7 +118,7 @@ However, they all handled this gracefully, and by lunchtime there were surprisin
 
 The latter half of the day only moderately cooled from the morning's tomfoolery and began to skew more towards trends and practical application interspersed with some genuinely compelling overviews like [Evan Weaver](https://twitter.com/evan), CEO at [Fauna](https://fauna.com/), walking through FaunaDB's place in a _modern_ stack with Serverless. I cannot wait to learn more about Fauna and try it out on my own time.
 
-Another fantastic talk was from [Guillermo Rauch](https://twitter.com/rauchg), CEO at ZEIT and creator of [socket.io](https://socket.io/) and [mongoose](https://mongoosejs.com/) among other things, who demoed a serverless instance that played Pokémon from an emulator one frame at a time taking advantage of Lambda's persisting state between function executions, a reality that is not immediately clear when developing for serverless. Hopefully, this talk will be posted soon!
+Another fantastic talk was from [Guillermo Rauch](https://twitter.com/rauchg), CEO at ZEIT and creator of [socket.io](https://socket.io/) and [mongoose](https://mongoosejs.com/) among other things, who demoed a serverless instance that played Pokémon from an emulator one frame at a time taking advantage of Lambda's persisting state between function executions, a reality that is not immediately clear when developing for serverless.
 
 I've had only been partially aware of Prisma from looking into GraphCool in the past, and I have not used Prisma in production. But I appreciated the intimate feel of Prisma Day along with the depth quality of the content – I'll be looking for an opportunity to add Prisma tools into my stack soon to learn more about them.
 
