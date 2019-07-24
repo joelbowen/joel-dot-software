@@ -96,8 +96,8 @@ const MobileNavBtn = styled.button`
   display: none; // @TODO mobile menu is not ready yet
   font-size: 0.75rem;
 `
-function Navigation({ title, isBlogEntry }) {
-  if (title === '404' || isBlogEntry) {
+function Navigation({ title, hideNav }) {
+  if (title === '404' || hideNav) {
     return (
       <Nav style={{ justifyContent: 'flex-end' }}>
         <a href="/">Home</a>
@@ -114,7 +114,7 @@ function Navigation({ title, isBlogEntry }) {
   )
 }
 
-function Header({ avatar, site, title, isBlogEntry }) {
+function Header({ avatar, site, title, hideNav }) {
   return (
     <HeaderWrapper>
       <Container>
@@ -150,7 +150,7 @@ function Header({ avatar, site, title, isBlogEntry }) {
             </Link>
           </h1>
           <MobileNavBtn>MENU</MobileNavBtn>
-          <Navigation title={title} isBlogEntry={isBlogEntry} />
+          <Navigation title={title} hideNav={hideNav} />
         </Content>
       </Container>
     </HeaderWrapper>

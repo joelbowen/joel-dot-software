@@ -25,7 +25,7 @@ const Body = styled.div`
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children, isBlogEntry } = this.props
+    const { location, title, children, hideNav } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
 
     return (
@@ -37,7 +37,7 @@ class Layout extends React.Component {
         }}
       >
         <Global styles={globalStyles} />
-        <Header location={location} title={title} isBlogEntry={isBlogEntry} />
+        <Header location={location} title={title} hideNav={hideNav} />
         <Body>{children}</Body>
       </div>
     )
