@@ -8,7 +8,7 @@ function TalkContent({ data }) {
     <Layout hideNav>
       <SEO
         title="Scaling Your Team with GraphQL: Why Relationships Matter"
-        description="GraphQL Conf 2019 just wrapped up in Berlin where I was fortunate to hear meet thoughtful leaders on these and other subjects related to GraphQL. So, whether you're brand new to GraphQL or have an active project using GraphQL, I'd like to share some of what I have learned so you can be productive with GraphQL and your teams - while keeping relationships at the center of our work. "
+        description="Today we’re going to talk about scaling your team with GraphQL, and why relationships matter at all points in the process - both the relationships within your data, and the relationships within your organization and teams. Much of this content comes from my own recent learnings, and specifically from attending GraphQL Conf 2019 which just wrapped up in Berlin."
         imageUrl={`https://joel.software${data.featuredPhoto.publicURL}`}
         keywords={[
           'GraphQL',
@@ -76,8 +76,8 @@ function TalkContent({ data }) {
           why relationships matter at all points in the process - both the
           relationships within your data, and the relationships within your
           organization and teams. Much of this content comes from my own recent
-          learnings, and specifically from GraphQL Conf 2019 which just wrapped
-          up in Berlin.
+          learnings, and specifically from attending GraphQL Conf 2019 which
+          just wrapped up in Berlin.
         </p>
         <p />
         <p>
