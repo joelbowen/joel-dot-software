@@ -9,6 +9,12 @@ const FeaturedWrapper = styled.div`
 
   @media (min-width: 620px) {
     display: flex;
+    margin-left: -4px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: -100px;
+    margin-right: -100px;
   }
 `
 
@@ -32,12 +38,9 @@ const FeaturedItemWrapper = styled.div`
   max-width: 200px;
   padding: 2px;
 
-  @media (min-width: 800px) {
-    padding: 0 0 0 10px;
-  }
-
   @media (min-width: 1024px) {
     padding-left: ${rhythm(2 / 3)};
+    padding: 0 0 0 10px;
   }
 `
 
