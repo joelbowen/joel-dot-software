@@ -8,7 +8,7 @@ import MailChimpSignupButton from '../../../components/MailChimpSignupButton'
 function TalkContent({ data }) {
   return (
     <div>
-      <Layout hideNav>
+      <Layout>
         <SEO
           title="Scaling Your Team with GraphQL: Why Relationships Matter"
           description="Today we’re going to talk about scaling your team with GraphQL, and why relationships matter at all points in the process - both the relationships within your data, and the relationships within your organization and teams. Much of this content comes from my own recent learnings, and specifically from attending GraphQL Conf 2019 which just wrapped up in Berlin."

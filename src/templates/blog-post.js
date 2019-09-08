@@ -75,7 +75,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div>
-        <Layout location={this.props.location} title={siteTitle} hideNav>
+        <Layout location={this.props.location} title={siteTitle}>
           <Post>
             <SEO
               title={post.frontmatter.title}
