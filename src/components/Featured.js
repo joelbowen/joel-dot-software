@@ -13,8 +13,7 @@ const FeaturedWrapper = styled.div`
   }
 
   @media (min-width: 1024px) {
-    margin-left: -100px;
-    margin-right: -100px;
+    margin: 0 calc(calc(750px - 1024px) / 2) ${rhythm(2.75)};
   }
 `
 
@@ -39,7 +38,6 @@ const FeaturedItemWrapper = styled.div`
   padding: 2px;
 
   @media (min-width: 1024px) {
-    padding-left: ${rhythm(2 / 3)};
     padding: 0 0 0 10px;
   }
 `
