@@ -44,7 +44,7 @@ const GitHubLink = () => (
 
 function Footer({ instagram, twitter, linkedin, showGitHub }) {
   return (
-    <footer>
+    <footer style={{ marginTop: 'auto' }}>
       <SocialIcons>
         <a href="https://www.instagram.com/joelbowen/" target="_blank">
           <img src={instagram.publicURL} alt="Instragram Logo" />

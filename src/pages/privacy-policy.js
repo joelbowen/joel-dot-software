@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 
 function PrivacyPolicy({ data }) {
@@ -7,9 +8,11 @@ function PrivacyPolicy({ data }) {
     __html: data.allIubendaDocument.edges[0].node.content,
   }
   return (
-    <Layout>
-      <div dangerouslySetInnerHTML={html} />
-    </Layout>
+    <PageWrapper>
+      <Layout>
+        <div dangerouslySetInnerHTML={html} style={{ marginTop: '1rem' }} />
+      </Layout>
+    </PageWrapper>
   )
 }
 

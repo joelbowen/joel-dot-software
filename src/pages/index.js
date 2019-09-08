@@ -2,8 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
-import Bio from '../components/Bio'
+import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
+import Bio from '../components/Bio'
 import SEO from '../components/seo'
 import Featured from '../components/Featured'
 import Skills from '../components/Skills'
@@ -23,12 +24,12 @@ const ContentWrapper = styled.div`
 
 class BlogIndex extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, location } = this.props
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <div>
-        <Layout location={this.props.location} title={siteTitle}>
+      <PageWrapper>
+        <Layout location={location} title={siteTitle}>
           <SEO
             title="About Me"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -45,7 +46,7 @@ class BlogIndex extends React.Component {
           </ContentWrapper>
         </Layout>
         <Footer showGitHub />
-      </div>
+      </PageWrapper>
     )
   }
 }
