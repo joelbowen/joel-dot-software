@@ -1,102 +1,16 @@
 import { StaticQuery, graphql, Link } from 'gatsby'
-import Image from 'gatsby-image'
-import styled from '@emotion/styled'
-
 import { rhythm } from '../utils/typography'
-
-const Abstract = styled.p`
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
-
-  @media (min-width: 620px) {
-    -webkit-line-clamp: 4;
-    margin: 0;
-  }
-`
-
-const PostWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: 620px) {
-    flex-direction: row;
-  }
-`
-
-const FeaturedPhotoWrapper = styled.div`
-  flex: 1;
-  margin-bottom: ${rhythm(1)};
-  margin-right: ${rhythm(1)};
-
-  @media (min-width: 620px) {
-    margin-bottom: ${rhythm(1 / 2)};
-    max-width: 265px;
-  }
-`
-
-const MobileCTA = styled.p`
-  margin-top: -${rhythm(1 / 2)};
-  text-align: right;
-  @media (min-width: 620px) {
-    display: none;
-  }
-`
-
-function FeaturedPhoto({ post }) {
-  if (!post.frontmatter.photo) {
-    return null
-  }
-
-  return (
-    <FeaturedPhotoWrapper>
-      <Link style={{ boxShadow: `none` }} to={post.fields.slug}>
-        <Image
-          fluid={post.frontmatter.photo.childImageSharp.fluid}
-          alt={post.frontmatter.photoDescription}
-        />
-      </Link>
-    </FeaturedPhotoWrapper>
-  )
-}
+import Abstract from './BlogPost/Abstract'
 
 function LatestPost({ post }) {
   return (
     <div style={{ marginBottom: rhythm(1) }}>
       <h2>Latest Post</h2>
-      <PostWrapper>
-        <FeaturedPhoto post={post} />
-        <article style={{ flex: 1 }}>
-          <Link
-            style={{
-              display: 'block',
-              fontWeight: '800',
-              boxShadow: `none`,
-              marginBottom: rhythm(1 / 4),
-            }}
-            to={post.fields.slug}
-          >
-            <h3 style={{ margin: 0 }}>{post.frontmatter.title}</h3>
-          </Link>
-          <Abstract
-            dangerouslySetInnerHTML={{
-              __html: post.frontmatter.description || post.excerpt,
-            }}
-          />
-          <MobileCTA>
-            <Link style={{ boxShadow: `none` }} to={post.fields.slug}>
-              Continue Reading
-            </Link>
-          </MobileCTA>
-        </article>
-      </PostWrapper>
-      <hr
-        style={{
-          marginBottom: rhythm(1.5),
-        }}
-      />
+      <Abstract post={post} />
+      <div style={{ margin: '1rem 0', textAlign: 'right', fontSize: '14px' }}>
+        <Link to="/blog">SEE ALL POSTS</Link>
+      </div>
+      <hr />
     </div>
   )
 }
