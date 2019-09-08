@@ -2,7 +2,6 @@ import React from 'react'
 import { rhythm } from '../utils/typography'
 import { Global, css } from '@emotion/core'
 import styled from '@emotion/styled'
-import Footer from './Footer'
 import Header from './Header'
 
 const globalStyles = css`
@@ -11,6 +10,14 @@ const globalStyles = css`
     strong {
       font-weight: 800;
     }
+  }
+
+  hr {
+    align-self: center;
+    border: 0.03rem solid rgb(225, 225, 225);
+    display: block;
+    height: 0;
+    margin: ${rhythm(1.5)} 0;
   }
 `
 const Body = styled.div`

@@ -25,10 +25,6 @@ const GitHubLink = () => (
   <div>
     <hr
       style={{
-        alignSelf: 'center',
-        border: '1px solid rgb(225, 225, 225)',
-        display: 'block',
-        height: 0,
         margin: '0 auto',
         maxWidth: '300px',
         width: '60%',
