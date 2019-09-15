@@ -11,17 +11,17 @@ date: '2019-09-14'
 
 Not long ago, in preparation for a software architecture and design phase at [Skookum](https://skookum.com), a coworker recommended I read [Design It!](https://www.oreilly.com/library/view/design-it/9781680502923/) by Michael Keeling. Ultimately, this turned into one of those rare experiences where a book feels perfectly timed, like a pointed guide to everything you were wrestling with during a particular season. Now, after concluding a few successful design and implementation phases with my team, I want to take a moment to write down some of the fundamental principles I have learned.
 
-## Intro: Why is architecture important, and how long shout it take?
+## Intro: Why is architecture important, and how long should it take?
 
 It can be challenging to articulate the importance of spending time architecting (or "systems engineering") rather than building. Unless your business has been keeping meticulous track of your software development lifecycles, you might be determining timelines based on gut feel rather than facts.
 
-Worse yet, determining how long to spend architecting can be even more loosely based on feelings. Fortunately, there is some great research on this subject that can help guide and direct these assessments, like [**The ROI of Systems Engineering: Some Quantitative Results  
+Fortunately, there is some great research on this subject that can help guide and direct these assessments, like [**The ROI of Systems Engineering: Some Quantitative Results  
 Boehm, Valerdi, 2007**](https://www.researchgate.net/publication/224579114_The_ROI_of_Systems_Engineering_Some_Quantitative_Results).
 
 ![Effects of software size on architecture and risk resolution time](https://d3i71xaburhd42.cloudfront.net/499a3c608498d907ba479b62641e676f82cbb833/7-Figure5-1.png)
 _Source: [Architected Agile Solutions for Software-Reliant Systems](https://www.semanticscholar.org/paper/Architected-Agile-Solutions-for-Software-Reliant-Boehm-Lane/499a3c608498d907ba479b62641e676f82cbb833)_
 
-Ultimately, this is how I think about factors. Estimate architectural timelines only after you have a general understanding of the proposed software's size. Stop architecting once you have answered the most important questions as related to the 6 principles I describe below.
+Ultimately, this is how I think about factors - estimate architectural timelines only after you have a general understanding of the proposed software's size and stop architecting once you have answered the most important questions as related to the 6 principles I describe below.
 
 If you have answered the critical questions, cataloged your concerns, resolved known risks or proposed mitigation strategies, and created an informative guide for your teams to take ownership over design and implementation, your work is done.
 
@@ -39,7 +39,7 @@ Additionally, thorough architecture documents provide a valuable outline or "pla
 
 > Gut feelings tell us something is wrong, or it could just be the Burrito you ate for lunch.
 
-Early on in the process, and consistently throughout the process of creating a technical architecture, it is essential to write down the things that are concerning and add them to a list, _Design It!_ refers to this as a "Catalog of Concerns."
+Early on in the process, and consistently throughout the process of creating a technical architecture, **it is essential to write down the things that are concerning and add them to a list**, _Design It!_ refers to this as a "Catalog of Concerns."
 
 Concerns or “gut feelings” help guide the initial straw-man architectures, and help refine or challenge existing beliefs. When evidence or further learnings invalidate these concerns, they can be resolved and documented for future readers.
 
@@ -53,7 +53,7 @@ Preserving ambiguity might be my favorite principle I learned from _Design It!_.
 
 Future designers and implementers will know more than what was identified during an architecture design phase. With that in mind, it's vital to weigh choices being proposed and evaluate whether or not each is necessary to make.
 
-Architecturally significant decisions, those that strongly influence the structure of the architecture, are often made during the architecture design phase. Defining ASRs is essential, but not every choice needs to be made before implementation begins. If it's a difficult choice that is easy to change later, it might not be architecturally significant and can be deferred to a downstream designer.
+Architecturally significant decisions, those that strongly influence the structure of the architecture, are often made during the architecture design phase. Defining ASRs is essential, but **not every choice needs to be made before implementation begins**. If it's a difficult choice that is easy to change later, it might not be architecturally significant and can be deferred to a downstream designer.
 
 **if it’s easy to change later then it is probably not an architecturally significant decision.**
 
@@ -73,7 +73,7 @@ A mature software architecture attempts to account for change by considering cou
 
 When creating software architectures, evaluating cost can end up being the last step in the process. Discovering you've proposed a costly solution means you have to _rework_ your architecture, which is only slightly better than having to rework your software.
 
-It is essential to gain at least a cursory understanding of the businesses tolerance and expectation for cost. With this knowledge, you can find ways to reduce the total cost of ownership throughout the process by thoroughly evaluating costs.
+**It is essential to gain at least a cursory understanding of the businesses tolerance and expectation for cost**. With this knowledge, you can find ways to reduce the total cost of ownership throughout the process by thoroughly evaluating costs.
 
 One method of reducing Total Cost of Ownership (TCO) may be selecting off-the-shelf solutions or partnering with vendors. These solutions can provide functionality and services that adhere to the businesses desired quality attributes.
 
@@ -89,7 +89,7 @@ Business-driven principles should change between architectures as each software 
 
 ## Conclusion
 
-Being asked to propose an architectural solution to a complex business problem can seem daunting. However, I have found that by following (and communicating) these principles while openly sharing concerns, and asking your stakeholders to join you in the mission of creating flexible and effective architectures, the process of defining and communicating a capable architecture can be more exhilarating than overwhelming.
+Being asked to propose an architectural solution to a complex business problem can seem daunting. However, I have found that **the process of defining and communicating a capable architecture can be more exhilarating than overwhelming** by following (and communicating) these principles while openly sharing concerns, and asking your stakeholders to join you in the mission of creating flexible and effective architectures.
 
 I believe these principles are helpful, but they only begin to scratch the surface of how to approach a complex architectural problem. I highly recommend picking up a copy of [Design It!](https://www.oreilly.com/library/view/design-it/9781680502923/) by Michael Keeling and developing your principles and processes that allow you to systematically and consistently navigate the changing waters of software architecture and design.
 
