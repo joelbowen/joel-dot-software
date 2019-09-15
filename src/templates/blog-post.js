@@ -80,14 +80,13 @@ class BlogPostTemplate extends React.Component {
             <SEO
               title={post.frontmatter.title}
               description={post.frontmatter.description || post.excerpt}
-              imageUrl={`https://joel.software${
-                post.frontmatter.photo.publicURL
-              }`}
+              imageUrl={`https://joel.software${post.frontmatter.photo.publicURL}`}
               keywords={
                 post.frontmatter.keywords
                   ? post.frontmatter.keywords.split(',')
                   : undefined
               }
+              tags={[['author', 'Joel Bowen'], ['date', post.frontmatter.date]]}
             />
             <ContentWrapper>
               <Title>{post.frontmatter.title}</Title>
