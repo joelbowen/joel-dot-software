@@ -7,15 +7,16 @@ photoCredit: Wes Hicks
 photoCreditLink: https://unsplash.com/@sickhews
 keywords: Application Architecture,Software Design,Engineering,Systems Engineering,ROI,Service Oriented,Principled Developer,Pragmatic Design,Software Lifecycle
 date: '2019-09-14'
+lastUpdated: '2020-07-31'
 ---
 
-Not long ago, in preparation for a software architecture and design phase at [Skookum](https://skookum.com), a coworker recommended I read [Design It!](https://www.oreilly.com/library/view/design-it/9781680502923/) by Michael Keeling. Ultimately, this turned into one of those rare experiences where a book feels perfectly timed, a pointed guide to everything you were wrestling with during a particular season. Now, after concluding a few successful design and implementation phases with my team, I want to take a moment to write down some of the fundamental principles I have learned.
+Not long ago, in preparation for a software architecture and design phase at [Skookum](https://skookum.com), my coworker and friend the incomparable [Glenn Goodrich](https://twitter.com/ruprict) recommended I read [Design It!](https://www.oreilly.com/library/view/design-it/9781680502923/) by Michael Keeling. Ultimately, this turned into one of those rare experiences where a book feels perfectly timed, a pointed guide to everything you were wrestling with during a particular season. Now, after concluding a few successful design and implementation phases with my team, I want to take a moment to write down some of the fundamental principles I have learned.
 
 ## Intro: Why is architecture important, and how long should it take?
 
 It can be challenging to articulate the importance of spending time architecting (or "systems engineering") rather than building. Unless your business has been keeping meticulous track of your software development lifecycles, you might be communicating timelines and value based on gut feel rather than facts.
 
-Fortunately, there is some great research on this subject that can help guide and direct these assessments, like [**The ROI of Systems Engineering: Some Quantitative Results  
+Fortunately, there is some great research on this subject that can help guide and direct these assessments, like [**The ROI of Systems Engineering: Some Quantitative Results
 Boehm, Valerdi, 2007**](https://www.researchgate.net/publication/224579114_The_ROI_of_Systems_Engineering_Some_Quantitative_Results).
 
 <p></p>
@@ -75,7 +76,7 @@ However, a mature software architecture attempts to account for change by consid
 
 > Understanding and reducing cost will reduce risk in all phases
 
-When creating software architectures, evaluating cost can end up being the last step in the process. However, discovering you've proposed a costly solution at the end of your architectural efforts means you have to _rework_ your architecture. Reworking your architecture is only slightly better than having to rework your software.
+When creating software architectures, evaluating cost too often ends up being the last step in the process. However, discovering you've proposed a costly solution at the end of your architectural efforts means you have to _rework_ your architecture. As we've discussed, reducing rework is a primary pinciple of archtecting, and reworking your architecture is only slightly better than having to rework your software.
 
 **It is essential to gain at least a cursory understanding of the businesses tolerance and expectation for cost**. With this knowledge, you can find ways to reduce the total cost of ownership throughout the process by thoroughly evaluating costs.
 
