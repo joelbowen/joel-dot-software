@@ -32,11 +32,11 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-embed-youtube",
+            resolve: 'gatsby-remark-embed-youtube',
             options: {
               width: 800,
-              height: 400
-            }
+              height: 400,
+            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -53,7 +53,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          '@weknow/gatsby-remark-twitter'
+          '@weknow/gatsby-remark-twitter',
         ],
       },
     },
