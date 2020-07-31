@@ -94,14 +94,29 @@ class BlogPostTemplate extends React.Component {
               <time
                 style={{
                   ...scale(-1 / 5),
-                  display: `block`,
+                  display: `inline-block`,
                   marginBottom: rhythm(2),
                   marginTop: rhythm(-1),
                 }}
                 dateTime={post.frontmatter.date}
               >
-                {post.frontmatter.datestring}
+                {post.frontmatter.dateString}
               </time>
+              {post.frontmatter.lastUpdated ? (
+                <time
+                  style={{
+                    ...scale(-2 / 5),
+                    display: `block`,
+                    marginBottom: rhythm(2),
+                    marginTop: rhythm(-2),
+                    color: '#bcc',
+                    fontStyle: 'italic',
+                  }}
+                  dateTime={post.frontmatter.lastUpdated}
+                >
+                  Updated: {post.frontmatter.lastUpdatedString}
+                </time>
+              ) : null}
             </ContentWrapper>
             <FeaturedPhoto post={post} />
 
@@ -164,8 +179,10 @@ export const pageQuery = graphql`
         title
         subtitle
         description
-        datestring: date(formatString: "MMMM DD, YYYY")
         date
+        dateString: date(formatString: "MMMM DD, YYYY")
+        lastUpdated
+        lastUpdatedString: lastUpdated(formatString: "MMMM DD, YYYY")
         keywords
         photo {
           childImageSharp {
