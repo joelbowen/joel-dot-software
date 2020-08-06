@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  plugins: ['react', 'jsx-a11y'],
+  plugins: ['react', 'jsx-a11y', '@babel/plugin-proposal-optional-chaining'],
   globals: {
     graphql: false,
   },
