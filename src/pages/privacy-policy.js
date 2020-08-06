@@ -5,7 +5,8 @@ import Layout from '../components/Layout'
 
 function PrivacyPolicy({ data }) {
   const html = {
-    __html: data.allIubendaDocument.edges[0].node.content,
+    __html: JSON.parse(data.allIubendaDocument.edges[0].node.content)
+      ?.privacyPolicy?.content,
   }
   return (
     <PageWrapper>
@@ -25,7 +26,6 @@ export const query = graphql`
         node {
           id
           content
-          title
         }
       }
     }
