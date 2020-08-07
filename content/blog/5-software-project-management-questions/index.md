@@ -84,10 +84,11 @@ The second side of client management is ensuring the work being produced is corr
 If you're waiting until demo day to show progress because you want your Don Draper moment, you're taking unnecessary risks and keeping your client further from work, weakening your partnership.
 
 Some clarifying questions may be:
-Does the client participate in review sessions?
-Does the client provide feedback to chunks of work delivered on a regular basis?
-Does the client express concerns about the progress, velocity, fidelity, or correctness of the work being submitted?
-Does the client see progress during a working cycle, or only after work has been completed?
+
+- Does the client participate in review sessions?
+- Does the client provide feedback to chunks of work delivered on a regular basis?
+- Does the client express concerns about the progress, velocity, fidelity, or correctness of the work being submitted?
+- Does the client see progress during a working cycle, or only after work has been completed?
 
 If you can answer this question and the clarifying questions with real data, you are ensuring **client acceptance**, which is critical to project success.
 
@@ -98,10 +99,11 @@ Budgets and allocation aren't just for LOB owners, teams need to understand the 
 A healthy team will have clear answers to this question with supporting data to make their case if they’re answering questions #2 and #3 with data supported by a process. If you aren't able to answer this question, go back to the earlier questions, and ensure that teams are well informed about expectations.
 
 Some clarifying questions may be:
-Are there gaps between the project plan, the definition of work, etc. and the team members who will own the functional work that has been identified?
-Does the team regularly communicate the project plan and any changes to the client?
-Does the team regularly communicate team member allocation and any changes to the client?
-Does the team give feedback or express concerns about their ability to deliver on the scope of work as they understand it?
+
+- Are there gaps between the project plan, the definition of work, etc. and the team members who will own the functional work that has been identified?
+- Does the team regularly communicate the project plan and any changes to the client?
+- Does the team regularly communicate team member allocation and any changes to the client?
+- Does the team give feedback or express concerns about their ability to deliver on the scope of work as they understand it?
 
 If you can answer this question and the clarifying questions with real data, you are **ensuring proper allocation**, which is critical to project success.
 
