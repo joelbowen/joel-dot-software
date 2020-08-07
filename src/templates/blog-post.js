@@ -52,7 +52,7 @@ function FeaturedPhoto({ post }) {
         <br />
         {post.frontmatter.photoCredit && (
           <em>
-            Credit:{' '}
+            Photo Credit:{' '}
             <a
               href={post.frontmatter.photoCreditLink}
               target="_blank"
