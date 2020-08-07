@@ -28,12 +28,17 @@ function SEO({ description, lang, keywords, title, imageUrl, author, tags }) {
             content: `website`,
           },
           {
+            name: `image`,
+            property: `og:image`,
+            content: imageUrl,
+          },
+          {
             name: `twitter:card`,
             content: `summary_large_image`,
           },
           {
             name: `twitter:creator`,
-            content: data.site.siteMetadata.author,
+            content: author || data.site.siteMetadata.author,
           },
           {
             name: `twitter:title`,
