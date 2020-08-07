@@ -3,7 +3,6 @@ import Layout from '../../../components/Layout'
 import SEO from '../../../components/seo'
 import { graphql } from 'gatsby'
 import Footer from '../../../components/Footer'
-import MailChimpSignupButton from '../../../components/MailChimpSignupButton'
 
 function TalkContent({ data }) {
   return (
@@ -817,7 +816,13 @@ function TalkContent({ data }) {
           <p />
           <p>98. Thank You</p>
           <p />
-          <MailChimpSignupButton cta="Click here to get notified when I post new content" />
+          <a
+            href="https://www.joel.pub/newsletter"
+            target="_blank"
+            alt="Sign up for my newsletter"
+          >
+            Click here to get notified when I post new content
+          </a>
           <p />
           <p />
           <hr />

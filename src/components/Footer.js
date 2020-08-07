@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import { rhythm } from '../utils/typography'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import BackTopTop from './BackToTop'
-import MailChimpSignupButton from './MailChimpSignupButton'
 
 const SocialIcons = styled.div`
   display: flex;
@@ -67,7 +66,13 @@ function Footer({ instagram, twitter, linkedin, showGitHub }) {
       >
         <Link to="/privacy-policy">Privacy Policy</Link>
         <span style={{ width: '10px', display: 'inline-block' }} />
-        <MailChimpSignupButton cta="Mailing List" />
+        <a
+          href="https://www.joel.pub/newsletter"
+          target="_blank"
+          alt="Sign up for my newsletter"
+        >
+          Mailing List
+        </a>
       </div>
       <BackTopTop />
     </footer>

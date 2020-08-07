@@ -6,7 +6,6 @@ import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale, sansFont } from '../utils/typography'
-import MailChimpSignupButton from '../components/MailChimpSignupButton'
 import Footer from '../components/Footer'
 
 const ContentWrapper = styled.div`
@@ -86,7 +85,10 @@ class BlogPostTemplate extends React.Component {
                   ? post.frontmatter.keywords.split(',')
                   : undefined
               }
-              tags={[['author', 'Joel Bowen'], ['date', post.frontmatter.date]]}
+              tags={[
+                ['author', 'Joel Bowen'],
+                ['date', post.frontmatter.date],
+              ]}
             />
             <ContentWrapper>
               <Title>{post.frontmatter.title}</Title>
@@ -122,7 +124,13 @@ class BlogPostTemplate extends React.Component {
 
             <ContentWrapper>
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              <MailChimpSignupButton cta="Click here to get notified when I post new content" />
+              <a
+                href="https://www.joel.pub/newsletter"
+                target="_blank"
+                alt="Sign up for my newsletter"
+              >
+                Click here to get notified when I post new content
+              </a>{' '}
               <ul
                 style={{
                   background: '#7AAB4F20',
