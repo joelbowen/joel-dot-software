@@ -10,9 +10,19 @@ keywords: Software Project Management,Software Development Process,SDLC,Pragmati
 
 Have you ever asked yourself, "are we doing software project management well?" or tried to evaluate your team's health but didn't know what data to assess? I have. These and other experiences got me thinking more about the most successful projects I've been part of as an IC or PM.
 
-In this post, I want to share the 5 questions I came up with that align with the methodologies and supporting processes I've fallen in love with on successful projects with healthy teams. The answers you and your team give are strong indicators of success and will elevate opportunities to improve project management processes.
+In this post, I want to share the 5 questions I came up with that align with the methodologies and supporting processes I've fallen in love with on successful projects with healthy teams. The answers you and your team give are strong indicators of success and will elevate opportunities to improve your project management processes so that you will:
 
-If you google "Software Project Management" you may find this entry on Wikipedia with the following definition from [Applied Software Project Management](https://web.archive.org/web/20150209011617/http://www.stellman-greene.com/aspm/):
+1. Understand the utilization of your teams
+2. Derive contextual projections for the proposed scope of work
+3. Manage client expectations
+4. Ensure client acceptance
+5. Ensure proper team allocation
+
+Not sure where to begin? Read on to learn 5 key questions that will help your team evaluate their project management processes and identify areas for improvement.
+
+--
+
+Google "Software Project Management" and you may find this entry on Wikipedia with the following definition from [Applied Software Project Management](https://web.archive.org/web/20150209011617/http://www.stellman-greene.com/aspm/):
 
 > Software project management is an art and science of planning and leading software projects.[[1]](https://en.wikipedia.org/wiki/Software_project_management#cite_note-Stellman05-1) It is a sub-discipline of [project management](https://en.wikipedia.org/wiki/Project_management) in which [software](https://en.wikipedia.org/wiki/Software) projects are planned, implemented, monitored, and controlled.
 
@@ -24,7 +34,7 @@ Honestly, I don't want to talk about those things, at least not directly, becaus
 
 **Let's answer this question: How can you stand before your leaders and your teams and show how work is being completed, when work will be complete, and whether or not it is the correct work?**
 
-I believe there are five questions every healthy software project can answer with **data and consistent processes** to prove each answer. If you aren't able to answer these questions, talk with your teams, and discuss what processes you can institute.
+I believe there are five questions every healthy software project team can answer with **data and consistent processes** to prove each answer. If you aren't able to answer these questions, talk with your teams, and discuss what processes you can institute.
 
 _Heads-up: A significant portion of my experience is derived from client services. The terminology I use is "team/client". However, I think these concepts apply whether your language is more "team/business", or even "we/they". Either way, real user feedback is an assumed part of the software project management process described below._
 
@@ -32,7 +42,7 @@ _Heads-up: A significant portion of my experience is derived from client service
 
 The wording of this question is important: how is the team able to use their time? The question assumes the team wants to use their time well and asks whether they can achieve their goals.
 
-A good software project manager should clearly show how the team has been able to use their time. This is only possible if there is a consistent process in place and a healthy degree of trust between the team and the project manager.
+A good software project manager should clearly show how the team has been able to use their time. This is only possible if there is a consistent and effective process in place with a healthy degree of trust between the team and the project manager.
 
 Some clarifying questions may be:
 
@@ -43,7 +53,7 @@ Some clarifying questions may be:
 
 If you can answer this question and the clarifying questions with real data, you understand the **utilization** of your teams.
 
-## Question #2: How well does the team understand the proposed scope of work?
+## Question #2: How well does the team understand the proposed scope of work and how it enables the client's business goals?
 
 Healthy and high performing teams pursue understanding the scope of their work well enough to optimize their time, processes, and the fidelity of deliverables to achieve the larger project goals.
 
@@ -109,7 +119,7 @@ If you can answer this question and the clarifying questions with real data, you
 
 ## Conclusion
 
-The way you and your teams answer these 5 questions is a strong indicator of their project's health and the likelihood of achieving an acceptable outcome for all stakeholders.
+The way you and your teams answer these 5 questions is a strong indicator of their project's health and the likelihood of achieving an outcome that meets or exceeds your stakeholders' goals while boosting (rather than draining) your team's morale.
 
 But as you may have already noticed, these questions only elevate the strength or weakness of supporting project management processes. As a team, coming together regularly to evaluate and improve the supporting processes is the only way to ensure these indicators will remain positive.
 
