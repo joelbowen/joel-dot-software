@@ -1,6 +1,6 @@
 import React from 'react'
 import { rhythm } from '../utils/typography'
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import Header from './Header'
 

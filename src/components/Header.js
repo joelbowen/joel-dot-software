@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
-import { keyframes } from '@emotion/core'
+import { keyframes } from '@emotion/react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 
