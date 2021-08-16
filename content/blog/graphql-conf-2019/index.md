@@ -7,6 +7,7 @@ photoCredit: Sergio Pellegrini
 photoCreditLink: https://www.instagram.com/iamsergiop
 keywords: GraphQL,GraphQL Conf,Apollo,Federation,Prisma,Honeypot,Schema First,SDL,Code First,Scaling GraphQL
 date: '2019-06-22'
+type: 'blog'
 ---
 
 [GraphQL Conf 2019](https://graphqlconf.org) is officially over, and for me, there will be a lot to reflect on in the coming weeks and months. But I have 10 hours to kill on a train to Switzerland so here are my takeaways less than 24 hours later.
@@ -123,7 +124,7 @@ Another fantastic talk was from [Guillermo Rauch](https://twitter.com/rauchg), C
 I've had only been partially aware of Prisma from looking into GraphCool in the past, and I have not used Prisma in production. But I appreciated the intimate feel of Prisma Day along with the depth quality of the content – I'll be looking for an opportunity to add Prisma tools into my stack soon to learn more about them.
 
 `youtube:https://www.youtube.com/embed/zWY2A43IQKI`
-`youtube:https://www.youtube.com/embed/lUyln5m6AhY`  
+`youtube:https://www.youtube.com/embed/lUyln5m6AhY`
 `youtube:https://www.youtube.com/embed/0orY8a-660g`
 
 ## Conclusion

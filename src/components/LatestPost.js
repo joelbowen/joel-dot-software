@@ -15,11 +15,12 @@ function LatestPost({ post }) {
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query LatestPost {
         allMarkdownRemark(
+          filter: { frontmatter: { type: { eq: "blog" } } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1
         ) {
@@ -49,6 +50,8 @@ export default props => (
         }
       }
     `}
-    render={data => <LatestPost post={data.allMarkdownRemark.edges[0].node} />}
+    render={(data) => (
+      <LatestPost post={data.allMarkdownRemark.edges[0].node} />
+    )}
   />
 )

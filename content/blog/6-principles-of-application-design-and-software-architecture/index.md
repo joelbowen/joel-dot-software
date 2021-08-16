@@ -8,6 +8,7 @@ photoCreditLink: https://unsplash.com/@sickhews
 keywords: Application Architecture,Software Design,Engineering,Systems Engineering,ROI,Service Oriented,Principled Developer,Pragmatic Design,Software Lifecycle
 date: '2019-09-14'
 lastUpdated: '2020-07-31'
+type: 'blog'
 ---
 
 Not long ago, in preparation for a software architecture and design phase at [Skookum](https://skookum.com), my coworker and friend the incomparable [Glenn Goodrich](https://twitter.com/ruprict) recommended I read [Design It!](https://www.oreilly.com/library/view/design-it/9781680502923/) by Michael Keeling. Ultimately, this turned into one of those rare experiences where a book feels perfectly timed, a pointed guide to everything you were wrestling with during a particular season. Now, after concluding a few successful design and implementation phases with my team, I want to take a moment to write down some of the fundamental principles I have learned.

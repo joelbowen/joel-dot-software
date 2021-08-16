@@ -7,6 +7,7 @@ photoDescription: A brick tower in Melbourne, Australia grows beneath a metal fr
 photoCredit: Alex Knight
 photoCreditLink: https://unsplash.com/@agkdesign
 date: '2018-10-29T09:00:00-04:00'
+type: 'blog'
 ---
 
 _This content also appears on [skookum.com](https://skookum.com/blog/getting-started-with-progressive-web-apps) and was co-authored by [Tirell Mckinnon](https://twitter.com/TirellMckinnon)_

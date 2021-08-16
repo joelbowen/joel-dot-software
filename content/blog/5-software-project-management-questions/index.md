@@ -6,6 +6,7 @@ photoCredit: Cody Yantis
 photoCreditLink: https://www.flickr.com/photos/cyantis
 date: '2020-08-07'
 keywords: Software Project Management,Software Development Process,SDLC,Pragmatic Project Management,Principled Developer,Engineering,Product Development,Project Management Software,Agile Project Management,Kanban,Agile Process
+type: 'blog'
 ---
 
 Have you ever asked yourself, "are we doing software project management well?" or tried to evaluate your team's health but didn't know what data to assess? I have. These and other experiences got me thinking more about the most successful projects I've been part of as an IC or PM.
