@@ -58,12 +58,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `30882533`,
-      },
-    },
-    {
       resolve: `gatsby-source-iubenda`,
       options: {
         documentIds: [`72446042`],

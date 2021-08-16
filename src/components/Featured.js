@@ -38,7 +38,7 @@ const FeaturedItemWrapper = styled.div`
   padding: 2px;
 
   @media (min-width: 1024px) {
-    padding: 0 0 0 10px;
+    padding: 0 0 10px 10px;
   }
 `
 
@@ -70,9 +70,9 @@ function Featured({ images, videos }) {
   return (
     <FeaturedWrapper>
       <FeaturedItems>
-        {images.map(image => (
+        {images.map((image) => (
           <FeaturedItemWrapper key={image.node.id}>
-            <Image fluid={image.node.localFile.childImageSharp.fluid} />
+            <Image fluid={image.node.childImageSharp.fluid} />
           </FeaturedItemWrapper>
         ))}
       </FeaturedItems>
@@ -109,26 +109,28 @@ function Featured({ images, videos }) {
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query FeaturedItems {
-        allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 3) {
+        pictures: allFile(
+          filter: {
+            sourceInstanceName: { eq: "assets" }
+            name: { glob: "featured-img-*" }
+          }
+        ) {
           edges {
             node {
               id
-              timestamp
-              localFile {
-                childImageSharp {
-                  fluid(maxWidth: 250, maxHeight: 250) {
-                    ...GatsbyImageSharpFluid
-                  }
+              childImageSharp {
+                fluid(maxWidth: 250, maxHeight: 250) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
           }
         }
-        allFile(
+        video: allFile(
           filter: {
             sourceInstanceName: { eq: "assets" }
             name: { eq: "featured-video" }
@@ -147,10 +149,10 @@ export default props => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Featured
-        images={data.allInstaNode.edges}
-        videos={data.allFile.edges}
+        images={data.pictures.edges}
+        videos={data.video.edges}
         {...props}
       />
     )}
