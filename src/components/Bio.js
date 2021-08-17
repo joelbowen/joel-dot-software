@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { rhythm } from '../utils/typography'
-import aboutMeList from '../../content/aboutMe'
+import { graphql, StaticQuery } from 'gatsby'
 
 const Intro = styled.h2`
   text-align: center;
   font-size: ${rhythm(3 / 4)};
   font-weight: 400;
-  line-height: 2;
+  line-height: 1;
   margin-bottom: ${rhythm(2.75)};
 `
 
-function Bio() {
+function Bio({ introAsHtml }) {
   return (
     <div
       style={{
@@ -22,10 +22,7 @@ function Bio() {
         letterSpacing: rhythm(1 / 60),
       }}
     >
-      <Intro>
-        <strong style={{ display: 'block' }}>{aboutMeList[0]}</strong>
-        {aboutMeList[1]}
-      </Intro>
+      <Intro dangerouslySetInnerHTML={introAsHtml} />
       <hr
         style={{
           margin: 0,
@@ -37,4 +34,24 @@ function Bio() {
   )
 }
 
-export default Bio
+export default (props) => (
+  <StaticQuery
+    query={graphql`
+      query Intro {
+        allMarkdownRemark(
+          filter: { frontmatter: { title: { eq: "intro" } } }
+          limit: 1
+        ) {
+          edges {
+            node {
+              __html: html
+            }
+          }
+        }
+      }
+    `}
+    render={(data) => (
+      <Bio introAsHtml={data.allMarkdownRemark.edges[0].node} />
+    )}
+  />
+)
