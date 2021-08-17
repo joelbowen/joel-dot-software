@@ -1,3 +1,3 @@
 // custom typefaces
-import 'typeface-lato'
-import 'typeface-yrsa'
+import '@fontsource/cabin/400.css'
+import '@fontsource/cabin/700.css'

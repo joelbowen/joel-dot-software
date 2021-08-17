@@ -10,6 +10,7 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@fontsource/cabin": "^4.5.0",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "gatsby": "^3.11.1",
     "gatsby-image": "^3.11.0",
@@ -38,8 +39,6 @@
     "react-helmet": "^6.1.0",
     "react-loading-overlay": "^1.0.1",
     "react-typography": "^0.16.20",
-    "typeface-lato": "^1.1.13",
-    "typeface-yrsa": "^1.1.13",
     "typography": "^0.16.21",
     "typography-theme-us-web-design-standards": "^0.16.19"
   },

@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm, scale, sansFont } from '../utils/typography'
+import { rhythm, scale } from '../utils/typography'
 import Footer from '../components/Footer'
 
 const ContentWrapper = styled.div`
@@ -23,7 +23,6 @@ const Title = styled.h1`
   margin-top: 1rem;
 `
 const Subtitle = styled.h2`
-  font-family: ${sansFont};
   font-size: 1rem;
   color: rgb(125, 125, 125);
 `

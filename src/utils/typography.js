@@ -5,8 +5,8 @@ import usWebDesignStandardsTheme from 'typography-theme-us-web-design-standards'
 delete usWebDesignStandardsTheme.googleFonts
 
 // Update the default theme header font
-usWebDesignStandardsTheme.headerFontFamily = ['Yrsa', 'serif']
-usWebDesignStandardsTheme.bodyFontFamily = ['Lato', 'sans-serif']
+usWebDesignStandardsTheme.headerFontFamily = ['Cabin', 'sans-serif']
+usWebDesignStandardsTheme.bodyFontFamily = ['Cabin', 'sans-serif']
 
 const typography = new Typography(usWebDesignStandardsTheme)
 
@@ -18,5 +18,3 @@ if (process.env.NODE_ENV !== `production`) {
 export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
-export const serifFont = usWebDesignStandardsTheme.headerFontFamily[0]
-export const sansFont = usWebDesignStandardsTheme.bodyFontFamily[0]

@@ -44,6 +44,7 @@ const FeaturedItemWrapper = styled.div`
 
 const WatchCTA = styled.strong`
   display: none;
+  font-weight: 700;
   @media (min-width: 345px) {
     display: inline-block;
   }
@@ -52,8 +53,7 @@ const FeaturedText = styled.h3`
   color: #000;
   display: -webkit-box;
   font-size: ${rhythm(3 / 4)};
-  font-family: Lato;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   margin: 0;
   1overflow: hidden;
