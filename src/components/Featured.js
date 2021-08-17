@@ -36,7 +36,11 @@ const FeaturedItemWrapper = styled.div`
   max-height: 200px;
   max-width: 200px;
   padding: 2px;
-
+  align-items: ${(props) =>
+    props.align === 'center' ? 'center' : 'flex-start'};
+  @media (min-width: 620px) {
+    align-items: flex-start;
+  }
   @media (min-width: 1024px) {
     padding: 0 0 10px 10px;
   }
@@ -86,8 +90,8 @@ function Featured({ images, videos }) {
           </a>
         </FeaturedItemWrapper>
         <FeaturedItemWrapper
+          align="center"
           style={{
-            alignItems: 'center',
             flex: `0 0 66%`,
             display: 'flex',
             justifyContent: 'center',

@@ -7,7 +7,7 @@ const Intro = styled.h2`
   text-align: center;
   font-size: ${rhythm(3 / 4)};
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: ${rhythm(2.75)};
 `
 
