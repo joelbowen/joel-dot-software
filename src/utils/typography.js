@@ -5,8 +5,8 @@ import usWebDesignStandardsTheme from 'typography-theme-us-web-design-standards'
 delete usWebDesignStandardsTheme.googleFonts
 
 // Update the default theme header font
-usWebDesignStandardsTheme.headerFontFamily = ['Cabin', 'sans-serif']
-usWebDesignStandardsTheme.bodyFontFamily = ['Cabin', 'sans-serif']
+usWebDesignStandardsTheme.headerFontFamily = ['CabinVariable', 'sans-serif']
+usWebDesignStandardsTheme.bodyFontFamily = ['CabinVariable', 'sans-serif']
 
 const typography = new Typography(usWebDesignStandardsTheme)
 
