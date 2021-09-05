@@ -8,9 +8,6 @@ import Bio from '../components/Bio'
 import SEO from '../components/seo'
 import Featured from '../components/Featured'
 import Skills from '../components/Skills'
-import Experience from '../components/Experience'
-import Accomplishments from '../components/Accomplishments'
-import Education from '../components/Education'
 import Footer from '../components/Footer'
 import LatestPost from '../components/LatestPost'
 
@@ -40,9 +37,6 @@ class BlogIndex extends React.Component {
           <ContentWrapper>
             <LatestPost />
             <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
-            <Experience />
-            <Accomplishments />
-            <Education currentYear={CURRENT_YEAR} startYear={START_YEAR} />
           </ContentWrapper>
         </Layout>
         <Footer showGitHub />
