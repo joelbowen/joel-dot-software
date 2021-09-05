@@ -163,18 +163,6 @@ function Header({ avatar, site, title, hideNav, location }) {
   return (
     <HeaderWrapper>
       <Container>
-        <ProfilePhoto>
-          <Image
-            fluid={avatar.childImageSharp.fluid}
-            alt={site.siteMetadata.author}
-            style={{
-              marginBottom: 0,
-              width: '100%',
-              borderRadius: `100%`,
-            }}
-            alt="Joel Bowen's Headshot"
-          />
-        </ProfilePhoto>
         <Content>
           <h1
             style={{
