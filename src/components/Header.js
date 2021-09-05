@@ -204,7 +204,7 @@ function Header({ avatar, site, title, hideNav, location }) {
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query layoutQuery {
@@ -225,6 +225,8 @@ export default props => (
         }
       }
     `}
-    render={data => <Header avatar={data.avatar} site={data.site} {...props} />}
+    render={(data) => (
+      <Header avatar={data.avatar} site={data.site} {...props} />
+    )}
   />
 )

@@ -79,7 +79,7 @@ function Footer({ instagram, twitter, linkedin, showGitHub }) {
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query FooterLogos {
@@ -124,7 +124,7 @@ export default props => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Footer
         instagram={data.instagram.edges[0].node}
         twitter={data.twitter.edges[0].node}
