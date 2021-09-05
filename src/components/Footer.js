@@ -8,7 +8,7 @@ const SocialIcons = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(2.75)};
+  margin-top: ${rhythm(3.5)};
   a {
     flex: 1;
     margin-right: 40px;

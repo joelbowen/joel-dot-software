@@ -1,18 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-
 import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 import Bio from '../components/Bio'
 import SEO from '../components/seo'
 import Featured from '../components/Featured'
-import Skills from '../components/Skills'
+import AboutMe from '../components/AboutMe'
 import Footer from '../components/Footer'
 import LatestPost from '../components/LatestPost'
-
-const CURRENT_YEAR = new Date().getFullYear()
-const START_YEAR = 2006
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
@@ -36,7 +32,7 @@ class BlogIndex extends React.Component {
           <Featured />
           <ContentWrapper>
             <LatestPost />
-            <Skills currentYear={CURRENT_YEAR} startYear={START_YEAR} />
+            <AboutMe />
           </ContentWrapper>
         </Layout>
         <Footer showGitHub />
