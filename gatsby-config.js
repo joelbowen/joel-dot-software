@@ -7,7 +7,7 @@ module.exports = {
     description,
     siteUrl: `https://joel.software`,
     social: {
-      twitter: `JoelSocialized`,
+      twitter: `joeldotsoftware`,
       linkedin: `joelbowen`,
       instagram: `joelbowen`,
     },
