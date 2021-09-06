@@ -160,6 +160,9 @@ function Navigation({ title, hideNav, location }) {
 
 function Header({ avatar, site, title, hideNav, location }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  useEffect(() => {
+    setShowMobileMenu(false)
+  }, [location?.hash])
 
   return (
     <HeaderWrapper>
