@@ -45,7 +45,6 @@
     "typography-theme-us-web-design-standards": "^0.16.19"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
     "eslint": "^7.29.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
