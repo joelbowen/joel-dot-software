@@ -5,10 +5,15 @@ import { graphql, StaticQuery } from 'gatsby'
 
 const Intro = styled.h2`
   text-align: center;
-  font-size: ${rhythm(3 / 4)};
+  font-size: ${rhythm(0.75)};
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: ${rhythm(2.75)};
+
+  em {
+    color: ${lightMode.color}9f;
+    font-size: ${rhythm(0.7)};
+  }
 `
 
 function Bio({ introAsHtml }) {
