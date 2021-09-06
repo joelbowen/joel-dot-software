@@ -60,7 +60,7 @@ const FeaturedText = styled.h3`
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
-  1overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
