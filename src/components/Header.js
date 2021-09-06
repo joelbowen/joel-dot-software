@@ -59,6 +59,10 @@ const HeaderWrapper = styled.div`
 
   @media (min-width: 620px) {
     height: 95px;
+const SiteTitle = styled.h1`
+  font-size: ${rhythm(3 / 4)};
+  margin: 0;
+
   }
 `
 
@@ -161,13 +165,7 @@ function Header({ avatar, site, title, hideNav, location }) {
     <HeaderWrapper>
       <Container>
         <Content>
-          <h1
-            style={{
-              fontSize: rhythm(3 / 4),
-              marginBottom: 0,
-              marginTop: 0,
-            }}
-          >
+          <SiteTitle>
             <Link
               style={{
                 boxShadow: `none`,
@@ -176,9 +174,9 @@ function Header({ avatar, site, title, hideNav, location }) {
               }}
               to={`/`}
             >
-              Joel.Software
+              joel.software
             </Link>
-          </h1>
+          </SiteTitle>
           <HideOnMobile>
             <Navigation hideNav={hideNav} location={location} />
           </HideOnMobile>
