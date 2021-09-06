@@ -26,6 +26,22 @@ const Subtitle = styled.h2`
   font-size: 1rem;
   color: rgb(125, 125, 125);
 `
+
+const BlogFooter = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 2rem;
+  margin: ${rhythm(1)} 0;
+  background: #e6f4ea;
+
+  li {
+    margin: ${rhythm(0.75)} 0;
+  }
+
+`
+
 function FeaturedPhoto({ post }) {
   if (!post.frontmatter.photo) {
     return null
@@ -130,17 +146,7 @@ class BlogPostTemplate extends React.Component {
               >
                 Click here to get notified when I post new content
               </a>{' '}
-              <ul
-                style={{
-                  background: '#7AAB4F20',
-                  display: `flex`,
-                  flexWrap: `wrap`,
-                  justifyContent: `space-between`,
-                  listStyle: `none`,
-                  padding: '2rem',
-                  margin: `${rhythm(1)} 0`,
-                }}
-              >
+              <BlogFooter>
                 {previous && (
                   <li>
                     <h3>Previous Post</h3>
@@ -158,7 +164,7 @@ class BlogPostTemplate extends React.Component {
                     </Link>
                   </li>
                 )}
-              </ul>
+              </BlogFooter>
             </ContentWrapper>
           </Post>
         </Layout>
