@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { rhythm } from '../utils/typography'
+import { darkMode, lightMode, rhythm } from '../utils/typography'
 import { graphql, StaticQuery } from 'gatsby'
 
 const Intro = styled.h2`
@@ -11,8 +11,13 @@ const Intro = styled.h2`
   margin-bottom: ${rhythm(2.75)};
 
   em {
-    color: ${lightMode.color}9f;
+    color: ${lightMode.mutedColor};
     font-size: ${rhythm(0.7)};
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & em {
+    color: ${darkMode.mutedColor};
   }
 `
 

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { rhythm } from '../utils/typography'
+import React, { useEffect, useState } from 'react'
+import { darkMode, lightMode, rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { HiSun, HiMoon } from 'react-icons/hi'
 
 const fadeIn = keyframes`
   from { opacity: 0 }
@@ -23,14 +24,32 @@ const MobileNav = styled.div`
   opacity: 1;
 
   animation: ${fadeIn} 0.25s ease;
+
+  && a {
+    color: ${lightMode.mutedColor};
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    background: rgba(0, 0, 0, 0.9);
+
+    a {
+      color: ${darkMode.mutedColor};
+    }
+  }
 `
 
 const MobileNavBtn = styled.button`
+  color: ${lightMode.mutedColor};
   margin-right: 1rem;
   text-align: left;
 
   &:hover {
     cursor: pointer;
+  }
+  /* * DARK MODE * */
+  .dark-mode & {
+    color: ${lightMode.mutedColor};
   }
 `
 
@@ -52,17 +71,33 @@ const HeaderWrapper = styled.div`
   display: flex;
   height: 65px;
   left: 0;
-  padding: 0 1rem;
+  padding: 0 1.5rem 0 1rem;
   position: fixed;
   width: 100vw;
   z-index: 9;
 
-  @media (min-width: 620px) {
-    height: 95px;
+  @meda (min-width: 750px) {
+    height: inherit;
+  }
+
+  @meda (min-width: 1100px) {
+    padding: 0 1rem;
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    background: ${darkMode.background};
+    border-color: ${darkMode.gray};
+  }
+`
+
 const SiteTitle = styled.h1`
   font-size: ${rhythm(3 / 4)};
   margin: 0;
 
+  /* * DARK MODE * */
+  .dark-mode & {
+    font-weight: 400;
   }
 `
 
@@ -102,10 +137,20 @@ const Nav = styled.nav`
   text-align: center;
 
   a {
-    color: #000;
-    margin-bottom: 1rem;
+    color: ${lightMode.color};
+    padding: 1rem 1.5rem;
     text-decoration: none;
     font-size: 1.5rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: ${lightMode.linkColor}10;
+    }
+    &.active {
+      color: ${lightMode.linkColor};
+      border-bottom: 2px solid ${lightMode.linkColor};
+    }
   }
 
   @media (min-width: 750px) {
@@ -116,24 +161,60 @@ const Nav = styled.nav`
     text-align: left;
 
     a {
-      margin-left: 27px;
-      margin-top: 1rem;
       font-size: 1rem;
     }
   }
 
   @media (min-width: 900px) {
     padding-left: 70px;
+  }
 
-    a {
-      margin-left: 57px;
-      text-decoration: none;
+  /* * DARK MODE * */
+  .dark-mode & a {
+    color: ${darkMode.color};
+    &:hover,
+    &:active,
+    &:focus {
+      background: ${darkMode.color}05;
+    }
+    &.active {
+      color: ${darkMode.linkColor};
+      border-bottom: 2px solid ${darkMode.linkColor};
     }
   }
 `
 
+const ToggleThemeBtn = styled.button`
+  border-radius: 100%;
+  color: ${lightMode.mutedColor};
+  height: 40px;
+  width: 40px;
+  margin: auto 0 auto auto;
+  font-size: ${rhythm(1)};
+  svg {
+    position: relative;
+    top: 5px;
   }
 
+  &:hover,
+  &:active,
+  &:focus {
+    background: #cccccc3f;
+    color: ${lightMode.color};
+    cursor: pointer;
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    color: ${darkMode.mutedColor};
+    &:hover,
+    &:active,
+    &:focus {
+      background: ${darkMode.color}15;
+      color: ${darkMode.color};
+    }
+  }
+`
 
 function isHome(location) {
   if (!location || location.hash === '#about-me') {
@@ -203,6 +284,9 @@ function Header({ location, theme, toggleTheme }) {
             <Navigation location={location} />
           </HideOnMobile>
         </Content>
+        <ToggleThemeBtn onClick={toggleTheme}>
+          {theme === 'dark' ? <HiSun /> : <HiMoon />}
+        </ToggleThemeBtn>
       </Container>
       {showMobileMenu && (
         <MobileNav>

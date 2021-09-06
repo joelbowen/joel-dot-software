@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Image from 'gatsby-image'
-import { rhythm } from '../utils/typography'
+import { darkMode, lightMode, rhythm } from '../utils/typography'
 import { StaticQuery, graphql } from 'gatsby'
 
 const FeaturedWrapper = styled.div`
@@ -47,16 +47,21 @@ const FeaturedItemWrapper = styled.div`
 `
 
 const WatchCTA = styled.h3`
+  color: ${lightMode.color};
   display: none;
   font-weight: 400;
   margin: 0 0 0.5rem;
   @media (min-width: 345px) {
     display: block;
   }
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    color: ${darkMode.color};
   }
 `
-  color: #000;
 const FeaturedText = styled.aside`
+  color: ${lightMode.mutedColor};
   display: -webkit-box;
   font-size: ${rhythm(0.6)};
   font-weight: 400;
@@ -69,6 +74,11 @@ const FeaturedText = styled.aside`
 
   @media (min-width: 325px) {
     -webkit-line-clamp: 3;
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    color: ${darkMode.mutedColor}af;
   }
 `
 

@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
+import { darkMode, lightMode, rhythm, scale } from '../utils/typography'
 import Footer from '../components/Footer'
 
 const ContentWrapper = styled.div`
@@ -16,6 +16,15 @@ const Post = styled.article`
   hr {
     border-top: 4px dotted #cecece;
     background: none;
+  }
+
+  blockquote {
+    border-color: ${lightMode.gray};
+
+    /* * DARK MODE * */
+    .dark-mode & {
+      border-color: ${darkMode.gray};
+    }
   }
 `
 const Title = styled.h1`
@@ -40,6 +49,10 @@ const BlogFooter = styled.ul`
     margin: ${rhythm(0.75)} 0;
   }
 
+  /* * DARK MODE * */
+  .dark-mode & {
+    background: #7aab4f20;
+  }
 `
 
 function FeaturedPhoto({ post }) {

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { rhythm } from '../utils/typography'
+import { darkMode, lightMode, rhythm } from '../utils/typography'
 import { StaticQuery, graphql } from 'gatsby'
 import { IoTriangle } from 'react-icons/io5'
 
@@ -22,6 +22,18 @@ const Button = styled.button`
 
   &:hover {
     cursor: pointer;
+    background: ${lightMode.linkColor}15;
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    background: ${darkMode.gray}1f;
+    border-top: 1px solid ${darkMode.gray};
+    color: ${darkMode.color};
+
+    &:hover {
+      background: ${darkMode.gray}3f;
+    }
   }
 `
 

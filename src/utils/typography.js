@@ -15,6 +15,23 @@ if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
 }
 
-export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
+
+// Theme variants
+export const darkMode = {
+  color: '#e8eaed',
+  mutedColor: '#9aa0a6',
+  background: '#202124',
+  linkColor: '#8ab4f8',
+  gray: '#5f6368',
+}
+
+export const lightMode = {
+  color: '#202124',
+  mutedColor: '#5f6368',
+  linkColor: '#1a73e8',
+  gray: '#dadce0',
+}
+
+export default typography

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { rhythm } from '../utils/typography'
+import { darkMode, lightMode, rhythm } from '../utils/typography'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import {
   RiInstagramLine,
@@ -28,6 +28,11 @@ const SocialIcons = styled.div`
   svg {
     color: ${lightMode.color}6f;
     margin-bottom: ${rhythm(1)};
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & svg {
+    color: ${darkMode.color}6f;
   }
 `
 const GitHubLink = () => (
