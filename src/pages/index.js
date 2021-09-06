@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
-import Bio from '../components/Bio'
+import Intro from '../components/Intro'
 import SEO from '../components/seo'
 import Featured from '../components/Featured'
 import AboutMe from '../components/AboutMe'
@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             imageUrl={`https://joel.software${data.avatar.publicURL}`}
           />
-          <Bio />
+          <Intro />
           <Featured />
           <ContentWrapper>
             <LatestPost />
