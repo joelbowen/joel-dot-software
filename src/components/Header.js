@@ -26,7 +26,8 @@ const MobileNav = styled.div`
 `
 
 const MobileNavBtn = styled.button`
-  text-align: right;
+  margin-right: 1rem;
+  text-align: left;
 
   &:hover {
     cursor: pointer;
@@ -163,6 +164,11 @@ function Header({ hideNav, location }) {
   return (
     <HeaderWrapper>
       <Container>
+        <HideOnDesktop>
+          <MobileNavBtn onClick={() => setShowMobileMenu(true)}>
+            &#9776;
+          </MobileNavBtn>
+        </HideOnDesktop>
         <Content>
           <SiteTitle>
             <Link
@@ -180,11 +186,6 @@ function Header({ hideNav, location }) {
             <Navigation hideNav={hideNav} location={location} />
           </HideOnMobile>
         </Content>
-        <HideOnDesktop>
-          <MobileNavBtn onClick={() => setShowMobileMenu(true)}>
-            &#9776;
-          </MobileNavBtn>
-        </HideOnDesktop>
       </Container>
       {showMobileMenu && (
         <MobileNav>
