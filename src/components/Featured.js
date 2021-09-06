@@ -46,17 +46,19 @@ const FeaturedItemWrapper = styled.div`
   }
 `
 
-const WatchCTA = styled.strong`
+const WatchCTA = styled.h3`
   display: none;
-  font-weight: 700;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
   @media (min-width: 345px) {
-    display: inline-block;
+    display: block;
+  }
   }
 `
-const FeaturedText = styled.h3`
   color: #000;
+const FeaturedText = styled.aside`
   display: -webkit-box;
-  font-size: ${rhythm(3 / 4)};
+  font-size: ${rhythm(0.6)};
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -100,8 +102,8 @@ function Featured({ images, videos }) {
           }}
         >
           <FeaturedText>
-            <WatchCTA>WATCH:</WatchCTA> Creating “Jake Knapp” for Wily’s Design
-            Sprint Bootcamp. (
+            <WatchCTA>Featured</WatchCTA> Creating “Jake Knapp” for Wily’s
+            Design Sprint Bootcamp. (
             <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
               link
             </a>
