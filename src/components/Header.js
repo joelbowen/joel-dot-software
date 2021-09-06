@@ -3,7 +3,6 @@ import { rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import Image from 'gatsby-image'
 
 const fadeIn = keyframes`
   from { opacity: 0 }
@@ -94,15 +93,6 @@ const Content = styled.div`
   }
 `
 
-const ProfilePhoto = styled.div`
-  min-width: 40px;
-  margin-right: ${rhythm(2 / 3)};
-
-  @media (min-width: 620px) {
-    min-width: 65px;
-  }
-`
-
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
@@ -164,7 +154,7 @@ function Navigation({ title, hideNav, location }) {
   )
 }
 
-function Header({ avatar, site, title, hideNav, location }) {
+function Header({ hideNav, location }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   useEffect(() => {
     setShowMobileMenu(false)
@@ -208,29 +198,4 @@ function Header({ avatar, site, title, hideNav, location }) {
   )
 }
 
-export default (props) => (
-  <StaticQuery
-    query={graphql`
-      query layoutQuery {
-        avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-          childImageSharp {
-            fluid(maxWidth: 81) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        site {
-          siteMetadata {
-            author
-            social {
-              twitter
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <Header avatar={data.avatar} site={data.site} {...props} />
-    )}
-  />
-)
+export default Header
