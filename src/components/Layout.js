@@ -37,7 +37,7 @@ const Body = styled.div`
   }
 `
 
-function Layout({ location, title, children, hideNav }) {
+function Layout({ location, title, children }) {
   }
   return (
     <div
@@ -51,7 +51,6 @@ function Layout({ location, title, children, hideNav }) {
       <Header
         location={location}
         title={title}
-        hideNav={hideNav}
       />
       <Body>{children}</Body>
     </div>

@@ -132,14 +132,9 @@ const Nav = styled.nav`
   }
 `
 
-function Navigation({ title, hideNav, location }) {
-  if (hideNav) {
-    return (
-      <Nav style={{ justifyContent: 'flex-end' }}>
-        <a href="/">Home</a>
-      </Nav>
-    )
   }
+
+function Navigation({ location }) {
   return (
     <Nav>
       <Link to="/" className={isHome(location) ? 'active' : ''}>
@@ -155,7 +150,7 @@ function Navigation({ title, hideNav, location }) {
   )
 }
 
-function Header({ hideNav, location }) {
+function Header({ location, theme, toggleTheme }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   useEffect(() => {
     setShowMobileMenu(false)
@@ -183,7 +178,7 @@ function Header({ hideNav, location }) {
             </Link>
           </SiteTitle>
           <HideOnMobile>
-            <Navigation hideNav={hideNav} location={location} />
+            <Navigation location={location} />
           </HideOnMobile>
         </Content>
       </Container>
@@ -192,7 +187,7 @@ function Header({ hideNav, location }) {
           <MobileNavBtn onClick={() => setShowMobileMenu(false)}>
             CLOSE
           </MobileNavBtn>
-          <Navigation hideNav={hideNav} location={location} />
+          <Navigation location={location} />
         </MobileNav>
       )}
     </HeaderWrapper>
