@@ -37,25 +37,25 @@ const Body = styled.div`
   }
 `
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children, hideNav } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          padding: `0 ${rhythm(3 / 4)}`,
-        }}
-      >
-        <Global styles={globalStyles} />
-        <Header location={location} title={title} hideNav={hideNav} />
-        <Body>{children}</Body>
-      </div>
-    )
+function Layout({ location, title, children, hideNav }) {
   }
+  return (
+    <div
+      style={{
+        marginLeft: `auto`,
+        marginRight: `auto`,
+        padding: `0 ${rhythm(3 / 4)}`,
+      }}
+    >
+      <Global styles={globalStyles} />
+      <Header
+        location={location}
+        title={title}
+        hideNav={hideNav}
+      />
+      <Body>{children}</Body>
+    </div>
+  )
 }
 
 export default Layout
