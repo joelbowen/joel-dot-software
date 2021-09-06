@@ -19,7 +19,7 @@ const MobileNav = styled.div`
   left: 0;
   top: 0;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.95);
   text-align: right;
   opacity: 1;
 
