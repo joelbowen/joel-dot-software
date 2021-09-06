@@ -134,11 +134,33 @@ const Nav = styled.nav`
 
   }
 
+
+function isHome(location) {
+  if (!location || location.hash === '#about-me') {
+    return false
+  } else if (location.pathname === '/') {
+    return true
+  }
+
+  return false
+}
+
+function isAboutMe(location) {
+  if (!location || location.hash !== '#about-me') {
+    return false
+  }
+
+  return true
+}
+
 function Navigation({ location }) {
   return (
     <Nav>
       <Link to="/" className={isHome(location) ? 'active' : ''}>
         home
+      </Link>
+      <Link to="/#about-me" className={isAboutMe(location) ? 'active' : ''}>
+        about
       </Link>
       <Link to="/blog" activeClassName="active">
         blog
