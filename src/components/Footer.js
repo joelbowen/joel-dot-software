@@ -2,10 +2,16 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { rhythm } from '../utils/typography'
 import { StaticQuery, graphql, Link } from 'gatsby'
+import {
+  RiInstagramLine,
+  RiLinkedinBoxFill,
+  RiTwitterFill,
+} from 'react-icons/ri'
 import BackTopTop from './BackToTop'
 
 const SocialIcons = styled.div`
   display: flex;
+  font-size: 3rem;
   justify-content: center;
   margin-bottom: ${rhythm(1)};
   margin-top: ${rhythm(3.5)};
@@ -14,10 +20,14 @@ const SocialIcons = styled.div`
     margin-right: 40px;
     max-height: 40px;
     max-width: 40px;
-    opacity: 0.5;
+
     &:last-child {
       margin-right: 0;
     }
+  }
+  svg {
+    color: ${lightMode.color}6f;
+    margin-bottom: ${rhythm(1)};
   }
 `
 const GitHubLink = () => (
@@ -37,18 +47,18 @@ const GitHubLink = () => (
   </div>
 )
 
-function Footer({ instagram, twitter, linkedin, showGitHub }) {
+function Footer({ showGitHub }) {
   return (
     <footer style={{ marginTop: 'auto' }}>
       <SocialIcons>
         <a href="https://www.instagram.com/joelbowen/" target="_blank">
-          <img src={instagram.publicURL} alt="Instragram Logo" />
+          <RiInstagramLine />
         </a>
-        <a href="https://twitter.com/JoelSocialized" target="_blank">
-          <img src={twitter.publicURL} alt="Twitter Logo" />
+        <a href="https://twitter.com/joeldotsoftware" target="_blank">
+          <RiTwitterFill />
         </a>
         <a href="https://www.linkedin.com/in/joelbowen" target="_blank">
-          <img src={linkedin.publicURL} alt="LinkedIn Logo" />
+          <RiLinkedinBoxFill />
         </a>
       </SocialIcons>
       {showGitHub ? (
@@ -79,58 +89,4 @@ function Footer({ instagram, twitter, linkedin, showGitHub }) {
   )
 }
 
-export default (props) => (
-  <StaticQuery
-    query={graphql`
-      query FooterLogos {
-        linkedin: allFile(
-          filter: {
-            sourceInstanceName: { eq: "assets" }
-            name: { eq: "linkedin" }
-          }
-        ) {
-          edges {
-            node {
-              id
-              publicURL
-            }
-          }
-        }
-        twitter: allFile(
-          filter: {
-            sourceInstanceName: { eq: "assets" }
-            name: { eq: "twitter" }
-          }
-        ) {
-          edges {
-            node {
-              id
-              publicURL
-            }
-          }
-        }
-        instagram: allFile(
-          filter: {
-            sourceInstanceName: { eq: "assets" }
-            name: { eq: "instagram" }
-          }
-        ) {
-          edges {
-            node {
-              id
-              publicURL
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <Footer
-        instagram={data.instagram.edges[0].node}
-        twitter={data.twitter.edges[0].node}
-        linkedin={data.linkedin.edges[0].node}
-        {...props}
-      />
-    )}
-  />
-)
+export default Footer
