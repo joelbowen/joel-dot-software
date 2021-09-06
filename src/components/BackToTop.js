@@ -10,8 +10,7 @@ const Wrapper = styled.div`
 
 const Button = styled.button`
   align-items: center;
-  background: rgb(225, 225, 225);
-  border: 0;
+  background: ${lightMode.gray}3f;
   display: flex;
   height: 44px;
   justify-content: center;

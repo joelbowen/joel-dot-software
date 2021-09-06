@@ -18,6 +18,13 @@ const globalStyles = css`
     display: block;
     height: 0;
     margin: ${rhythm(1.5)} 0;
+  button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: ${lightMode.color};
+  }
   }
 `
 const Body = styled.div`

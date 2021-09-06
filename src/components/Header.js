@@ -27,8 +27,6 @@ const MobileNav = styled.div`
 `
 
 const MobileNavBtn = styled.button`
-  background: none;
-  border: none;
   text-align: right;
 
   &:hover {

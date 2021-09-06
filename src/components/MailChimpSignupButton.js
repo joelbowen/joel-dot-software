@@ -3,14 +3,10 @@ import styled from '@emotion/styled'
 import Loader from 'react-loading-overlay'
 
 const LinkButton = styled.button`
-  background-color: transparent;
-  border: none;
   color: #0071bc;
   cursor: pointer;
   text-decoration: underline;
   display: inline;
-  margin: 0;
-  padding: 0;
 `
 
 const isMCForm = /(PopupSignupForm)\w+/
