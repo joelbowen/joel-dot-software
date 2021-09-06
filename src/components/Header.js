@@ -151,9 +151,15 @@ function Navigation({ title, hideNav, location }) {
   }
   return (
     <Nav>
-      {location && location.pathname === '/' ? null : <Link to="/">Home</Link>}
-      <Link to="/blog">Blog</Link>
-      <Link to="/talks">Talks</Link>
+      <Link to="/" className={isHome(location) ? 'active' : ''}>
+        home
+      </Link>
+      <Link to="/blog" activeClassName="active">
+        blog
+      </Link>
+      <Link to="/talks" activeClassName="active">
+        talks
+      </Link>
     </Nav>
   )
 }
