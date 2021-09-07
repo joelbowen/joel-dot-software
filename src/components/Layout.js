@@ -94,7 +94,7 @@ const Body = styled.div`
   }
 `
 
-function getTheme() {
+function getThemeFromBrowserStorage() {
   // Check if we're on the server or client
   if (typeof window !== 'undefined') {
     return localStorage.getItem('siteTheme')
@@ -103,7 +103,7 @@ function getTheme() {
 }
 
 function Layout({ location, title, children }) {
-  const [theme, setTheme] = useState(getTheme() || 'dark')
+  const [theme, setTheme] = useState(getThemeFromBrowserStorage())
 
   function toggleTheme() {
     const isDark = theme === 'dark'
@@ -116,7 +116,12 @@ function Layout({ location, title, children }) {
   }
 
   useEffect(() => {
-    localStorage.setItem('siteTheme', theme || getTheme() || 'dark')
+    if (!theme) {
+      // First render
+      setTheme(getThemeFromBrowserStorage() || 'dark')
+    } else {
+      localStorage.setItem('siteTheme', theme)
+    }
   }, [theme])
 
   return (
@@ -130,7 +135,7 @@ function Layout({ location, title, children }) {
       <Global styles={globalStyles} />
       <Helmet
         bodyAttributes={{
-          class: theme === 'dark' ? 'dark-mode' : 'light-mode',
+          class: theme !== 'light' ? 'dark-mode' : 'light-mode',
         }}
       />
       <Header
