@@ -116,13 +116,15 @@ function Layout({ location, title, children }) {
   }
 
   useEffect(() => {
-    if (!theme) {
-      // First render
-      setTheme(getThemeFromBrowserStorage() || 'dark')
-    } else {
+    if (theme) {
       localStorage.setItem('siteTheme', theme)
     }
   }, [theme])
+
+  // After first client-side render
+  useEffect(() => {
+    setTheme(getThemeFromBrowserStorage() || 'dark')
+  }, [])
 
   return (
     <div

@@ -204,6 +204,10 @@ const ToggleThemeBtn = styled.button`
     cursor: pointer;
   }
 
+  .dark-mode-toggle {
+    display: none;
+  }
+
   /* * DARK MODE * */
   .dark-mode & {
     color: ${darkMode.mutedColor};
@@ -212,6 +216,13 @@ const ToggleThemeBtn = styled.button`
     &:focus {
       background: ${darkMode.color}15;
       color: ${darkMode.color};
+    }
+
+    .dark-mode-toggle {
+      display: inline-block;
+    }
+    .light-mode-toggle {
+      display: none;
     }
   }
 `
@@ -297,7 +308,8 @@ function Header({ location, theme, toggleTheme }) {
           </HideOnMobile>
         </Content>
         <ToggleThemeBtn onClick={toggleTheme}>
-          {theme === 'dark' ? <HiSun /> : <HiMoon />}
+          <HiSun className="dark-mode-toggle" />
+          <HiMoon className="light-mode-toggle" />
         </ToggleThemeBtn>
       </Container>
       {showMobileMenu && (
