@@ -17,6 +17,10 @@ const globalStyles = css`
     color: ${lightMode.color};
   }
 
+  body.light-mode {
+    transition: background-color 0.3s ease;
+  }
+
   a {
     text-decoration: none;
     color: ${lightMode.linkColor};
