@@ -33,7 +33,7 @@ function openMailChimpSignup() {
   window.dojoRequire(['mojo/signup-forms/Loader'], mojoStartFn)
 }
 
-const observerCallback = setShowLoader => (mutationsList, observer) => {
+const observerCallback = (setShowLoader) => (mutationsList, observer) => {
   console.log(mutationsList)
   const addedNode = mutationsList[0] ? mutationsList[0].addedNodes[0] : false
   // Verify the added node matches the MC form id pattern
@@ -70,7 +70,7 @@ function MailChimpSignupButton(props) {
         spinner
         fadeSpeed={0}
         styles={{
-          overlay: base => ({
+          overlay: (base) => ({
             ...base,
             position: 'fixed',
             background: 'rgba(0, 0, 0, 0.2)',
