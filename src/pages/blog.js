@@ -16,10 +16,11 @@ function Blog({
   data: {
     allMarkdownRemark: { edges: blogs },
   },
+  location,
 }) {
   return (
     <PageWrapper>
-      <Layout>
+      <Layout location={location}>
         <ContentWrapper>
           <h1 style={{ marginTop: '1rem' }}>Blog Posts</h1>
           {blogs.map(({ node: post }) => (
