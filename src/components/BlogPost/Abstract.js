@@ -45,7 +45,7 @@ function BlogPostAbstract({ post }) {
             boxShadow: `none`,
             marginBottom: rhythm(1 / 4),
           }}
-          to={post.fields.slug}
+          to={`/blog${post.fields.slug}`}
         >
           <h3 style={{ margin: 0 }}>{post.frontmatter.title}</h3>
         </Link>

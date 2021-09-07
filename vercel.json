@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/5-software-project-management-questions",
+      "destination": "/blog/5-software-project-management-questions",
+      "permanent": false
+    },
+    {
+      "source": "/6-principles-of-application-design-and-software-architecture",
+      "destination": "/blog/6-principles-of-application-design-and-software-architecture",
+      "permanent": false
+    },
+    {
+      "source": "/graphql-conf-2019",
+      "destination": "/blog/graphql-conf-2019",
+      "permanent": false
+    },
+    {
+      "source": "/what-even-is-a-pwa",
+      "destination": "/blog/what-even-is-a-pwa",
+      "permanent": false
+    }
+  ]
+}
