@@ -76,8 +76,8 @@ const HeaderWrapper = styled.div`
   width: 100vw;
   z-index: 9;
 
-  @meda (min-width: 750px) {
-    height: inherit;
+  @media (min-width: 750px) {
+    align-items: flex-end;
   }
 
   @meda (min-width: 1100px) {
