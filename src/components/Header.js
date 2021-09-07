@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { darkMode, lightMode, rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import { HiSun, HiMoon } from 'react-icons/hi'
 
 const fadeIn = keyframes`
@@ -298,7 +298,7 @@ function Header({ location, darkMode }) {
                 textDecoration: `none`,
                 color: `inherit`,
               }}
-              to={`/`}
+              to="/"
             >
               joel.software
             </Link>

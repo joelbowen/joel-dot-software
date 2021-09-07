@@ -6,7 +6,7 @@ function Skills({ html }) {
   return (
     <div>
       <OffsetAnchor id="about-me" />
-      <div dangerouslySetInnerHTML={html}></div>
+      <div dangerouslySetInnerHTML={html} />
     </div>
   )
 }

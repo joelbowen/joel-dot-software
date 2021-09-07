@@ -4,7 +4,7 @@ import Image from 'gatsby-image'
 import styled from '@emotion/styled'
 
 import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import { darkMode, lightMode, rhythm, scale } from '../utils/typography'
 import Footer from '../components/Footer'
 
@@ -104,7 +104,7 @@ class BlogPostTemplate extends React.Component {
       <div>
         <Layout location={this.props.location} title={siteTitle}>
           <Post>
-            <SEO
+            <Seo
               title={post.frontmatter.title}
               description={post.frontmatter.description || post.excerpt}
               imageUrl={`https://joel.software${post.frontmatter.photo.publicURL}`}

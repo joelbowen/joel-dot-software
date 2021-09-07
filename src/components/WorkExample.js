@@ -100,18 +100,6 @@ const EntryBtn = styled.button`
   }
 `
 
-const ToggleExpandBtn = styled.button`
-  background: none;
-  border: none;
-  padding: 0;
-  text-align: left;
-
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-`
-
 const ReadMoreCTA = styled.span`
   color: ${lightMode.mutedColor};
   text-decoration: underline;
@@ -157,12 +145,6 @@ const Tag = styled.li`
   }
 `
 
-const HideOnMobile = styled.div`
-  @media (max-width: 749px) {
-    display: none;
-  }
-`
-
 const HideOnDesktop = styled.div`
   @media (min-width: 750px) {
     display: none;
@@ -175,7 +157,7 @@ function WorkExample({ icon, title, position, html, tags, year, context }) {
     <EntryContainer className={`year-${year}`} year={year}>
       <TimelineContainer>
         <Timeline className="timeline">
-          <YearDot className="year-dot"></YearDot>
+          <YearDot className="year-dot" />
           <Year className="year-name">{year}</Year>
         </Timeline>
       </TimelineContainer>
@@ -193,7 +175,7 @@ function WorkExample({ icon, title, position, html, tags, year, context }) {
             <p>{context}</p>
           </article>
           <Collapse isOpened={showingDetails}>
-            <article dangerouslySetInnerHTML={{ __html: html }}></article>
+            <article dangerouslySetInnerHTML={{ __html: html }} />
             <Tags>
               {tags.split(', ').map((t) => (
                 <Tag key={t.toString()}>{t}</Tag>

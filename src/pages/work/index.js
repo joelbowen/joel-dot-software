@@ -49,7 +49,7 @@ function Work({ data, location }) {
           <h1>Some of my work</h1>
           <p>
             These work examples should give insight into the types of projects
-            I've been privileged to help bring to life.
+            I&apos;ve been privileged to help bring to life.
           </p>
           <p>
             This list is not exhaustive but represents some of the highlights of
@@ -74,7 +74,7 @@ function Work({ data, location }) {
                 tags={e.node.frontmatter.tags}
                 title={e.node.frontmatter.title}
                 year={e.node.frontmatter.year}
-              ></WorkExample>
+              />
             ))}
           </WorkContainer>
         </ContentWrapper>

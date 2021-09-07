@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Redirect } from '@reach/router'
+import { Redirect } from '@reach/router'
 
 function Talks() {
   // Temporarily redirecting, this page should be a repository of talks eventually //

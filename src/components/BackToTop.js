@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { darkMode, lightMode, rhythm } from '../utils/typography'
-import { StaticQuery, graphql } from 'gatsby'
 import { IoTriangle } from 'react-icons/io5'
 
 const Wrapper = styled.div`

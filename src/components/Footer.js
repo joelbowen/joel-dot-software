@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { darkMode, lightMode, rhythm } from '../utils/typography'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import {
   RiInstagramLine,
   RiLinkedinBoxFill,

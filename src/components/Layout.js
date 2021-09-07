@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { rhythm, darkMode, lightMode } from '../utils/typography'
 import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'

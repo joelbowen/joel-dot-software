@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { darkMode, lightMode, rhythm } from '../utils/typography'
+import { rhythm } from '../utils/typography'
 import { graphql, StaticQuery } from 'gatsby'
 
 const Intro = styled.h2`

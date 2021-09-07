@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../../components/Layout'
-import SEO from '../../../components/seo'
+import Seo from '../../../components/seo'
 import { graphql } from 'gatsby'
 import Footer from '../../../components/Footer'
 
@@ -8,7 +8,7 @@ function TalkContent({ data, location }) {
   return (
     <div>
       <Layout location={location}>
-        <SEO
+        <Seo
           title="Scaling Your Team with GraphQL: Why Relationships Matter"
           description="Today we’re going to talk about scaling your team with GraphQL, and why relationships matter at all points in the process - both the relationships within your data, and the relationships within your organization and teams. Much of this content comes from my own recent learnings, and specifically from attending GraphQL Conf 2019 which just wrapped up in Berlin."
           imageUrl={`https://joel.software${data.featuredPhoto.publicURL}`}
@@ -121,7 +121,7 @@ function TalkContent({ data, location }) {
             Conf are live-streamed for free and the talks are posted online
             later. You can watch this content at 2x speed in the comfort of your
             own home if your primary goal is learnings from the stage, but I say
-            it's much more than that. Go, and build relationships with the
+            it&apos;s much more than that. Go, and build relationships with the
             people you meet there – that is where the true value of a conference
             is found.
           </p>
@@ -163,15 +163,17 @@ function TalkContent({ data, location }) {
           <p />
           <p>9. GraphQL is not a database query language</p>
           <p />
-          <p>10. GraphQL doesn't specify where or how to store your data</p>
+          <p>
+            10. GraphQL doesn&apos;t specify where or how to store your data
+          </p>
           <p />
           <p>
-            11. GraphQL doesn't specify how to execute retrieval of your data
-            within your various services Certainly “resolvers” are the functions
-            that run in order to retrieve data from your various services, but
-            the method by which you execute that retrieval within those
-            services, or the protocols you use to communicate with them, is
-            explicitly not defined by GraphQL.
+            11. GraphQL doesn&apos;t specify how to execute retrieval of your
+            data within your various services Certainly “resolvers” are the
+            functions that run in order to retrieve data from your various
+            services, but the method by which you execute that retrieval within
+            those services, or the protocols you use to communicate with them,
+            is explicitly not defined by GraphQL.
           </p>
           <p />
           <p>
@@ -234,7 +236,8 @@ function TalkContent({ data, location }) {
             17. GraphQL servers also use POST which is particularly valuable for
             running multiple operations and mutations with variables. At the end
             of the day, GraphQL APIs are still using HTTP methods GET and POST
-            primarily - though you won't find those methods defined in the spec.
+            primarily - though you won&apos;t find those methods defined in the
+            spec.
           </p>
           <p />
           <p>18. Now you might be wondering, what did you mean by entities?</p>

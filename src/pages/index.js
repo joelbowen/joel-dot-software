@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Featured from '../components/Featured'
 import AboutMe from '../components/AboutMe'
 import Footer from '../components/Footer'
@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
     return (
       <PageWrapper>
         <Layout location={location} title={siteTitle}>
-          <SEO
+          <Seo
             title="About Me"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             imageUrl={`https://joel.software${data.avatar.publicURL}`}
