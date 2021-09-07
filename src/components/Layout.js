@@ -94,10 +94,16 @@ const Body = styled.div`
   }
 `
 
+function getTheme() {
+  // Check if we're on the server or client
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('siteTheme')
+  }
+  return null
+}
+
 function Layout({ location, title, children }) {
-  const [theme, setTheme] = useState(
-    localStorage.getItem('siteTheme') || 'dark'
-  )
+  const [theme, setTheme] = useState(getTheme())
 
   function toggleTheme() {
     const isDark = theme === 'dark'
@@ -110,7 +116,7 @@ function Layout({ location, title, children }) {
   }
 
   useEffect(() => {
-    localStorage.setItem('siteTheme', theme)
+    localStorage.setItem('siteTheme', theme || getTheme() || 'dark')
   }, [theme])
 
   return (
