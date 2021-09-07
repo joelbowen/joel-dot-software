@@ -249,6 +249,9 @@ function Navigation({ location }) {
       <Link to="/#about-me" className={isAboutMe(location) ? 'active' : ''}>
         about
       </Link>
+      <Link to="/work" activeClassName="active">
+        work
+      </Link>
       <Link to="/blog" className={isNested(location, 'blog') ? 'active' : ''}>
         blog
       </Link>

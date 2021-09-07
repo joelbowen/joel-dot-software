@@ -34,6 +34,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/work`,
+        name: `work`,
+        defaultLayouts: {
+          default: require.resolve('./src/components/Layout.js'),
+        },
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
