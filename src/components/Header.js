@@ -234,6 +234,12 @@ function isAboutMe(location) {
   return true
 }
 
+function isNested(location, parent) {
+  const pattern = `\/${parent}\/.*|\/${parent}`
+  const re = new RegExp(pattern, 'g')
+  return re.test(location.pathname)
+}
+
 function Navigation({ location }) {
   return (
     <Nav>
@@ -243,10 +249,13 @@ function Navigation({ location }) {
       <Link to="/#about-me" className={isAboutMe(location) ? 'active' : ''}>
         about
       </Link>
-      <Link to="/blog" activeClassName="active">
+      <Link to="/blog" className={isNested(location, 'blog') ? 'active' : ''}>
         blog
       </Link>
-      <Link to="/talks" activeClassName="active">
+      <Link
+        to="/talks/scaling-your-team-with-graphql/"
+        className={isNested(location, 'talks') ? 'active' : ''}
+      >
         talks
       </Link>
     </Nav>
