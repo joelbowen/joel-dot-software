@@ -15,5 +15,5 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ['plugin:jsx-a11y/recommended'],
+  extends: ['plugin:jsx-a11y/recommended', 'alloy', 'alloy/react'],
 }
