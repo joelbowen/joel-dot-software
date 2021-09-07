@@ -60,6 +60,15 @@ const globalStyles = css`
     }
   }
 
+  em {
+    color: ${lightMode.mutedColor};
+
+    /* * DARK MODE * */
+    .dark-mode & {
+      color: ${darkMode.mutedColor};
+    }
+  }
+
   /* * DARK MODE * */
   body.dark-mode {
     background: ${darkMode.background};

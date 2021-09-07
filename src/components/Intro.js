@@ -11,13 +11,7 @@ const Intro = styled.h2`
   margin-bottom: ${rhythm(2.75)};
 
   em {
-    color: ${lightMode.mutedColor};
     font-size: ${rhythm(0.7)};
-  }
-
-  /* * DARK MODE * */
-  .dark-mode & em {
-    color: ${darkMode.mutedColor};
   }
 `
 
