@@ -3,14 +3,14 @@ import { graphql } from 'gatsby'
 import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 
-function PrivacyPolicy({ data }) {
+function PrivacyPolicy({ data, location }) {
   const html = {
     __html: JSON.parse(data.allIubendaDocument.edges[0].node.content)
       ?.privacyPolicy?.content,
   }
   return (
     <PageWrapper>
-      <Layout>
+      <Layout location={location}>
         <div dangerouslySetInnerHTML={html} style={{ marginTop: '1rem' }} />
       </Layout>
     </PageWrapper>
