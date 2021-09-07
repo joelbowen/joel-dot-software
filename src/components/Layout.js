@@ -103,7 +103,7 @@ function getTheme() {
 }
 
 function Layout({ location, title, children }) {
-  const [theme, setTheme] = useState(getTheme())
+  const [theme, setTheme] = useState(getTheme() || 'dark')
 
   function toggleTheme() {
     const isDark = theme === 'dark'
