@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { rhythm, darkMode, lightMode } from '../utils/typography'
 import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'
+import useDarkMode from 'use-dark-mode'
 import Header from './Header'
-import { Helmet } from 'react-helmet'
 
 const globalStyles = css`
   html {
@@ -94,37 +94,8 @@ const Body = styled.div`
   }
 `
 
-function getThemeFromBrowserStorage() {
-  // Check if we're on the server or client
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('siteTheme')
-  }
-  return null
-}
-
 function Layout({ location, title, children }) {
-  const [theme, setTheme] = useState(getThemeFromBrowserStorage())
-
-  function toggleTheme() {
-    const isDark = theme === 'dark'
-
-    if (isDark) {
-      setTheme('light')
-    } else {
-      setTheme('dark')
-    }
-  }
-
-  useEffect(() => {
-    if (theme) {
-      localStorage.setItem('siteTheme', theme)
-    }
-  }, [theme])
-
-  // After first client-side render
-  useEffect(() => {
-    setTheme(getThemeFromBrowserStorage() || 'dark')
-  }, [])
+  const darkMode = useDarkMode(true)
 
   return (
     <div
@@ -135,17 +106,7 @@ function Layout({ location, title, children }) {
       }}
     >
       <Global styles={globalStyles} />
-      <Helmet
-        bodyAttributes={{
-          class: theme !== 'light' ? 'dark-mode' : 'light-mode',
-        }}
-      />
-      <Header
-        location={location}
-        title={title}
-        theme={theme}
-        toggleTheme={toggleTheme}
-      />
+      <Header location={location} title={title} darkMode={darkMode} />
       <Body>{children}</Body>
     </div>
   )

@@ -276,7 +276,7 @@ function Navigation({ location }) {
   )
 }
 
-function Header({ location, theme, toggleTheme }) {
+function Header({ location, darkMode }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   useEffect(() => {
     setShowMobileMenu(false)
@@ -307,7 +307,7 @@ function Header({ location, theme, toggleTheme }) {
             <Navigation location={location} />
           </HideOnMobile>
         </Content>
-        <ToggleThemeBtn onClick={toggleTheme}>
+        <ToggleThemeBtn onClick={darkMode.toggle}>
           <HiSun className="dark-mode-toggle" />
           <HiMoon className="light-mode-toggle" />
         </ToggleThemeBtn>

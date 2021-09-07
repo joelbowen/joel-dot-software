@@ -23,6 +23,7 @@
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^3.11.0",
     "gatsby-plugin-typography": "^3.11.0",
+    "gatsby-plugin-use-dark-mode": "^1.3.0",
     "gatsby-remark-copy-linked-files": "^4.8.0",
     "gatsby-remark-embed-youtube": "^0.0.7",
     "gatsby-remark-images": "5.8.0",
@@ -42,7 +43,8 @@
     "react-loading-overlay": "^1.0.1",
     "react-typography": "^0.16.20",
     "typography": "^0.16.21",
-    "typography-theme-us-web-design-standards": "^0.16.19"
+    "typography-theme-us-web-design-standards": "^0.16.19",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "^7.29.0",

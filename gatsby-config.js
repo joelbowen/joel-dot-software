@@ -124,5 +124,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-use-dark-mode`,
   ],
 }
