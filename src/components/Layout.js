@@ -17,9 +17,6 @@ const globalStyles = css`
     color: ${lightMode.color};
   }
 
-  body.light-mode {
-    transition: background-color 0.3s ease;
-  }
 
   a {
     text-decoration: none;
@@ -73,6 +70,10 @@ const globalStyles = css`
     }
   }
 
+  body.light-mode {
+    transition: background-color 0.3s ease;
+  }
+
   /* * DARK MODE * */
   body.dark-mode {
     background: ${darkMode.background};
@@ -85,6 +86,18 @@ const globalStyles = css`
     h5,
     h6 {
       font-weight: 400;
+    }
+
+    .gatsby-image-wrapper:before {
+      width: 100%;
+      height: 100%;
+      content: "";
+      display: block;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, .15);
+      z-index: 1;
     }
   }
 `
