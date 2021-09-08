@@ -44,6 +44,20 @@ const FeaturedItemWrapper = styled.div`
   @media (min-width: 1024px) {
     padding: 0 0 10px 10px;
   }
+
+  a .gatsby-image-wrapper:hover {
+    :before {
+      background: rgba(255, 255, 255, .25);
+    }
+  }
+
+  /* * DARK MODE * */
+  .dark-mode & a .gatsby-image-wrapper:hover {
+    :before {
+      background: rgba(255, 255, 255, .1);
+
+    }
+  }
 `
 
 const WatchCTA = styled.h3`

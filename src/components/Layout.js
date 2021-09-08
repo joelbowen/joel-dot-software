@@ -74,6 +74,17 @@ const globalStyles = css`
     transition: background-color 0.3s ease;
   }
 
+  .gatsby-image-wrapper:before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
   /* * DARK MODE * */
   body.dark-mode {
     background: ${darkMode.background};
@@ -89,15 +100,7 @@ const globalStyles = css`
     }
 
     .gatsby-image-wrapper:before {
-      width: 100%;
-      height: 100%;
-      content: "";
-      display: block;
-      top: 0;
-      left: 0;
-      position: absolute;
       background: rgba(0, 0, 0, .15);
-      z-index: 1;
     }
   }
 `
