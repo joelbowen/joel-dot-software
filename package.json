@@ -65,7 +65,7 @@
     "dev": "gatsby develop",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "format": "prettier -l \"{content,src}/**/*.{js,jsx,md}\"",
     "develop": "gatsby develop",
     "start": "yarn develop",
     "build": "gatsby build"
