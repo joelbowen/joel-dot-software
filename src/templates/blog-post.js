@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 
 import Layout from '../components/Layout'
@@ -62,8 +62,8 @@ function FeaturedPhoto({ post }) {
 
   return (
     <div>
-      <Image
-        fluid={post.frontmatter.photo.childImageSharp.fluid}
+      <GatsbyImage
+        image={post.frontmatter.photo.childImageSharp.gatsbyImageData}
         alt={post.frontmatter.photoDescription}
       />
       <p
@@ -212,9 +212,7 @@ export const pageQuery = graphql`
         keywords
         photo {
           childImageSharp {
-            fluid(maxWidth: 1024, maxHeight: 500) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
           publicURL
         }

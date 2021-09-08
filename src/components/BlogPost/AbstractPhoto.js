@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Image from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 import { rhythm } from '../../utils/typography'
 
@@ -23,8 +23,8 @@ function AbstractPhoto({ post }) {
   return (
     <AbstractPhotoWrapper>
       <Link style={{ boxShadow: `none` }} to={post.fields.slug}>
-        <Image
-          fluid={post.frontmatter.photo.childImageSharp.fluid}
+        <GatsbyImage
+          image={post.frontmatter.photo.childImageSharp.gatsbyImageData}
           alt={post.frontmatter.photoDescription}
         />
       </Link>

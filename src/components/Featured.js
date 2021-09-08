@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Image from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { darkMode, lightMode, rhythm } from '../utils/typography'
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -88,15 +88,15 @@ function Featured({ images, videos }) {
       <FeaturedItems>
         {images.map((image) => (
           <FeaturedItemWrapper key={image.node.id}>
-            <Image fluid={image.node.childImageSharp.fluid} />
+            <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} />
           </FeaturedItemWrapper>
         ))}
       </FeaturedItems>
       <FeaturedItems>
         <FeaturedItemWrapper>
           <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
-            <Image
-              fluid={videos[0].node.childImageSharp.fluid}
+            <GatsbyImage
+              image={videos[0].node.childImageSharp.gatsbyImageData}
               alt="Featured Video"
             />
           </a>
@@ -139,9 +139,7 @@ export default (props) => (
             node {
               id
               childImageSharp {
-                fluid(maxWidth: 250, maxHeight: 250) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 250, height: 250, layout: CONSTRAINED)
               }
             }
           }
@@ -156,9 +154,7 @@ export default (props) => (
             node {
               id
               childImageSharp {
-                fluid(maxWidth: 250, maxHeight: 250) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 250, height: 250, layout: CONSTRAINED)
               }
             }
           }

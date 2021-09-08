@@ -36,9 +36,11 @@ export default (props) => (
                 description
                 photo {
                   childImageSharp {
-                    fluid(maxWidth: 400, maxHeight: 200) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(
+                      width: 400
+                      height: 200
+                      layout: CONSTRAINED
+                    )
                   }
                 }
                 photoDescription
