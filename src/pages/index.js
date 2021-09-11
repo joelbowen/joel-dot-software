@@ -50,7 +50,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/profile-icon-02.png/" }) {
       publicURL
     }
   }

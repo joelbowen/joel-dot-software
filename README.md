@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://joel.software">
-    <img alt="Gatsby" src="./content/assets/profile-pic.jpg" width="60" />
+    <img alt="Gatsby" src="./content/assets/profile-icon-02.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
