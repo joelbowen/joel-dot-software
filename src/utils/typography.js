@@ -18,6 +18,14 @@ if (process.env.NODE_ENV !== `production`) {
 export const rhythm = typography.rhythm
 export const scale = typography.scale
 
+export const breakpoints = {
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+  xxl: '1440px',
+}
+
 // Theme variants
 export const darkMode = {
   color: '#e8eaed',
