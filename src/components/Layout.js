@@ -85,6 +85,14 @@ const globalStyles = css`
     z-index: 1;
   }
 
+  .show-dark-mode {
+    display: none;
+  }
+
+  .show-light-mode {
+    display: initial;
+  }
+
   /* * DARK MODE * */
   body.dark-mode {
     background: ${darkMode.background};
@@ -101,6 +109,13 @@ const globalStyles = css`
 
     .gatsby-image-wrapper:before {
       background: rgba(0, 0, 0, .15);
+    }
+    .show-dark-mode {
+      display: initial;
+    }
+
+    .show-light-mode {
+      display: none;
     }
   }
 `
