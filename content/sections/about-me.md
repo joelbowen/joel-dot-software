@@ -5,6 +5,18 @@ type: content
 
 ## About Me
 
+<div class="show-light-mode img-float-right">
+
+![developer coding](../assets/profile-icon-01.svg)
+
+</div>
+
+<div class="show-dark-mode img-float-right">
+
+![developer coding](../assets/profile-icon-02.svg)
+
+</div>
+
 Hi there 👋, I'm Joel - a Principal Architect and Software Engineer with 15 years of experience [creating products](/work) at scale in various industries.
 
 I'm an engineer that thinks like a product leader&mdash;I've helped companies drive user-centric outcomes as an individual contributor, VP of Engineering, technical project manager, director of Innovation, and more. I love building products with cross-functional teams, and I especially enjoy writing code.
@@ -14,6 +26,19 @@ I have helped small businesses to fortune 50 companies identify the most signifi
 _📚 Read: [6 Principles for Designing Software Architecture](/6-principles-of-application-design-and-software-architecture)_
 
 ## I like
+
+<div class="show-light-mode img-float-left">
+
+![person placing preferences](../assets/likes-01.svg)
+
+</div>
+
+<div class="show-dark-mode img-float-left">
+
+![person placing preferences](../assets/likes-02.svg)
+
+</div>
+
 
 Continuous discovery and delivery, flow-focused value streams, empowering cross-functional product teams, the inverse Conway maneuver, outcome-based roadmaps, promoting ownership and autonomy for product teams, embracing the [Principles of Agile](http://agilemanifesto.org/principles.html), Serverless, GraphQL, Node.js, Containerization, JavaScript (TypeScript), PostgreSQL, Infrastructure as Code (IaC), automated testing, Redshift, observability, and pursuing outcomes over outputs.
 
