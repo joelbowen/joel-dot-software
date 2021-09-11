@@ -13,7 +13,7 @@ const Button = styled.button`
   display: flex;
   height: 44px;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 
   svg {
     margin-left: 10px;
