@@ -12,8 +12,8 @@ const FeaturedWrapper = styled.div`
     margin-left: -4px;
   }
 
-  @media (min-width: 1024px) {
-    margin: 0 calc(calc(750px - 1024px) / 2) ${rhythm(2.75)};
+  @media (min-width: 1200px) {
+    margin: 0 -5vw ${rhythm(2.75)};
   }
 `
 
