@@ -113,7 +113,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#30395F`,
         display: `minimal-ui`,
-        icon: `content/assets/profile-pic.jpg`,
+        icon: `content/assets/favicon.png`,
       },
     },
     `gatsby-plugin-remove-serviceworker`,
