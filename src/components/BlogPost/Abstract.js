@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-import { rhythm } from '../../utils/typography'
+import { breakpoints, rhythm } from '../../utils/typography'
 import AbstractPhoto from './AbstractPhoto'
 
 const Abstract = styled.p`
@@ -10,7 +10,7 @@ const Abstract = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
 
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     -webkit-line-clamp: 4;
     margin: 0;
   }
@@ -20,7 +20,7 @@ const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     flex-direction: row;
   }
 `
@@ -28,7 +28,7 @@ const PostWrapper = styled.div`
 const MobileCTA = styled.p`
   margin-top: -${rhythm(1 / 2)};
   text-align: right;
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     display: none;
   }
 `

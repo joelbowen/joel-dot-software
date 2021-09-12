@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { darkMode, lightMode, rhythm } from '../utils/typography'
+import { breakpoints, darkMode, lightMode, rhythm } from '../utils/typography'
 import { StaticQuery, graphql } from 'gatsby'
 
 const FeaturedWrapper = styled.div`
   margin-bottom: ${rhythm(2.75)};
 
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     display: flex;
     margin-left: -4px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoints.xl}) {
     margin: 0 -5vw ${rhythm(2.75)};
   }
 `
@@ -22,7 +22,7 @@ const FeaturedItems = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     flex: 1;
     justify-content: flex-end;
     &:last-child {
@@ -38,10 +38,10 @@ const FeaturedItemWrapper = styled.div`
   padding: 2px;
   align-items: ${(props) =>
     props.align === 'center' ? 'center' : 'flex-start'};
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     align-items: flex-start;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoints.lg}) {
     padding: 0 0 10px 10px;
   }
 
@@ -62,12 +62,9 @@ const FeaturedItemWrapper = styled.div`
 
 const WatchCTA = styled.h3`
   color: ${lightMode.color};
-  display: none;
   font-weight: 400;
   margin: 0 0 0.5rem;
-  @media (min-width: 345px) {
-    display: block;
-  }
+  display: block;
 
   /* * DARK MODE * */
   .dark-mode & {
@@ -84,11 +81,7 @@ const FeaturedText = styled.aside`
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-
-  @media (min-width: 325px) {
-    -webkit-line-clamp: 3;
-  }
+  -webkit-line-clamp: 3;
 
   /* * DARK MODE * */
   .dark-mode & {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { rhythm, darkMode, lightMode } from '../utils/typography'
+import { rhythm, darkMode, lightMode, breakpoints } from '../utils/typography'
 import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import useDarkMode from 'use-dark-mode'
@@ -124,7 +124,7 @@ const Body = styled.div`
   max-width: 1024px;
   padding-top: ${rhythm(2.75)};
 
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     padding-top: ${rhythm(5.5)};
   }
 `

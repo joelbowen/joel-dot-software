@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { darkMode, lightMode, rhythm } from '../utils/typography'
+import { breakpoints, darkMode, lightMode, rhythm } from '../utils/typography'
 import { BiTag } from 'react-icons/bi'
 import { Collapse } from 'react-collapse'
 import { useState } from 'react'
@@ -33,7 +33,7 @@ const TimelineContainer = styled.aside`
 
 const Timeline = styled.div`
   display: none;
-  @media (min-width: 540px) {
+  @media (min-width: ${breakpoints.sm}) {
     padding-top: ${rhythm(1.5)};
     padding-right: 25px;
     border-left: 1px solid #ccc;
@@ -41,7 +41,7 @@ const Timeline = styled.div`
     margin-left: 50px;
     transition: 0.15s all ease;
   }
-  @media (min-width: 960px) {
+  @media (min-width: ${breakpoints.lg}) {
     margin-left: -45px;
     padding-right: 0;
   }
@@ -146,7 +146,7 @@ const Tag = styled.li`
 `
 
 const HideOnDesktop = styled.div`
-  @media (min-width: 750px) {
+  @media (min-width: ${breakpoints.md}) {
     display: none;
   }
 `

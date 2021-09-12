@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { darkMode, lightMode, rhythm } from '../utils/typography'
+import { breakpoints, darkMode, lightMode, rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import { Link } from 'gatsby'
@@ -54,13 +54,13 @@ const MobileNavBtn = styled.button`
 `
 
 const HideOnMobile = styled.div`
-  @media (max-width: 749px) {
+  @media (max-width: ${breakpoints.mdVal - 1}px) {
     display: none;
   }
 `
 
 const HideOnDesktop = styled.div`
-  @media (min-width: 750px) {
+  @media (min-width: ${breakpoints.md}) {
     display: none;
   }
 `
@@ -76,7 +76,7 @@ const HeaderWrapper = styled.div`
   width: 100vw;
   z-index: 9;
 
-  @media (min-width: 750px) {
+  @media (min-width: ${breakpoints.md}) {
     align-items: flex-end;
   }
 
@@ -116,13 +116,13 @@ const Content = styled.div`
   height: 100%;
   justify-content: space-between;
 
-  @media (min-width: 620px) {
+  @media (min-width: ${breakpoints.sm}) {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
   }
 
-  @media (min-width: 750px) {
+  @media (min-width: ${breakpoints.md}) {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -153,7 +153,7 @@ const Nav = styled.nav`
     }
   }
 
-  @media (min-width: 750px) {
+  @media (min-width: ${breakpoints.md}) {
     flex-direction: row;
     justify-content: flex-start;
     margin: initial;
@@ -165,7 +165,7 @@ const Nav = styled.nav`
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: ${breakpoints.lg}) {
     padding-left: 70px;
   }
 
