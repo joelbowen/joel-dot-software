@@ -47,15 +47,14 @@ const FeaturedItemWrapper = styled.div`
 
   a .gatsby-image-wrapper:hover {
     :before {
-      background: rgba(255, 255, 255, .25);
+      background: rgba(255, 255, 255, 0.25);
     }
   }
 
   /* * DARK MODE * */
   .dark-mode & a .gatsby-image-wrapper:hover {
     :before {
-      background: rgba(255, 255, 255, .1);
-
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 `

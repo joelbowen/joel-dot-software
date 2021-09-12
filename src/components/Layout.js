@@ -17,7 +17,6 @@ const globalStyles = css`
     color: ${lightMode.color};
   }
 
-
   a {
     text-decoration: none;
     color: ${lightMode.linkColor};
@@ -77,7 +76,7 @@ const globalStyles = css`
   .gatsby-image-wrapper:before {
     width: 100%;
     height: 100%;
-    content: "";
+    content: '';
     display: block;
     top: 0;
     left: 0;
@@ -108,7 +107,7 @@ const globalStyles = css`
     }
 
     .gatsby-image-wrapper:before {
-      background: rgba(0, 0, 0, .15);
+      background: rgba(0, 0, 0, 0.15);
     }
     .show-dark-mode {
       display: initial;

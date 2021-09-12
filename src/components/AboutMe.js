@@ -5,13 +5,13 @@ import OffsetAnchor from './OffsetAnchor'
 import { breakpoints } from '../utils/typography'
 
 const Container = styled.article`
-
-  .img-float-left, .img-float-right {
+  .img-float-left,
+  .img-float-right {
     @media (min-width: ${breakpoints.sm}) {
       width: 50%;
       max-width: 200px;
       padding: 1rem;
-      transition: margin .3s ease;
+      transition: margin 0.3s ease;
     }
 
     p {

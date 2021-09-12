@@ -39,7 +39,6 @@ _📚 Read: [6 Principles for Designing Software Architecture](/6-principles-of-
 
 </div>
 
-
 Continuous discovery and delivery, flow-focused value streams, empowering cross-functional product teams, the inverse Conway maneuver, outcome-based roadmaps, promoting ownership and autonomy for product teams, embracing the [Principles of Agile](http://agilemanifesto.org/principles.html), Serverless, GraphQL, Node.js, Containerization, JavaScript (TypeScript), PostgreSQL, Infrastructure as Code (IaC), automated testing, Redshift, observability, and pursuing outcomes over outputs.
 
 Modern product development engages empowered cross-functional teams to continuously discover and deliver value. I aim to bring thoughtful structure and outcome-based approaches to product teams.
