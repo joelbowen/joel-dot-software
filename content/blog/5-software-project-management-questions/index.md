@@ -4,6 +4,7 @@ description: 'Have you ever asked yourself, "are we doing software project manag
 photo: './no-parking-cyantis.jpg'
 photoCredit: Cody Yantis
 photoCreditLink: https://www.flickr.com/photos/cyantis
+photoDescription: 'A no parking sign in front of a concrete wall'
 date: '2020-08-07'
 keywords: Software Project Management,Software Development Process,SDLC,Pragmatic Project Management,Principled Developer,Engineering,Product Development,Project Management Software,Agile Project Management,Kanban,Agile Process
 type: 'blog'
