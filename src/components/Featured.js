@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import { breakpoints, darkMode, lightMode, rhythm } from '../utils/typography'
-import { StaticQuery, graphql } from 'gatsby'
 
 const FeaturedWrapper = styled.div`
   margin-bottom: ${rhythm(2.75)};
@@ -88,22 +87,53 @@ const FeaturedText = styled.aside`
   }
 `
 
-function Featured({ images, videos }) {
+function Featured() {
   return (
     <FeaturedWrapper>
       <FeaturedItems>
-        {images.map((image) => (
-          <FeaturedItemWrapper key={image.node.id}>
-            <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} />
-          </FeaturedItemWrapper>
-        ))}
+        <FeaturedItemWrapper>
+          <StaticImage
+            src="../../content/assets/newborn.jpg"
+            alt="A man holds a newborn baby"
+          />
+        </FeaturedItemWrapper>
+        <FeaturedItemWrapper>
+          <StaticImage
+            src="../../content/assets/graphql-switzerland.jpg"
+            alt="A backpack with the GraphQL logo sits atop a swiss mountain"
+          />
+        </FeaturedItemWrapper>
+        <FeaturedItemWrapper>
+          <StaticImage
+            src="../../content/assets/grill-cart.jpg"
+            alt="A cedar grill cart"
+          />
+        </FeaturedItemWrapper>
+        <FeaturedItemWrapper>
+          <StaticImage
+            src="../../content/assets/milling-lumber.jpg"
+            alt="A man in a helmet holds a red cedar slab"
+          />
+        </FeaturedItemWrapper>
+        <FeaturedItemWrapper>
+          <StaticImage
+            src="../../content/assets/github-desk-walnut.jpg"
+            alt="The Github Octocat logo is embedded in a walnut table"
+          />
+        </FeaturedItemWrapper>
+        <FeaturedItemWrapper>
+          <StaticImage
+            src="../../content/assets/denver.jpg"
+            alt="The word Denver is lit up in lights"
+          />
+        </FeaturedItemWrapper>
       </FeaturedItems>
       <FeaturedItems>
         <FeaturedItemWrapper>
           <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
-            <GatsbyImage
-              image={videos[0].node.childImageSharp.gatsbyImageData}
-              alt="Featured Video"
+            <StaticImage
+              src="../../content/assets/featured-video.jpg"
+              alt="Preview thumbnail of the featured video - a man uses a handheld cnc"
             />
           </a>
         </FeaturedItemWrapper>
@@ -131,48 +161,4 @@ function Featured({ images, videos }) {
   )
 }
 
-export default (props) => (
-  <StaticQuery
-    query={graphql`
-      query FeaturedItems {
-        pictures: allFile(
-          filter: {
-            sourceInstanceName: { eq: "assets" }
-            name: { glob: "featured-img-*" }
-          }
-        ) {
-          edges {
-            node {
-              id
-              childImageSharp {
-                gatsbyImageData(width: 250, height: 250, layout: CONSTRAINED)
-              }
-            }
-          }
-        }
-        video: allFile(
-          filter: {
-            sourceInstanceName: { eq: "assets" }
-            name: { eq: "featured-video" }
-          }
-        ) {
-          edges {
-            node {
-              id
-              childImageSharp {
-                gatsbyImageData(width: 250, height: 250, layout: CONSTRAINED)
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <Featured
-        images={data.pictures.edges}
-        videos={data.video.edges}
-        {...props}
-      />
-    )}
-  />
-)
+export default Featured
