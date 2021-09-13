@@ -1,16 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from '@emotion/styled'
-
 import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 import Abstract from '../components/BlogPost/Abstract'
 import Footer from '../components/Footer'
-
-const ContentWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 750px;
-`
+import { ContentWrapper } from '../components/_Containers'
 
 function Blog({
   data: {

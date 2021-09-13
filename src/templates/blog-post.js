@@ -7,11 +7,8 @@ import Layout from '../components/Layout'
 import Seo from '../components/seo'
 import { darkMode, lightMode, rhythm, scale } from '../utils/typography'
 import Footer from '../components/Footer'
+import { ContentWrapper } from '../components/_Containers'
 
-const ContentWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 750px;
-`
 const Post = styled.article`
   hr {
     border-top: 4px dotted #cecece;

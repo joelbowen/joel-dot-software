@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from '@emotion/styled'
 import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
@@ -9,11 +8,7 @@ import Featured from '../components/Featured'
 import AboutMe from '../components/AboutMe'
 import Footer from '../components/Footer'
 import LatestPost from '../components/LatestPost'
-
-const ContentWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 750px;
-`
+import { ContentWrapper } from '../components/_Containers'
 
 class BlogIndex extends React.Component {
   render() {

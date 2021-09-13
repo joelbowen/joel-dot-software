@@ -17,11 +17,7 @@ import {
 } from 'react-icons/ri'
 import { BiBeer, BiPyramid } from 'react-icons/bi'
 import Footer from '../../components/Footer'
-
-const ContentWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 750px;
-`
+import { ContentWrapper } from '../../components/_Containers'
 
 const WorkContainer = styled.div`
   margin-top: ${rhythm(3)};
