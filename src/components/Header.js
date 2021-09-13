@@ -101,11 +101,11 @@ const SiteTitle = styled.h1`
   }
 `
 
-const Container = styled.div`
+const HeaderContainer = styled.div`
   align-items: center;
   display: flex;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1280px;
   width: 100%;
 `
 
@@ -284,7 +284,7 @@ function Header({ location, darkMode }) {
 
   return (
     <HeaderWrapper>
-      <Container>
+      <HeaderContainer>
         <HideOnDesktop>
           <MobileNavBtn onClick={() => setShowMobileMenu(true)}>
             &#9776;
@@ -311,7 +311,7 @@ function Header({ location, darkMode }) {
           <HiSun className="dark-mode-toggle" />
           <HiMoon className="light-mode-toggle" />
         </ToggleThemeBtn>
-      </Container>
+      </HeaderContainer>
       {showMobileMenu && (
         <MobileNav>
           <MobileNavBtn onClick={() => setShowMobileMenu(false)}>
