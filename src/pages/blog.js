@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 import Abstract from '../components/BlogPost/Abstract'
 import Footer from '../components/Footer'
-import { ContentWrapper } from '../components/_Containers'
+import { ContentWrapper, PageWrapper } from '../components/_Containers'
 
 function Blog({
   data: {

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
 import Seo from '../components/seo'
@@ -8,7 +7,7 @@ import Featured from '../components/Featured'
 import AboutMe from '../components/AboutMe'
 import Footer from '../components/Footer'
 import LatestPost from '../components/LatestPost'
-import { ContentWrapper } from '../components/_Containers'
+import { ContentWrapper, PageWrapper } from '../components/_Containers'
 
 class BlogIndex extends React.Component {
   render() {

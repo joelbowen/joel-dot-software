@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import PageWrapper from '../../components/PageWrapper'
 import { rhythm } from '../../utils/typography'
 import WorkExample from '../../components/WorkExample'
 import {
@@ -17,7 +16,7 @@ import {
 } from 'react-icons/ri'
 import { BiBeer, BiPyramid } from 'react-icons/bi'
 import Footer from '../../components/Footer'
-import { ContentWrapper } from '../../components/_Containers'
+import { ContentWrapper, PageWrapper } from '../../components/_Containers'
 
 const WorkContainer = styled.div`
   margin-top: ${rhythm(3)};

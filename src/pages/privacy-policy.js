@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PageWrapper from '../components/PageWrapper'
 import Layout from '../components/Layout'
+import { PageWrapper } from '../components/_Containers'
 
 function PrivacyPolicy({ data, location }) {
   const html = {
