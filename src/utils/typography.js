@@ -7,6 +7,7 @@ delete usWebDesignStandardsTheme.googleFonts
 // Update the default theme header font
 usWebDesignStandardsTheme.headerFontFamily = ['CabinVariable', 'sans-serif']
 usWebDesignStandardsTheme.bodyFontFamily = ['CabinVariable', 'sans-serif']
+usWebDesignStandardsTheme.baseFontSize = '20px'
 
 const typography = new Typography(usWebDesignStandardsTheme)
 
