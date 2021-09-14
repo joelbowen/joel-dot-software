@@ -22,7 +22,7 @@ function AbstractPhoto({ post }) {
 
   return (
     <AbstractPhotoWrapper>
-      <Link style={{ boxShadow: `none` }} to={post.fields.slug}>
+      <Link style={{ boxShadow: `none` }} to={`/blog${post.fields.slug}`}>
         <GatsbyImage
           image={post.frontmatter.photo.childImageSharp.gatsbyImageData}
           alt={post.frontmatter.photoDescription}
