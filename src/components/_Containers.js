@@ -8,5 +8,5 @@ export const PageWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 700px;
 `
