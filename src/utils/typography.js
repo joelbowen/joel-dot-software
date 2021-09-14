@@ -19,21 +19,23 @@ if (process.env.NODE_ENV !== `production`) {
 export const rhythm = typography.rhythm
 export const scale = typography.scale
 
-export let breakpoints = {
-  smVal: 640,
-  mdVal: 768,
-  lgVal: 1024,
-  xlVal: 1280,
-  xxlVal: 1440,
-}
+const smVal = 640
+const mdVal = 768
+const lgVal = 1024
+const xlVal = 1280
+const xxlVal = 1440
 
-breakpoints = {
-  ...breakpoints,
-  sm: `${breakpoints.smVal}px`,
-  md: `${breakpoints.mdVal}px`,
-  lg: `${breakpoints.lgVal}px`,
-  xl: `${breakpoints.xlVal}px`,
-  xxl: `${breakpoints.xxlVal}px`,
+export let breakpoints = {
+  sm: `${smVal}px`,
+  smVal,
+  md: `${mdVal}px`,
+  mdVal,
+  lg: `${lgVal}px`,
+  lgVal,
+  xl: `${xlVal}px`,
+  xlVal,
+  xxl: `${xxlVal}px`,
+  xxlVal,
 }
 
 // Theme variants
