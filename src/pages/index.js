@@ -24,8 +24,8 @@ class BlogIndex extends React.Component {
           />
           <Intro />
           <Featured />
+          <LatestPost />
           <ContentWrapper>
-            <LatestPost />
             <AboutMe />
           </ContentWrapper>
         </Layout>
