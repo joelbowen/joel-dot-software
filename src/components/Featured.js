@@ -6,13 +6,8 @@ import { breakpoints, darkMode, lightMode, rhythm } from '../utils/typography'
 const FeaturedWrapper = styled.div`
   margin-bottom: ${rhythm(2.75)};
 
-  @media (min-width: ${breakpoints.sm}) {
+  @media (min-width: ${breakpoints.md}) {
     display: flex;
-    margin-left: -4px;
-  }
-
-  @media (min-width: ${breakpoints.xl}) {
-    margin: 0 -5vw ${rhythm(2.75)};
   }
 `
 
@@ -21,7 +16,7 @@ const FeaturedItems = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (min-width: ${breakpoints.sm}) {
+  @media (min-width: ${breakpoints.md}) {
     flex: 1;
     justify-content: flex-end;
     &:last-child {
@@ -31,17 +26,13 @@ const FeaturedItems = styled.div`
 `
 
 const FeaturedItemWrapper = styled.div`
-  flex: 0 0 33%;
-  max-height: 200px;
-  max-width: 200px;
+  flex: 1 1 30%;
   padding: 2px;
-  align-items: ${(props) =>
-    props.align === 'center' ? 'center' : 'flex-start'};
-  @media (min-width: ${breakpoints.sm}) {
-    align-items: flex-start;
-  }
-  @media (min-width: ${breakpoints.lg}) {
-    padding: 0 0 10px 10px;
+
+  @media (min-width: ${breakpoints.md}) {
+    flex: 1 1 15%;
+    max-height: ${breakpoints.xl / 6};
+    max-width: ${breakpoints.xl / 6};
   }
 
   a .gatsby-image-wrapper:hover {
@@ -57,33 +48,64 @@ const FeaturedItemWrapper = styled.div`
     }
   }
 `
+const FeaturedLinkWrapper = styled(FeaturedItemWrapper)`
+  order: 7;
 
-const WatchCTA = styled.h3`
+  @media (min-width: ${breakpoints.md}) {
+    order: initial;
+  }
+`
+
+const FeaturedCTAWrapper = styled(FeaturedItemWrapper)`
+  order: 8;
+  flex: 2 0 60%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+
+  @media (min-width: ${breakpoints.md}) {
+    flex: 2 0 28%;
+    order: initial;
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    padding: 1rem;
+  }
+`
+
+const FeaturedCTA = styled.aside`
+  color: ${lightMode.mutedColor};
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  justify-content: center;
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    color: ${darkMode.mutedColor}af;
+  }
+`
+
+const FeaturedTitle = styled.h3`
   color: ${lightMode.color};
   font-weight: 400;
-  margin: 0 0 0.5rem;
-  display: block;
+  display: none;
+
+  @media (min-width: ${breakpoints.lg}) {
+    display: block;
+  }
 
   /* * DARK MODE * */
   .dark-mode & {
     color: ${darkMode.color};
   }
 `
-const FeaturedText = styled.aside`
-  color: ${lightMode.mutedColor};
-  display: -webkit-box;
-  font-size: ${rhythm(0.6)};
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
 
-  /* * DARK MODE * */
-  .dark-mode & {
-    color: ${darkMode.mutedColor}af;
+const FeaturedFiller = styled(FeaturedItemWrapper)`
+  display: none;
+  @media (min-width: ${breakpoints.md}) {
+    display: initial;
+    flex: 2 0 45%;
   }
 `
 
@@ -109,6 +131,24 @@ function Featured() {
             alt="A cedar grill cart"
           />
         </FeaturedItemWrapper>
+        <FeaturedLinkWrapper>
+          <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
+            <StaticImage
+              src="../../content/assets/featured-video.jpg"
+              alt="Preview thumbnail of the featured video - a man uses a handheld cnc"
+            />
+          </a>
+        </FeaturedLinkWrapper>
+        <FeaturedCTAWrapper>
+          <FeaturedCTA>
+            <FeaturedTitle>Featured Video</FeaturedTitle>
+            <span>
+              <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
+                Creating “Jake Knapp” for Wily’s Design Sprint Bootcamp.
+              </a>
+            </span>
+          </FeaturedCTA>
+        </FeaturedCTAWrapper>
         <FeaturedItemWrapper>
           <StaticImage
             src="../../content/assets/milling-lumber.jpg"
@@ -127,35 +167,7 @@ function Featured() {
             alt="The word Denver is lit up in lights"
           />
         </FeaturedItemWrapper>
-      </FeaturedItems>
-      <FeaturedItems>
-        <FeaturedItemWrapper>
-          <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
-            <StaticImage
-              src="../../content/assets/featured-video.jpg"
-              alt="Preview thumbnail of the featured video - a man uses a handheld cnc"
-            />
-          </a>
-        </FeaturedItemWrapper>
-        <FeaturedItemWrapper
-          align="center"
-          style={{
-            flex: `0 0 66%`,
-            display: 'flex',
-            justifyContent: 'center',
-            padding: `0 ${rhythm(2 / 3)}`,
-            maxWidth: '400px',
-          }}
-        >
-          <FeaturedText>
-            <WatchCTA>Featured</WatchCTA> Creating “Jake Knapp” for Wily’s
-            Design Sprint Bootcamp. (
-            <a href="https://www.instagram.com/p/BohW3wknX7J" target="_blank">
-              link
-            </a>
-            )
-          </FeaturedText>
-        </FeaturedItemWrapper>
+        <FeaturedFiller>&nbsp;</FeaturedFiller>
       </FeaturedItems>
     </FeaturedWrapper>
   )
