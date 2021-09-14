@@ -193,7 +193,7 @@ const ToggleThemeBtn = styled.button`
   font-size: ${rhythm(1)};
   svg {
     position: relative;
-    top: 5px;
+    top: 2px;
   }
 
   &:hover,
