@@ -16,12 +16,29 @@ const Abstract = styled.p`
   }
 `
 
+const PhotoWrapper = styled.div`
+  @media (min-width: ${breakpoints.sm}) {
+    padding-top: 2rem;
+    padding-right: 1rem;
+    flex: 1;
+  }
+
+  @media (min-width: ${breakpoints.md}) {
+    padding-top: 1rem;
+  }
+`
+
 const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   @media (min-width: ${breakpoints.sm}) {
     flex-direction: row;
+  }
+
+  @media (min-width: ${breakpoints.md}) {
+    margin-bottom: 0;
   }
 `
 
@@ -33,11 +50,21 @@ const MobileCTA = styled.p`
   }
 `
 
+const Title = styled.h3`
+  margin: 1.5rem 0 0;
+
+  @media (min-width: ${breakpoints.md}) {
+    margin: 0.5rem 0 0;
+  }
+`
+
 function BlogPostAbstract({ post }) {
   return (
     <PostWrapper>
-      <AbstractPhoto post={post} />
-      <article style={{ flex: 1 }}>
+      <PhotoWrapper>
+        <AbstractPhoto post={post} />
+      </PhotoWrapper>
+      <article style={{ flex: 2 }}>
         <Link
           style={{
             display: 'block',
@@ -47,7 +74,7 @@ function BlogPostAbstract({ post }) {
           }}
           to={`/blog${post.fields.slug}`}
         >
-          <h3 style={{ margin: 0 }}>{post.frontmatter.title}</h3>
+          <Title>{post.frontmatter.title}</Title>
         </Link>
         <Abstract
           dangerouslySetInnerHTML={{

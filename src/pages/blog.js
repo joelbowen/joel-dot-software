@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Abstract from '../components/BlogPost/Abstract'
 import Footer from '../components/Footer'
-import { ContentWrapper, PageWrapper } from '../components/_Containers'
+import { PageWrapper } from '../components/_Containers'
 
 function Blog({
   data: {
@@ -14,14 +14,14 @@ function Blog({
   return (
     <PageWrapper>
       <Layout location={location}>
-        <ContentWrapper>
+        <div style={{ maxWidth: '1024px' }}>
           <h1 style={{ marginTop: '1rem' }}>Blog Posts</h1>
           {blogs.map(({ node: post }) => (
-            <article style={{ marginBottom: '2rem' }} key={post.id}>
+            <article key={post.id}>
               <Abstract post={post} />
             </article>
           ))}
-        </ContentWrapper>
+        </div>
       </Layout>
       <Footer />
     </PageWrapper>
@@ -51,7 +51,12 @@ export const query = graphql`
             description
             photo {
               childImageSharp {
-                gatsbyImageData(width: 400, height: 200, layout: CONSTRAINED)
+                gatsbyImageData(
+                  width: 400
+                  height: 300
+                  layout: CONSTRAINED
+                  transformOptions: { cropFocus: CENTER }
+                )
               }
             }
             photoDescription

@@ -71,8 +71,9 @@ export default (props) => (
                   childImageSharp {
                     gatsbyImageData(
                       width: 400
-                      height: 200
+                      height: 300
                       layout: CONSTRAINED
+                      transformOptions: { cropFocus: CENTER }
                     )
                   }
                 }
