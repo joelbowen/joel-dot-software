@@ -46,7 +46,7 @@ const GitHubLink = () => (
     />
     <p style={{ textAlign: 'center', marginTop: rhythm(1) }}>
       <a href="https://github.com/joelbowen/joel-dot-software" target="_blank">
-        See the code on <strong>Github</strong>
+        See the code on Github
       </a>
     </p>
   </div>

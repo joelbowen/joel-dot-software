@@ -8,9 +8,6 @@ import Header from './Header'
 const globalStyles = css`
   html {
     letter-spacing: 0.01764705882rem;
-    strong {
-      font-weight: 600;
-    }
   }
 
   body {
@@ -57,6 +54,16 @@ const globalStyles = css`
     /* * DARK MODE * */
     .dark-mode & {
       color: ${darkMode.color};
+    }
+  }
+
+  strong {
+    font-weight: 600;
+    color: tomato;
+
+    /* * DARK MODE * */
+    .dark-mode & {
+      color: coral;
     }
   }
 
