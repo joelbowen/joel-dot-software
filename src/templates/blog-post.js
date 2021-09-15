@@ -29,6 +29,11 @@ const Post = styled.article`
       border-color: ${darkMode.gray};
     }
   }
+
+  em {
+    color: rgb(125, 125, 125);
+    font-size: 0.75em;
+  }
 `
 const Title = styled.h1`
   margin-bottom: 0;
@@ -88,14 +93,7 @@ function FeaturedPhoto({ post }) {
         image={post.frontmatter.photo.childImageSharp.gatsbyImageData}
         alt={post.frontmatter.photoDescription}
       />
-      <p
-        style={{
-          color: 'rgb(125, 125, 125)',
-          fontSize: '0.75rem',
-          marginTop: '1rem',
-          textAlign: 'center',
-        }}
-      >
+      <p style={{ marginTop: '1rem', textAlign: 'center' }}>
         {post.frontmatter.photoDescription && (
           <em>{post.frontmatter.photoDescription}</em>
         )}
