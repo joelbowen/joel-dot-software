@@ -11,7 +11,7 @@ const Abstract = styled.p`
   -webkit-line-clamp: 6;
 
   @media (min-width: ${breakpoints.sm}) {
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 6;
     margin: 0;
   }
 `
