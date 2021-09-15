@@ -5,7 +5,13 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/Layout'
 import Seo from '../components/seo'
-import { darkMode, lightMode, rhythm, scale } from '../utils/typography'
+import {
+  breakpoints,
+  darkMode,
+  lightMode,
+  rhythm,
+  scale,
+} from '../utils/typography'
 import Footer from '../components/Footer'
 import { ContentWrapper } from '../components/_Containers'
 
@@ -49,6 +55,25 @@ const BlogFooter = styled.ul`
   /* * DARK MODE * */
   .dark-mode & {
     background: #7aab4f20;
+  }
+
+  @media (min-width: ${breakpoints.md}) {
+    align-items: flex-end;
+    padding: 0 1rem;
+    li {
+      flex: 1;
+      order: 2;
+      text-align: right;
+
+      &:nth-of-type(2) {
+        text-align: left;
+        order: 1;
+      }
+
+      h3 {
+        margin-top: 1.2rem;
+      }
+    }
   }
 `
 
@@ -156,25 +181,26 @@ class BlogPostTemplate extends React.Component {
               >
                 Click here to get notified when I post new content
               </a>{' '}
-              <BlogFooter>
-                {previous && (
-                  <li>
-                    <h3>Previous Post</h3>
-
-                    <Link to={`/blog${previous.fields.slug}`} rel="prev">
-                      ← {previous.frontmatter.title}
-                    </Link>
-                  </li>
-                )}
-                {next && (
-                  <li>
-                    <h3>Next Post</h3>
-                    <Link to={`/blog${next.fields.slug}`} rel="next">
-                      {next.frontmatter.title} →
-                    </Link>
-                  </li>
-                )}
-              </BlogFooter>
+              <div className="expand-lg">
+                <BlogFooter>
+                  {next && (
+                    <li>
+                      <Link to={`/blog${next.fields.slug}`} rel="next">
+                        {next.frontmatter.title}
+                      </Link>
+                      <h3>Next Post</h3>
+                    </li>
+                  )}
+                  {previous && (
+                    <li>
+                      <Link to={`/blog${previous.fields.slug}`} rel="prev">
+                        {previous.frontmatter.title}
+                      </Link>
+                      <h3>Previous Post</h3>
+                    </li>
+                  )}
+                </BlogFooter>
+              </div>
             </ContentWrapper>
           </Post>
         </Layout>
