@@ -8,8 +8,13 @@ import IllustrationImgDark from '../../content/assets/illustrations/blog-02.svg'
 const LatestWrapper = styled.div`
   border-bottom: 1px solid #ccc;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: ${rhythm(3)};
   padding-bottom: ${rhythm(1.5)};
+
+  h2 {
+    flex: 1 0 100%;
+  }
 `
 
 const PostPreview = styled.div`
@@ -22,15 +27,15 @@ const Illustration = styled.aside`
   @media (min-width: ${breakpoints.lg}) {
     display: initial;
     flex: 1;
-    padding: 2rem;
+    padding: 0 2rem;
   }
 `
 
 function LatestPost({ post }) {
   return (
     <LatestWrapper>
+      <h2>Latest Blog Post</h2>
       <PostPreview>
-        <h2>Latest Blog Post</h2>
         <Abstract post={post} />
       </PostPreview>
       <Illustration>
