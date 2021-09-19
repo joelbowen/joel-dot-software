@@ -41,37 +41,41 @@ function Work({ data, location }) {
     <PageWrapper>
       <Layout location={location}>
         <ContentWrapper>
-          <h1>Some of my work</h1>
-          <p>
-            These work examples should give insight into the types of projects
-            I&apos;ve been privileged to help bring to life.
-          </p>
-          <p>
-            This list is not exhaustive but represents some of the highlights of
-            the last ten years.
-          </p>
-          <em>
-            I have chosen to omit the names of companies and coworkers out of
-            respect for their privacy preferences.
-          </em>
-          <WorkContainer>
-            {data.allMarkdownRemark.edges.map((e, index) => (
-              <WorkExample
-                context={e.node.frontmatter.context}
-                icon={
-                  icons[e.node.frontmatter.icon]
-                    ? icons[e.node.frontmatter.icon]()
-                    : null
-                }
-                html={e.node.html}
-                key={e.node.frontmatter.title}
-                position={e.node.frontmatter.position}
-                tags={e.node.frontmatter.tags}
-                title={e.node.frontmatter.title}
-                year={e.node.frontmatter.year}
-              />
-            ))}
-          </WorkContainer>
+          <div className="expand-lg">
+            <h1>Some of my work</h1>
+            <p>
+              These work examples should give insight into the types of projects
+              I&apos;ve been privileged to help bring to life.
+            </p>
+            <p>
+              This list is not exhaustive but represents some of the highlights
+              of the last ten years.
+            </p>
+            <em>
+              I have chosen to omit the names of companies and coworkers out of
+              respect for their privacy preferences.
+            </em>
+            <WorkContainer>
+              {data.allMarkdownRemark.edges.map((e, index) => (
+                <WorkExample
+                  context={e.node.frontmatter.context}
+                  icon={
+                    icons[e.node.frontmatter.icon]
+                      ? icons[e.node.frontmatter.icon]()
+                      : null
+                  }
+                  image={e.node.frontmatter.image}
+                  imageDark={e.node.frontmatter.imageDark}
+                  html={e.node.html}
+                  key={e.node.frontmatter.title}
+                  position={e.node.frontmatter.position}
+                  tags={e.node.frontmatter.tags}
+                  title={e.node.frontmatter.title}
+                  year={e.node.frontmatter.year}
+                />
+              ))}
+            </WorkContainer>
+          </div>
         </ContentWrapper>
       </Layout>
       <Footer />
@@ -96,6 +100,12 @@ export const pageQuery = graphql`
             icon
             year
             context
+            image {
+              publicURL
+            }
+            imageDark {
+              publicURL
+            }
           }
           html
         }

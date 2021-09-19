@@ -6,6 +6,8 @@ tags: Mobile Application, Pixel Perfect, Startup, Hybrid Mobile, Angular, Ionic,
 year: 2015
 icon: BiBeer
 context: An advertising agency wanted to develop a mobile application for a startup working on a subscription service to regularly ship craft brews to subscribers. The mobile application needed to capture feedback on deliveries, establish a taste profile, show detailed information on thousands of different brews, and allow the user to manage their profile and delivery preferences.
+image: './beer-delivery-service-01.svg'
+imageDark: './beer-delivery-service-02.svg'
 ---
 
 ### Challenges

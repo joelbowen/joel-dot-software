@@ -6,6 +6,8 @@ tags: Digital Transformation, Application Architecture, Event-Driven, Project Ma
 year: 2018
 icon: RiAuctionLine
 context: A legendary brand wanted to build a best-in-class auction platform for high-end collectibles. The platform needed thoughtful accessibility for a diverse user group and a white-glove touch to auction listings that would satisfy elite bidders and sellers alike.
+image: './vehicle-auction-01.svg'
+imageDark: './vehicle-auction-02.svg'
 ---
 
 ### Challenges

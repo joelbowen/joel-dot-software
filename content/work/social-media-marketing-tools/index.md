@@ -6,6 +6,8 @@ tags: Product Discovery, Empathy Research, User Personas, Product Ownership, Pro
 year: 2017
 icon: RiCalendarTodoLine
 context: A social media marketing company wanted to streamline its media planning process and securely communicate with clients for package review and approval. They needed a flexible solution to accommodate their unique data, client types, and hyper-local advertising packages for large businesses and franchises.
+image: './social-media-marketing-01.svg'
+imageDark: './social-media-marketing-02.svg'
 ---
 
 ### Challenges

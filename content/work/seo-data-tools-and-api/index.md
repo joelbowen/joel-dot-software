@@ -6,6 +6,8 @@ tags: Process Automation, API Design, Empathy Research, Vue, Serverless, Redshif
 year: 2020
 icon: RiSearchLine
 context: One of the most prominent digital media companies in the United States needed to improve how they surfaced opportunities and insights to their teams. They also wanted to make business-critical data accessible to various business units, including their Data Science group for large-scale research projects.
+image: './seo-insights-01.svg'
+imageDark: './seo-insights-02.svg'
 ---
 
 ### Challenges

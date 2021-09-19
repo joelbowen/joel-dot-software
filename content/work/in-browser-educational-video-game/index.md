@@ -6,6 +6,8 @@ tags: Browser, Unity 3D, WebGL, Angular, Node.js, Browser Messaging, REDIS, Post
 year: 2012
 icon: RiGamepadLine
 context: A startup I helped co-found wanted to create a browser-based 3D platformer that would teach K-12 technology education curriculum with game mechanics and track student progress in a custom learning management system for parents, teachers, and non-profits.
+image: './gaming-education-01.svg'
+imageDark: './gaming-education-02.svg'
 ---
 
 ### Challenges

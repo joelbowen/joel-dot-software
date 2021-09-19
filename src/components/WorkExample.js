@@ -1,8 +1,8 @@
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { breakpoints, darkMode, lightMode, rhythm } from '../utils/typography'
 import { BiTag } from 'react-icons/bi'
 import { Collapse } from 'react-collapse'
-import { useState } from 'react'
 
 const EntryContainer = styled.div`
   display: flex;
@@ -25,6 +25,13 @@ const EntryContainer = styled.div`
   h3 {
     font-weight: 400;
   }
+
+  &:nth-child(even) button {
+    aside {
+      order: 2;
+      padding: 0 0 0 2rem;
+    }
+  }
 `
 
 const TimelineContainer = styled.aside`
@@ -41,15 +48,12 @@ const Timeline = styled.div`
     margin-left: 50px;
     transition: 0.15s all ease;
   }
-  @media (min-width: ${breakpoints.lg}) {
+  @media (min-width: ${breakpoints.xl}) {
     margin-left: -45px;
     padding-right: 0;
   }
 `
-const Year = styled.span`
-  margin: -5px 0 0 -60px;
-  font-size: 0.75rem;
-`
+
 const YearDot = styled.article`
   height: 10px;
   background: #ccc;
@@ -58,19 +62,9 @@ const YearDot = styled.article`
   margin: 0 5px 0 -5px;
 `
 
-const IconContainer = styled.div`
-  color: ${lightMode.mutedColor};
-  min-width: 75px;
-
-  svg {
-    width: 50px;
-    height: 50px;
-  }
-
-  /* * DARK MODE * */
-  .dark-mode & {
-    color: ${darkMode.mutedColor};
-  }
+const Year = styled.span`
+  margin: -5px 0 0 -60px;
+  font-size: 0.75rem;
 `
 
 const EntryBtn = styled.button`
@@ -100,9 +94,33 @@ const EntryBtn = styled.button`
   }
 `
 
-const ReadMoreCTA = styled.span`
+const Illustration = styled.aside`
+  display: none;
+
+  @media (min-width: ${breakpoints.lg}) {
+    display: initial;
+    flex: 2;
+    padding: 0 2rem 0 0;
+
+    img {
+      margin-bottom: 0;
+    }
+  }
+`
+
+const Icon = styled.div`
   color: ${lightMode.mutedColor};
-  text-decoration: underline;
+  flex: 0;
+  min-width: 75px;
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    ${(props) => (props.hideLg ? 'display: none' : '')}
+  }
 
   /* * DARK MODE * */
   .dark-mode & {
@@ -110,7 +128,11 @@ const ReadMoreCTA = styled.span`
   }
 `
 
-const EntryTitle = styled.h2``
+const Entry = styled.div`
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+`
 
 const Position = styled.span`
   color: ${lightMode.mutedColor};
@@ -127,21 +149,27 @@ const Tags = styled.ul`
   list-style-type: none;
   margin: 5px 0 14px -5px;
 `
+
 const Tag = styled.li`
+  color: #fff;
   display: inline-block;
   padding: 5px 10px;
   margin: 5px;
-  background: ${lightMode.gray};
+  background: hsl(243deg 100% 69%);
   border-radius: 24px;
   font-size: 0.75rem;
   &:hover {
-    background: #ddd;
+    background: hsl(243deg 100% 65%);
   }
 
   /* * DARK MODE * */
   .dark-mode & {
     color: ${darkMode.background};
-    background: ${darkMode.linkColor};
+    background: hsl(68deg 56% 50%);
+
+    &:hover {
+      background: hsl(68deg 56% 45%);
+    }
   }
 `
 
@@ -151,7 +179,27 @@ const HideOnDesktop = styled.div`
   }
 `
 
-function WorkExample({ icon, title, position, html, tags, year, context }) {
+const ReadMoreCTA = styled.span`
+  color: ${lightMode.mutedColor};
+  text-decoration: underline;
+
+  /* * DARK MODE * */
+  .dark-mode & {
+    color: ${darkMode.mutedColor};
+  }
+`
+
+function WorkExample({
+  icon,
+  title,
+  position,
+  html,
+  tags,
+  year,
+  context,
+  image,
+  imageDark,
+}) {
   const [showingDetails, setShowingDetails] = useState(false)
   return (
     <EntryContainer className={`year-${year}`} year={year}>
@@ -162,9 +210,15 @@ function WorkExample({ icon, title, position, html, tags, year, context }) {
         </Timeline>
       </TimelineContainer>
       <EntryBtn onClick={() => setShowingDetails(!showingDetails)}>
-        <IconContainer>{icon}</IconContainer>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <EntryTitle>{title}</EntryTitle>
+        {image && imageDark ? (
+          <Illustration>
+            <img src={image.publicURL} className="show-light-mode" alt="" />
+            <img src={imageDark.publicURL} className="show-dark-mode" alt="" />
+          </Illustration>
+        ) : null}
+        <Icon hideLg={image && imageDark}>{icon}</Icon>
+        <Entry>
+          <h2>{title}</h2>
           <Position>
             <BiTag
               style={{ transform: 'rotate(180deg)', margin: '0 5px -2px 0' }}
@@ -188,7 +242,7 @@ function WorkExample({ icon, title, position, html, tags, year, context }) {
               Read {showingDetails ? 'Less' : 'More'}
             </ReadMoreCTA>
           </HideOnDesktop>
-        </div>
+        </Entry>
       </EntryBtn>
     </EntryContainer>
   )

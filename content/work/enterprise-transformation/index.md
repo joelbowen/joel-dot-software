@@ -6,6 +6,8 @@ tags: Process Automation, Legacy Integrations, Engineering Management, Product S
 year: 2010
 icon: RiBuildingLine
 context: An international retail giant needed to modernize how its community relations teams built digital products and reported annual growth. They wanted a fresh community-centric web presence, legacy systems integrations, and engaging digital applications for underserved communities to engage young girls and boys in STEM education.
+image: './enterprise-transformation-01.svg'
+imageDark: './enterprise-transformation-02.svg'
 ---
 
 ### Challenges

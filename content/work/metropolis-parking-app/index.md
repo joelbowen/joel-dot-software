@@ -6,6 +6,8 @@ tags: Rapid Prototyping, Application Architecture, Data Pipelines, React Native,
 year: 2018
 icon: RiParkingBoxLine
 context: A major metropolitan city needed a mobile application to help its residents find parking spots based on historical availability trends and knowledge of upcoming events.
+image: './parking-01.svg'
+imageDark: './parking-02.svg'
 ---
 
 ### Challenges

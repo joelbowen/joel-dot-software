@@ -6,6 +6,8 @@ tags: Design Thinking, Google Sprint, Agile Principles, Enterprise Engagement, U
 year: 2019
 icon: RiLightbulbLine
 context: A fortune 500 financial institution wanted to operationalize an innovation center to discover, test, and deploy product and operational ideas back into the business. They wanted a hands-on studio model built on design thinking and agile principles closely connected to users.
+image: './innovation-01.svg'
+imageDark: './innovation-02.svg'
 ---
 
 ### Challenges

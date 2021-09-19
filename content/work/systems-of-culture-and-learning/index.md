@@ -6,6 +6,8 @@ tags: Work Culture, Team Dynamics, Systems Thinking, Shared Language, Empowermen
 year: 2021
 icon: BiPyramid
 context: After many years of cultivating an unspoken culture, a global consulting firm joined forces with another consultancy and needed to codify its culture and ways of working. Stakeholder and end-user interviews showed no clear understanding of cultural “norms” or central knowledge-bases for team members to discover ways of working.
+image: './create-together-01.svg'
+imageDark: './create-together-02.svg'
 ---
 
 #### Challenges

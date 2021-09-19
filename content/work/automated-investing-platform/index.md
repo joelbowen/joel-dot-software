@@ -6,6 +6,8 @@ tags: Individual Contributor, Silicon Valley Startup, Angular, React, Typescript
 year: 2016
 icon: RiStockLine
 context: A financial technology company providing automated investment technology needed a web application for individual investors and partner banks. The application integrated with major financial institutions, gave personal investment insights, suggested personalized strategies, and showed asset performance in a customizable dashboard.
+image: './investing-01.svg'
+imageDark: './investing-02.svg'
 ---
 
 ### Challenges

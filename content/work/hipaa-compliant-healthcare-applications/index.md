@@ -6,6 +6,8 @@ tags: HIPAA, Healthcare, Regulated Environment, Compliance, Observability, Audit
 year: 2015
 icon: RiHospitalLine
 context: In 2015, many healthcare startups found it remarkably difficult to navigate the HIPAA Privacy and Security rules. I worked with several companies to educate them on the details of HIPAA, their entity type, the implications of regulation on their business and architectural strategies, and to guide them through the development of compliant platforms and applications.
+image: './healthcare-01.svg'
+imageDark: './healthcare-02.svg'
 ---
 
 ### Challenges
