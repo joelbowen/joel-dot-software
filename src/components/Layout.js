@@ -33,6 +33,10 @@ const globalStyles = css`
       &:visited {
         color: ${darkMode.linkColor};
       }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
