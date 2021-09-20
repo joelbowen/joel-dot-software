@@ -27,13 +27,13 @@ _📚 Read: [6 Principles for Designing Software Architecture](/6-principles-of-
 
 ## I like
 
-<div class="show-light-mode img-float-left">
+<div class="show-light-mode img-float-right img-float-left-xl">
 
 ![person placing preferences](../assets/likes-01.svg)
 
 </div>
 
-<div class="show-dark-mode img-float-left">
+<div class="show-dark-mode img-float-right img-float-left-xl">
 
 ![person placing preferences](../assets/likes-02.svg)
 

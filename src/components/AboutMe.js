@@ -5,12 +5,11 @@ import OffsetAnchor from './OffsetAnchor'
 import { breakpoints } from '../utils/typography'
 
 const Container = styled.article`
-  .img-float-left,
+  .img-float-left-xl,
   .img-float-right {
     @media (min-width: ${breakpoints.sm}) {
       width: 50%;
       max-width: 200px;
-      padding: 1rem;
       transition: margin 0.3s ease;
     }
 
@@ -22,14 +21,11 @@ const Container = styled.article`
   .img-float-right {
     @media (min-width: ${breakpoints.sm}) {
       float: right;
-    }
-
-    @media (min-width: ${breakpoints.lg}) {
-      margin-right: -10vw;
+      margin-left: 1rem;
     }
 
     @media (min-width: ${breakpoints.xl}) {
-      margin-right: -15vw;
+      margin-right: -20vw;
     }
 
     @media (min-width: ${breakpoints.xxl}) {
@@ -37,17 +33,10 @@ const Container = styled.article`
     }
   }
 
-  .img-float-left {
-    @media (min-width: ${breakpoints.sm}) {
-      float: left;
-    }
-
-    @media (min-width: ${breakpoints.lg}) {
-      margin-left: -10vw;
-    }
-
+  .img-float-left-xl {
     @media (min-width: ${breakpoints.xl}) {
-      margin-left: -15vw;
+      float: left;
+      margin-left: -20vw;
     }
 
     @media (min-width: ${breakpoints.xxl}) {
