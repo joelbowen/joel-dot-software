@@ -26,7 +26,7 @@ I have organized these parts into layers on a pyramid where Values establish a b
 <div class="show-dark-mode">
 <div class="expand-xl">
 
-![The culture framework as a pyramid](culture-pyramid-02.svg)
+![The culture framework as a pyramid](./culture-pyramid-dark.svg)
 
 <em>Pyramid Illustration by [Danny Sapio](https://www.dannysapio.com/)</em>
 
@@ -36,7 +36,7 @@ I have organized these parts into layers on a pyramid where Values establish a b
 <div class="show-light-mode">
 <div class="expand-xl">
 
-![The culture framework as a pyramid](culture-pyramid-01.svg)
+![The culture framework as a pyramid](./culture-pyramid-light.svg)
 
 <small>Pyramid Design by [Danny Sapio](https://www.dannysapio.com/)</small>
 
