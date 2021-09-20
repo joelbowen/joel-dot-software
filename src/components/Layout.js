@@ -22,6 +22,10 @@ const globalStyles = css`
       color: ${lightMode.linkColor};
     }
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     .dark-mode & {
       color: ${darkMode.linkColor};
       text-decoration: none;

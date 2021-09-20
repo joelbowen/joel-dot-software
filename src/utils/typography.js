@@ -43,14 +43,14 @@ export const darkMode = {
   color: '#e8eaed',
   mutedColor: '#9aa0a6',
   background: '#202124',
-  linkColor: '#8ab4f8',
+  linkColor: 'hsl(68deg 56% 50%)',
   gray: '#5f6368',
 }
 
 export const lightMode = {
   color: '#202124',
   mutedColor: '#5f6368',
-  linkColor: '#1a73e8',
+  linkColor: 'hsl(243deg 100% 69%)',
   gray: '#dadce0',
 }
 
