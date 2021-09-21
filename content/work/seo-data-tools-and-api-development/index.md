@@ -1,6 +1,6 @@
 ---
 type: work-example
-title: SEO Data Tools & Insights API
+title: SEO Data Tools & API Development
 position: Application Architect / Program Manager
 tags: Process Automation, API Design, Empathy Research, Vue, Serverless, Redshift, SQS, GraphQL, Node, Python, SEO, Outreach, Data Science, Data Lake, Data Pipelines, ETL Process, Web Scraping, Burst Scaling, Salesforce, Program Management, Engineering Management, Product Discovery
 year: 2020
