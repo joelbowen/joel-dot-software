@@ -34,6 +34,21 @@ const Post = styled.article`
     color: rgb(125, 125, 125);
     font-size: 0.75em;
   }
+
+  .footnotes {
+    font-size: 0.75rem;
+    margin-bottom: 4rem;
+    color: rgb(100, 100, 100);
+
+    ol {
+      margin-left: 0.75rem;
+    }
+
+    /* * DARK MODE * */
+    .dark-mode & {
+      color: rgb(200, 200, 200);
+    }
+  }
 `
 const Title = styled.h1`
   margin-bottom: 0;
